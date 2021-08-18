@@ -1,0 +1,172 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Control Base -->
+    <Style x:Key="xControlBase" TargetType="{x:Type Control}">
+        <Setter Property="FontFamily" Value="Meiryo UI"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="xBorderBase" TargetType="{x:Type Border}">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="5"/>
+    </Style>
+
+    <Style x:Key="xButtonBase" TargetType="{x:Type Button}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xCalendarBase" TargetType="{x:Type Calendar}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xCanvasBase" TargetType="{x:Type Canvas}">
+    </Style>
+
+    <Style x:Key="xCheckBoxBase" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xComboBoxBase" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xControlBase}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel VirtualizingPanel.IsVirtualizing="True"
+                                            VirtualizingPanel.VirtualizationMode="Recycling" >
+                    </VirtualizingStackPanel>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="xContentControlBase" TargetType="{x:Type ContentControl}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xDataGridBase" TargetType="{x:Type DataGrid}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xDatePickerBase" TargetType="{x:Type DatePicker}" BasedOn="{StaticResource xDatePickerBase}">
+    </Style>
+
+    <Style x:Key="xDockPanelBase" TargetType="{x:Type DockPanel}">
+    </Style>
+
+    <Style x:Key="xDocumentViewerBase" TargetType="{x:Type DocumentViewer}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xEllipseBase" TargetType="{x:Type Ellipse}">
+    </Style>
+
+    <Style x:Key="xExpanderBase" TargetType="{x:Type Expander}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xFrameBase" TargetType="{x:Type Frame}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xGridBase" TargetType="{x:Type Grid}">
+    </Style>
+
+    <Style x:Key="xGridSplitterBase" TargetType="{x:Type GridSplitter}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xGroupBoxBase" TargetType="{x:Type GroupBox}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xImageBase" TargetType="{x:Type Image}">
+    </Style>
+
+    <Style x:Key="xLabelBase" TargetType="{x:Type Label}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xItemsControlBase" TargetType="{x:Type ItemsControl}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+    
+    <Style x:Key="xListBoxBase" TargetType="{x:Type ListBox}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xListViewBase" TargetType="{x:Type ListView}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xMediaElementBase" TargetType="{x:Type MediaElement}">
+        <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
+
+    <Style x:Key="xMenuBase" TargetType="{x:Type Menu}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xPasswordBoxBase" TargetType="{x:Type PasswordBox}">
+        <Setter Property="FontFamily" Value="Meiryo UI"/>
+    </Style>
+
+    <Style x:Key="xProgressBarBase" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xRadioButtonBase" TargetType="{x:Type RadioButton}" BasedOn="{StaticResource xControlBase}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="xRectangleBase" TargetType="{x:Type Rectangle}">
+        <Setter Property="Fill" Value="Black"/>
+    </Style>
+
+    <Style x:Key="xRichTextBoxBase" TargetType="{x:Type RichTextBox}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xScrollBarBase" TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xScrollViewerBase" TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xSeparatorBase" TargetType="{x:Type Separator}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xSliderBase" TargetType="{x:Type Slider}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xStackPanelBase" TargetType="{x:Type StackPanel}">
+    </Style>
+
+    <Style x:Key="xStatusBarBase" TargetType="{x:Type StatusBar}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xTabControlBase" TargetType="{x:Type TabControl}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xTextBlockBase" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="Meiryo UI"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="xTextBoxBase" TargetType="{x:Type TextBox}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xToggleButtonBase" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xToolBarBase" TargetType="{x:Type ToolBar}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xToolBarPanelBase" TargetType="{x:Type ToolBarPanel}">
+    </Style>
+
+    <Style x:Key="xToolBarTrayBase" TargetType="{x:Type ToolBarTray}">
+    </Style>
+
+    <Style x:Key="xTreeViewBase" TargetType="{x:Type TreeView}" BasedOn="{StaticResource xControlBase}">
+    </Style>
+
+    <Style x:Key="xViewboxBase" TargetType="{x:Type Viewbox}">
+    </Style>
+
+    <Style x:Key="xWebBrowserBase" TargetType="{x:Type WebBrowser}">
+    </Style>
+
+    <Style x:Key="xWindowBase" TargetType="{x:Type Window}">
+    </Style>
+
+    <Style x:Key="xWrapPanelBase" TargetType="{x:Type WrapPanel}">
+    </Style>
+
+</ResourceDictionary>

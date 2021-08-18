@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BaseStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../ControlTemplate/StackPanelControlTemplateDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style x:Key="xStackPanelHorizontal" TargetType="{x:Type StackPanel}" BasedOn="{StaticResource xStackPanelBase}">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="xStackPanelVertical" TargetType="{x:Type StackPanel}" BasedOn="{StaticResource xStackPanelBase}">
+        <Setter Property="Orientation" Value="Vertical"/>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BaseStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../ControlTemplate/ListViewControlTemplateDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="xManagementItemItemsControl" TargetType="{x:Type ItemsControl}" BasedOn="{StaticResource xItemsControlBase}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+    </Style>
+
+</ResourceDictionary>

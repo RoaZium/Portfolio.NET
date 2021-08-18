@@ -1,0 +1,79 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BaseStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../ControlTemplate/TextBlockControlTemplateDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!--20 Font Size TextBlock-->
+    <Style x:Key="FontSize20TextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+    <!--14 Font Size TextBlock-->
+    <Style x:Key="FontSize14TextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <!--12 Font Size TextBlock-->
+    <Style x:Key="FontSize12TextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+
+    <!-- DataGrid Cell TextBlock -->
+    <Style x:Key="xDataGridCellTextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}" />
+    </Style>
+
+    <!--14 Font Size TextBlock-->
+    <Style x:Key="sFont14TextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_PopupFont}"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <!--12 Font Size TextBlock-->
+    <Style x:Key="sFont12TextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_PopupFont}"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+
+    <!--12 Window Title Font TextBlock-->
+    <Style x:Key="sWindowTitleTextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_WindowTitleTextBlock}"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+
+    <Style x:Key="xManagementItemTextBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource FontSize12TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+
+    <Style x:Key="sDevTextBlock01" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource FontSize12TextBlock}">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_White}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BaseStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../ControlTemplate/RadioButtonControlTemplateDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="sBaseRadioButton" TargetType="{x:Type RadioButton}" BasedOn="{StaticResource xRadioButtonBase}">
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}"/>
+    </Style>
+    
+    <!-- PMS/USER RadioButton -->
+    <Style x:Key="xRoundRadioButton" TargetType="{x:Type RadioButton}" BasedOn="{StaticResource xRadioButtonBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_BackgroundRadioButton}" />
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border Background="{TemplateBinding Background}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="5"/>
+                            </Grid.RowDefinitions>
+
+                            <Border Grid.Column="1" Grid.Row="1"
+                                    Name="RadioMark"
+                                    Background="{DynamicResource SolidColorBrush_BehindLayout}" 
+                                    CornerRadius="1" >
+
+                            </Border>
+
+                            <ContentPresenter Grid.Column="2" Grid.Row="1"
+                                              Content="{TemplateBinding Content}"
+                                              HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center" >
+
+                            </ContentPresenter>
+
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="RadioMark" Property="Background" Value="{DynamicResource SolidColorBrush_Layout}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{DynamicResource SolidColorBrush_002}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource SolidColorBrush_006}"/>
+                <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_010}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource SolidColorBrush_003}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource SolidColorBrush_007}"/>
+                <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_White}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{DynamicResource SolidColorBrush_004}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource SolidColorBrush_008}"/>
+                <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_012}"/>
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+    
+</ResourceDictionary>

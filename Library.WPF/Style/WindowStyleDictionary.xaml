@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BaseStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../ControlTemplate/WindowControlTemplateDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style x:Key="xCustomWindow" TargetType="{x:Type Window}" BasedOn="{StaticResource xWindowBase}">
+        <Setter Property="Background" Value="#FFf9f9f9"/>
+        <Setter Property="ResizeMode" Value="CanResize"/>
+        <Setter Property="Height" Value="768"/>
+        <Setter Property="Width" Value="1024"/>
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="30" ResizeBorderThickness="13"/>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="WindowState" Value="Maximized">
+                <Setter Property="BorderThickness" Value="{Binding Source={x:Static SystemParameters.WindowResizeBorderThickness}}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Popup Window -->
+    <Style x:Key="xCustomPopupWindow" TargetType="{x:Type Window}" BasedOn="{StaticResource xWindowBase}">
+        <Setter Property="Background" Value="#FFf9f9f9"/>
+        <Setter Property="ResizeMode" Value="NoResize"/>
+        <Setter Property="Height" Value="520"/>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="30" ResizeBorderThickness="13"/>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="WindowState" Value="Maximized">
+                <Setter Property="BorderThickness" Value="{Binding Source={x:Static SystemParameters.WindowResizeBorderThickness}}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="xFitHeightPopupWindow" TargetType="{x:Type Window}" BasedOn="{StaticResource xWindowBase}">
+        <Setter Property="Background" Value="#FFf9f9f9"/>
+        <Setter Property="ResizeMode" Value="NoResize"/>
+        <Setter Property="SizeToContent" Value="Height"/>
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="30" ResizeBorderThickness="13"/>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="WindowState" Value="Maximized">
+                <Setter Property="BorderThickness" Value="{Binding Source={x:Static SystemParameters.WindowResizeBorderThickness}}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

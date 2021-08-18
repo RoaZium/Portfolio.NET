@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Style/BaseStyleDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <ControlTemplate x:Key="RoundButtonTemplate" TargetType="{x:Type Button}">
+        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1.8" CornerRadius="3">
+            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="RectagleButtonTemplate" TargetType="{x:Type Button}">
+        <Grid>
+            <Border CornerRadius="3"
+                  BorderThickness="2"
+                  BorderBrush="Green">
+                <Image Source="{TemplateBinding Button.Content}" />
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    
+</ResourceDictionary>
