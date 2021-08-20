@@ -6,7 +6,9 @@
     </ResourceDictionary.MergedDictionaries>
     
     <ControlTemplate x:Key="RoundButtonTemplate" TargetType="{x:Type Button}">
-        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1.8" CornerRadius="3">
+        <Border Background="{TemplateBinding Background}" 
+                BorderBrush="{TemplateBinding BorderBrush}" 
+                BorderThickness="1.8" CornerRadius="3">
             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
     </ControlTemplate>

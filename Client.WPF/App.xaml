@@ -7,6 +7,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Library.WPF;component/Style/PrismWPFStyleDictionary.xaml" />
+                <ResourceDictionary Source="/Library.WPF;component/Dictionary/ArrayDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

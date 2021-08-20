@@ -6,7 +6,101 @@
         xmlns:local="clr-namespace:Client.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <Style x:Key="L_ComboBox_Color" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource ColorComboBox}">
+            <Setter Property="DisplayMemberPath" Value="Name" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sColorArray}}" />
+            <Setter Property="SelectedValuePath" Value="Name" />
+        </Style>
+
+        <Style x:Key="xComboBox" TargetType="{x:Type ComboBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <ToggleButton Grid.Column="2"
+                                          x:Name="ToggleButton" 
+                                          Template="{DynamicResource BasicComboBoxToggleButton}"
+                                          Focusable="false"
+                                          ClickMode="Press"
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" >
+                            </ToggleButton>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <ControlTemplate x:Key="BasicComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="24" />
+                </Grid.ColumnDefinitions>
+
+                <Border x:Name="Border" 
+                        Grid.ColumnSpan="2"
+                        CornerRadius="2"
+                        BorderThickness="1"
+                        BorderBrush="#FF99AAC0">
+
+                    <Border.Background>
+
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStopCollection>
+                                    <GradientStop Color="#FF113C66" />
+                                    <GradientStop Color="#FF082357" />
+                                </GradientStopCollection>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+
+                    </Border.Background>
+                </Border>
+
+                <Border Grid.Column="0"
+                        CornerRadius="2,0,0,2"
+                        Margin="1" 
+                        Background="#FF323232">
+                </Border>
+
+                <!--ComboBoxToggleButton Icon-->
+                <Path x:Name="Arrow" 
+                  Grid.Column="1" 
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Center"
+                  Fill="White"
+                  Data="M 0 0 L 4 4 L 8 0 Z" >
+
+                </Path>
+
+            </Grid>
+        </ControlTemplate>
+
+    </Window.Resources>
+    
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <local:UserControl1 Grid.Column="1" Grid.Row="0" />
     </Grid>
 </Window>

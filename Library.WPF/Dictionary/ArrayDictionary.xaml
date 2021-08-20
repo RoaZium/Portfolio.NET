@@ -1,0 +1,240 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib" >
+
+    <ObjectDataProvider x:Key="colorsTypeOdp" 
+                                MethodName="GetType" 
+                                ObjectType="{x:Type sys:Type}">
+        <ObjectDataProvider.MethodParameters>
+            <sys:String>System.Windows.Media.Colors, PresentationCore, Version=3.0.0.0, Culture=neutral, 
+                        PublicKeyToken=31bf3856ad364e35</sys:String>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+    <ObjectDataProvider x:Key="sColorArray"
+                        ObjectInstance="{StaticResource colorsTypeOdp}"
+                        MethodName="GetProperties" >
+
+    </ObjectDataProvider>
+
+    <ObjectDataProvider MethodName="GetValues" 
+                        ObjectType="{x:Type sys:Enum}"
+                        x:Key="sTextWrappingArray">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="TextWrapping" />
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+    <ObjectDataProvider MethodName="GetValues" 
+                        ObjectType="{x:Type sys:Enum}"
+                        x:Key="sVisibility">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="Visibility" />
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+    <!--Bool-->
+    <x:Array x:Key="sBoolArray" Type="{x:Type sys:String}">
+        <sys:String>False</sys:String>
+        <sys:String>True</sys:String>
+    </x:Array>
+
+    <!--SeriesLabelPosition-->
+    <x:Array x:Key="sSeriesLabelPositionArray" Type="{x:Type sys:String}">
+        <sys:String>Inside</sys:String>
+        <sys:String>Outside</sys:String>
+        <sys:String>TwoColumns</sys:String>
+    </x:Array>
+
+    <!--FontWeightOptions-->
+    <x:Array x:Key="sFontWeightOptionsArray" Type="{x:Type sys:String}">
+        <sys:String>Bold</sys:String>
+        <sys:String>Normal</sys:String>
+    </x:Array>
+
+    <!--AnimationMode-->
+    <x:Array x:Key="sAnimationModeArray" Type="{x:Type sys:String}">
+        <sys:String>Disabled</sys:String>
+        <sys:String>OnDataChanged</sys:String>
+        <sys:String>OnLoad</sys:String>
+    </x:Array>
+
+    <!--Opacity-->
+    <x:Array x:Key="sOpacityArray" Type="{x:Type sys:String}">
+        <sys:String>0.1</sys:String>
+        <sys:String>0.2</sys:String>
+        <sys:String>0.3</sys:String>
+        <sys:String>0.4</sys:String>
+        <sys:String>0.5</sys:String>
+        <sys:String>0.6</sys:String>
+        <sys:String>0.7</sys:String>
+        <sys:String>0.8</sys:String>
+        <sys:String>0.9</sys:String>
+        <sys:String>1.0</sys:String>
+    </x:Array>
+
+    <!--Orientation-->
+    <x:Array x:Key="sOrientationArray" Type="{x:Type sys:String}">
+        <sys:String>Horizontal</sys:String>
+        <sys:String>Vertical</sys:String>
+    </x:Array>
+
+    <!--HorizontalPosition-->
+    <x:Array x:Key="sHorizontalPositionArray" Type="{x:Type sys:String}">
+        <sys:String>Center</sys:String>
+        <sys:String>Left</sys:String>
+        <sys:String>LeftOutside</sys:String>
+        <sys:String>Right</sys:String>
+        <sys:String>RightOutside</sys:String>
+    </x:Array>
+
+    <!--VerticalPosition-->
+    <x:Array x:Key="sVerticalPositionArray" Type="{x:Type sys:String}">
+        <sys:String>Bottom</sys:String>
+        <sys:String>BottomOutside</sys:String>
+        <sys:String>Center</sys:String>
+        <sys:String>Top</sys:String>
+        <sys:String>TopOutside</sys:String>
+    </x:Array>
+
+    <!--Alignment-->
+    <x:Array x:Key="sAlignmentArray" Type="{x:Type sys:String}">
+        <sys:String>Far</sys:String>
+        <sys:String>Near</sys:String>
+    </x:Array>
+
+    <!--InnerIndent-->
+    <x:Array x:Key="sInnerIndentArray" Type="{x:Type sys:String}">
+        <sys:String>0</sys:String>
+        <sys:String>1</sys:String>
+        <sys:String>2</sys:String>
+        <sys:String>3</sys:String>
+        <sys:String>4</sys:String>
+        <sys:String>5</sys:String>
+        <sys:String>6</sys:String>
+        <sys:String>7</sys:String>
+        <sys:String>8</sys:String>
+        <sys:String>9</sys:String>
+        <sys:String>10</sys:String>
+    </x:Array>
+
+    <!--HorizontalAlignment-->
+    <x:Array x:Key="sHorizontalAlignmentArray" Type="{x:Type sys:String}">
+        <sys:String>Left</sys:String>
+        <sys:String>Center</sys:String>
+        <sys:String>Right</sys:String>
+        <sys:String>Stretch</sys:String>
+    </x:Array>
+
+    <!--VerticalAlignment-->
+    <x:Array x:Key="sVerticalAlignmentArray" Type="{x:Type sys:String}">
+        <sys:String>Bottom</sys:String>
+        <sys:String>Center</sys:String>
+        <sys:String>Stretch</sys:String>
+        <sys:String>Top</sys:String>
+    </x:Array>
+
+    <!--Visibility-->
+    <x:Array x:Key="sVisibilityArray" Type="{x:Type sys:String}">
+        <sys:String>Collapsed</sys:String>
+        <sys:String>Hidden</sys:String>
+        <sys:String>Visible</sys:String>
+    </x:Array>
+
+    <!--ScrollBar Visibility-->
+    <x:Array x:Key="sScrollBarVisibilityArray" Type="{x:Type sys:String}">
+        <sys:String>Auto</sys:String>
+        <sys:String>Disabled</sys:String>
+        <sys:String>Hidden</sys:String>
+        <sys:String>Visible</sys:String>
+    </x:Array>
+
+    <!--글자 스타일-->
+    <x:Array x:Key="sFontStyleArray" Type="{x:Type sys:String}">
+        <sys:String>Italic</sys:String>
+        <sys:String>Normal</sys:String>
+    </x:Array>
+
+    <!--Marker Mode-->
+    <x:Array x:Key="sMarkerModeArray" Type="{x:Type sys:String}">
+        <sys:String>CheckBox</sys:String>
+        <sys:String>CheckBoxAndMarker</sys:String>
+        <sys:String>Marker</sys:String>
+        <sys:String>MarkerAndCheckBox</sys:String>
+        <sys:String>None</sys:String>
+    </x:Array>
+
+    <!--PieSeries Marker Mode : PieSeries는 CheckBox 제공 안됨-->
+    <x:Array x:Key="sPieSeriesMarkerModeArray" Type="{x:Type sys:String}">
+        <sys:String>Marker</sys:String>
+        <sys:String>None</sys:String>
+    </x:Array>
+    
+    <!--시간 단위-->
+    <x:Array x:Key="sUnitofTimeArray" Type="{x:Type sys:String}">
+        <sys:String>Day</sys:String>
+        <sys:String>Hour</sys:String>
+        <sys:String>Millisecond</sys:String>
+        <sys:String>Month</sys:String>
+        <sys:String>Quarter</sys:String>
+        <sys:String>Second</sys:String>
+        <sys:String>Week</sys:String>
+        <sys:String>Year</sys:String>
+    </x:Array>
+
+    <!--스웝 방향-->
+    <x:Array x:Key="sSweepDirectionArray" Type="{x:Type sys:String}">
+        <sys:String>Clockwise</sys:String>
+        <sys:String>Counterclockwise</sys:String>
+    </x:Array>
+
+    <!--흐름 방향-->
+    <x:Array x:Key="sFlowDirectionArray" Type="{x:Type sys:String}">
+        <sys:String>LeftToRight</sys:String>
+        <sys:String>RightToLeft</sys:String>
+    </x:Array>
+
+    <!--겹침 모드-->
+    <x:Array x:Key="sResolveOverlappingModeArray" Type="{x:Type sys:String}">
+        <sys:String>Default</sys:String>
+        <sys:String>HideOverlapped</sys:String>
+        <sys:String>JustifyAllAroundPoint</sys:String>
+        <sys:String>JustifyAroundPoint</sys:String>
+        <sys:String>None</sys:String>
+    </x:Array>
+
+    <!--줄 바꿈 모드-->
+    <x:Array x:Key="sTextArray" Type="{x:Type sys:String}">
+        <sys:String>NoWrap</sys:String>
+        <sys:String>Wrap</sys:String>
+        <sys:String>WrapWithOverflow</sys:String>
+    </x:Array>
+
+    <!--호 타입 모드-->
+    <x:Array x:Key="sArcThicknessUnitArray" Type="{x:Type sys:String}">
+        <sys:String>Percent</sys:String>
+        <sys:String>Pixel</sys:String>
+    </x:Array>
+
+    <!--데이터 타입 모드-->
+    <x:Array x:Key="sDataTypeArray" Type="{x:Type sys:String}">
+        <sys:String>Percent</sys:String>
+        <sys:String>Value</sys:String>
+    </x:Array>
+
+    <!--StrokeLineJoin 모드-->
+    <x:Array x:Key="sStrokeLineJoinArray" Type="{x:Type sys:String}">
+        <sys:String>Bevel</sys:String>
+        <sys:String>Miter</sys:String>
+        <sys:String>Round</sys:String>
+    </x:Array>
+
+    <!--텍스트 축 정렬-->
+    <x:Array x:Key="sTextAlignmentArray" Type="{x:Type sys:String}">
+        <sys:String>Center</sys:String>
+        <sys:String>Justify</sys:String>
+        <sys:String>Left</sys:String>
+        <sys:String>Right</sys:String>
+    </x:Array>
+
+</ResourceDictionary>
