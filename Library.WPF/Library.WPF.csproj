@@ -46,11 +46,17 @@
   <ItemGroup>
     <Compile Include="ButtonBaseExtension.cs" />
     <Compile Include="EditModeExtension.cs" />
+    <Compile Include="Extensions\WatermarkAdorner.cs" />
+    <Compile Include="Extensions\WatermarkService.cs" />
     <Compile Include="FocusExtension.cs" />
     <Compile Include="MoveThumb.cs" />
     <Compile Include="PasswordExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResizeThumb.cs" />
+    <Compile Include="Text\CvTextBox.xaml.cs">
+      <DependentUpon>CvTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\InputType.cs" />
     <Compile Include="ThemeManagement.cs" />
     <Compile Include="UpdateSourceExtension.cs" />
     <Compile Include="VisibleExtension.cs" />
@@ -319,6 +325,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\WindowStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\CvTextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
