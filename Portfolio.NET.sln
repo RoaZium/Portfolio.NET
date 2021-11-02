@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util.DotNetVersions", "Util
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util.SvgToXaml", "Util.SvgToXaml\Util.SvgToXaml.csproj", "{0CAF3717-683D-45D3-94A1-CFA4828EF67B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Portfolio.WPF", "Client.Portfolio.WPF\Client.Portfolio.WPF.csproj", "{42EF1FD9-63F5-4164-B8A3-F989327B9188}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0CAF3717-683D-45D3-94A1-CFA4828EF67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CAF3717-683D-45D3-94A1-CFA4828EF67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CAF3717-683D-45D3-94A1-CFA4828EF67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EF1FD9-63F5-4164-B8A3-F989327B9188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EF1FD9-63F5-4164-B8A3-F989327B9188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EF1FD9-63F5-4164-B8A3-F989327B9188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EF1FD9-63F5-4164-B8A3-F989327B9188}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

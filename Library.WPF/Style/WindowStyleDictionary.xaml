@@ -5,15 +5,22 @@
         <ResourceDictionary Source="BaseStyleDictionary.xaml"/>
         <ResourceDictionary Source="../ControlTemplate/WindowControlTemplateDictionary.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="xCustomWindow" TargetType="{x:Type Window}" BasedOn="{StaticResource xWindowBase}">
-        <Setter Property="Background" Value="#FFf9f9f9"/>
-        <Setter Property="ResizeMode" Value="CanResize"/>
-        <Setter Property="Height" Value="768"/>
-        <Setter Property="Width" Value="1024"/>
+
+    <Style x:Key="xCustomWindow" TargetType="{x:Type Window}">
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="ResizeMode" Value="NoResize"/>
+        <Setter Property="Height" Value="500"/>
+        <Setter Property="Width" Value="420"/>
+        <Setter Property="WindowStyle" Value="None" />
+        <!--<Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="Yellow" BlurRadius="20" Direction="315" RenderingBias="Quality" ShadowDepth="14"/>
+            </Setter.Value>
+        </Setter>-->
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="30" ResizeBorderThickness="13"/>
+                <WindowChrome CaptionHeight="30" ResizeBorderThickness="13" />
             </Setter.Value>
         </Setter>
         <Style.Triggers>

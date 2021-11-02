@@ -6,6 +6,20 @@
         <ResourceDictionary Source="../ControlTemplate/BorderControlTemplateDictionary.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
+    <Style x:Key="sBorder_TopContainer" TargetType="{x:Type Border}" >
+        <Setter Property="Background" Value="Red" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style x:Key="Global_Border_TopContainer" TargetType="{x:Type Border}" >
+        <Setter Property="Background" Value="Red" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+
+
     <Style x:Key="sBaseBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
         <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Layout}"/>
     </Style>
