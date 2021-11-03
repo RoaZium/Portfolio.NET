@@ -281,7 +281,7 @@
 
     <!-- 설정, 최소화, 최대화, 닫기 Button -->
     <Style x:Key="WindowBaseButton" TargetType="{x:Type Button}" BasedOn="{StaticResource xButtonBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>

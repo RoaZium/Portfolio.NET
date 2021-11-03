@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ColorDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <SolidColorBrush x:Key="Global_SolidColorBrush_TopContainer" Color="{StaticResource Global_Color_TopContainer}" />
+    <SolidColorBrush x:Key="Global_SolidColorBrush_CenterContainer" Color="{StaticResource Global_Color_CenterContainer}" />
+    <SolidColorBrush x:Key="Global_SolidColorBrush_Font" Color="{StaticResource Global_Color_Font}" />
+        
+</ResourceDictionary>

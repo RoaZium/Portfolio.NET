@@ -4,11 +4,71 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client.Portfolio.WPF"
-        Style="{StaticResource xCustomWindow}"
+        Style="{StaticResource Global_Window_CustomClient}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow">
 
-    <Border Style="{StaticResource sBorder_TopContainer}">
-        
-    </Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Style="{StaticResource Global_Border_TopContainer}" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="1"
+                           Text="App title"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           FontSize="12"/>
+
+                <!--최소화/최대화/닫기-->
+                <Grid Grid.Column="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="1"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                                Style="{StaticResource WindowBaseButton}"
+                                Click="Button_MinimizationClick">
+                        <Button.Content>
+                            <Image Source="{StaticResource Global_DrawingImage_Minimization}"/>
+                        </Button.Content>
+                    </Button>
+
+                    <Button Grid.Column="2"
+                                Style="{StaticResource WindowBaseButton}"
+                                Click="Button_MaximizeClick" >
+                        <Button.Content>
+                            <Image Source="{StaticResource Global_DrawingImage_Maximize}"/>
+                        </Button.Content>
+                    </Button>
+
+                    <Button Grid.Column="4"
+                                Style="{StaticResource WindowBaseButton}"
+                                Click="Button_CloseClick">
+                        <Button.Content>
+                            <Image Source="{StaticResource Global_DrawingImage_Close}" />
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource Global_Border_LayoutContainer}" >
+            </Border>
+        </Grid>
 </Window>

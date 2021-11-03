@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Style/BaseStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/BorderStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ButtonStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/CalendarStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/CheckBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ComboBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ContentControlStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ContextMenuStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/DataGridStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/DatePickerStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ExpanderStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/GridStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/GroupBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ImageStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/LabelStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ItemsControlStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ListBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ListViewStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/MenuStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/PasswordBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ProgressBarStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/RadioButtonStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/RectangleStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ScrollbarStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/StackPanelStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/TextBlockStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/TextBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ThumbStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ToggleButtonStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ToolBarStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/ToolTipStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/TreeViewStyleDictionary.xaml"/>
+        <ResourceDictionary Source="../Style/WindowStyleDictionary.xaml"/>
+
+        <ResourceDictionary Source="ArrayDictionary.xaml"/>
+        <ResourceDictionary Source="IconDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

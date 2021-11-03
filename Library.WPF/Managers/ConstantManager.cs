@@ -2,10 +2,10 @@
 {
 	public class ConstantManager
 	{
-		public const string blackURI = @"/PrismWPF.Control;Component/Theme/Black/ColorDictionary.xaml";
-		public const string blueURI = @"/PrismWPF.Control;Component/Theme/Blue/ColorDictionary.xaml";
-		public const string whiteURI = @"/PrismWPF.Control;Component/Theme/White/ColorDictionary.xaml";
+		public const string blackURI = @"/Library.WPF;Component/Theme/Black/SolidColorBrushDictionary.xaml";
+		public const string blueURI = @"/Library.WPF;Component/Theme/Blue/SolidColorBrushDictionary.xaml";
+		public const string whiteURI = @"/Library.WPF;Component/Theme/White/SolidColorBrushDictionary.xaml";
 
-		public const string styleDictionary = "PrismWPFStyleDictionary";
+		public const string styleDictionary = "LibraryWPFDictionary";
 	}
 }

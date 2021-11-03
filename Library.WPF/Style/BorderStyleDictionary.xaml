@@ -6,68 +6,16 @@
         <ResourceDictionary Source="../ControlTemplate/BorderControlTemplateDictionary.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="sBorder_TopContainer" TargetType="{x:Type Border}" >
-        <Setter Property="Background" Value="Red" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="CornerRadius" Value="8" />
-    </Style>
-
+    <!--Client: Top Container-->
     <Style x:Key="Global_Border_TopContainer" TargetType="{x:Type Border}" >
-        <Setter Property="Background" Value="Red" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Background" Value="{DynamicResource Global_SolidColorBrush_TopContainer}" />
+        <Setter Property="CornerRadius" Value="8,8,0,0" />
     </Style>
 
-
-
-    <Style x:Key="sBaseBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Layout}"/>
+    <!--Client: Center Container-->
+    <Style x:Key="Global_Border_LayoutContainer" TargetType="{x:Type Border}" >
+        <Setter Property="Background" Value="{DynamicResource Global_SolidColorBrush_CenterContainer}" />
+        <Setter Property="CornerRadius" Value="0,0,8,8" />
     </Style>
 
-    <Style x:Key="xChartComponentBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_023}" />
-    </Style>
-
-    <Style x:Key="sPopupBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_BehindLayout}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource SolidColorBrush_Black}" />
-        <Setter Property="BorderThickness" Value="2" />
-    </Style>
-
-    <Style x:Key="xManagementItemBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="BorderBrush" Value="{DynamicResource SolidColorBrush_Border_01}"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="CornerRadius" Value="5"/>
-        <Setter Property="Padding" Value="3"/>
-    </Style>
-
-    <Style x:Key="xManagementPanelBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Layout}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource SolidColorBrush_Border_01}"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="CornerRadius" Value="3"/>
-    </Style>
-
-    <Style x:Key="xLightFilledBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Border_BG_01}"/>
-        <Setter Property="CornerRadius" Value="3"/>
-    </Style>
-
-    <Style x:Key="sDevBorder01" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Dev000}"/>
-        <Setter Property="CornerRadius" Value="4"/>
-        <Setter Property="Opacity" Value="{Binding Path=Opacity, ElementName=xChartControl}"/>
-    </Style>
-
-    <Style x:Key="sDevBorder02" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Dev001}"/>
-        <Setter Property="CornerRadius" Value="4,4,0,0"/>
-    </Style>
-
-    <Style x:Key="sRoundBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
-        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Layout}"/>
-        <Setter Property="CornerRadius" Value="3"/>
-        <Setter Property="Opacity" Value="0.8"/>
-    </Style>
-    
 </ResourceDictionary>
