@@ -1,0 +1,182 @@
+﻿<UserControl x:Class="DMS.Module.Management.View.ManagementListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Management.Properties"
+             xmlns:local="clr-namespace:DMS.Module.Management.View"
+             xmlns:enum="clr-namespace:DMS.Module.Management.Infrastructure"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Management;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Style="{StaticResource sBaseGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- 펼치기 -->
+        <Grid Grid.Column="0" Width="244" >
+
+            <!-- 관리 모듈 항목 -->
+            <StackPanel Grid.Row="1"
+                        Style="{StaticResource xStackPanelVertical}">
+
+                <Rectangle Style="{StaticResource HorizontalRectangle}"/>
+
+                <Button Style="{StaticResource RectangleImageTextButton}"
+                        Tag="{x:Static res:Res.StrRoutingConfigStatus}"
+                        Command="{Binding ManagementClickedCommand}"
+                        CommandParameter="{x:Static enum:ManagementType.RoutingConfigStatus}">
+                    <Button.Content>
+                        <Image Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-01-composition_24x24.png"/>
+                    </Button.Content>
+                </Button>
+
+                <Rectangle Style="{StaticResource HorizontalRectangle}"/>
+
+                <Button Style="{StaticResource RectangleImageTextButton}"
+                        Tag="{x:Static res:Res.StrMonitoringScenario}" 
+                        Command="{Binding ManagementClickedCommand}" 
+                        CommandParameter="{x:Static enum:ManagementType.Scenario}">
+                    <Button.Content>
+                        <Image Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-02-monitor_24x24.png"/>
+                    </Button.Content>
+                </Button>
+
+                <Rectangle Style="{StaticResource HorizontalRectangle}"/>
+
+                <Button Style="{StaticResource RectangleImageTextButton}" 
+                        Tag="{x:Static res:Res.StrAlarmScenario}"
+                        Command="{Binding ManagementClickedCommand}" 
+                        CommandParameter="{x:Static enum:ManagementType.AlarmScenario}">
+                    <Button.Content>
+                        <Image Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-03-alarm_24x24.png"/>
+                    </Button.Content>
+                </Button>
+
+                <Rectangle Style="{StaticResource HorizontalRectangle}"/>
+
+                <Button Style="{StaticResource RectangleImageTextButton}" 
+                        Tag="알람"
+                        Command="{Binding ManagementClickedCommand}" 
+                        CommandParameter="{x:Static enum:ManagementType.Alarm}">
+                    <Button.Content>
+                        <Image Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-03-alarm_24x24.png"/>
+                    </Button.Content>
+                </Button>
+
+                <Rectangle Style="{StaticResource HorizontalRectangle}"/>
+                
+                <Button Style="{StaticResource RectangleImageTextButton}"
+                        Tag="{x:Static res:Res.StrRecordInquiry}"
+                        Command="{Binding ManagementClickedCommand}" 
+                        CommandParameter="{x:Static enum:ManagementType.RecordingList}">
+                    <Button.Content>
+                        <Image Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-06-rec_24x24.png"/>
+                    </Button.Content>
+
+                </Button>
+
+                <Rectangle Style="{StaticResource HorizontalRectangle}"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <!--접기-->
+        <!--<Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64" />
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Style>
+                <Style>
+                    <Setter Property="Grid.Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityLayoutList, Mode=TwoWay}" Value="Collapsed">
+                            <Setter Property="StackPanel.Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            <Button Grid.Row="0"
+                    Style="{StaticResource RectangleImageButton}"
+                    Command="{Binding ManagementClickedCommand}"
+                    CommandParameter="{x:Static enum:ManagementType.RoutingConfigStatus}"
+                    ToolTip="{x:Static res:Res.StrRoutingConfigStatus}">
+                <Button.Content>
+                    <Image Height="24" Width="24" Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-01-composition_24x24.png"/>
+                </Button.Content>
+
+            </Button>
+
+            <Rectangle Grid.Row="1" 
+                       Style="{StaticResource HorizontalRectangle}"/>
+
+            <Button Grid.Row="2"
+                    Style="{StaticResource RectangleImageButton}"
+                    Command="{Binding ManagementClickedCommand}" 
+                    CommandParameter="{x:Static enum:ManagementType.Scenario}"
+                    ToolTip="{x:Static res:Res.StrScenario}">
+                <Button.Content>
+                    <Image Height="24" Width="24" Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-02-monitor_24x24.png"/>
+                </Button.Content>
+            </Button>
+
+            <Rectangle Grid.Row="3"
+                       Style="{StaticResource HorizontalRectangle}"/>
+
+            <Button Grid.Row="4"
+                    Style="{StaticResource RectangleImageButton}"
+                    Command="{Binding ManagementClickedCommand}" 
+                    CommandParameter="{x:Static enum:ManagementType.AlarmScenario}"
+                    ToolTip="{x:Static res:Res.StrAlarmScenario}">
+                <Button.Content>
+                    <Image Height="24" Width="24" Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-03-alarm_24x24.png"/>
+                </Button.Content>
+            </Button>
+
+            <Rectangle Grid.Row="5"
+                       Style="{StaticResource HorizontalRectangle}"/>
+
+            <Button Grid.Row="6"
+                    Style="{StaticResource RectangleImageButton}"
+                    Command="{Binding ManagementClickedCommand}" 
+                    CommandParameter="{x:Static enum:ManagementType.RecordingList}"
+                    ToolTip="{x:Static res:Res.StrRecordInquiry}">
+                <Button.Content>
+                    <Image Height="24" Width="24" Source="/DMS.Module.Management;component/Resource/Images/Blue/blue-ic-admin-06-rec_24x24.png"/>
+                </Button.Content>
+            </Button>
+
+            <Rectangle Grid.Row="7" 
+                       Style="{StaticResource HorizontalRectangle}"/>
+
+        </Grid>-->
+
+        <!-- 경계선 -->
+        <Rectangle Grid.Column="1" Style="{StaticResource VerticalRectangle}"/>
+        
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A2679F1-6802-4E53-86AA-04AC209F1C1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMS.Module.Management</RootNamespace>
+    <AssemblyName>DMS.Module.Management</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AXISMEDIACONTROLLib">
+      <HintPath>..\..\03.External\AxisCamera\AxInterop.AXISMEDIACONTROLLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.Designer.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Charts.Designer.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Charts.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.CodeParser.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Data.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.DataAccess.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Images.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Mvvm.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Office.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Pdf.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.PivotGrid.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Printing.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.RichEdit.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.RichEdit.v17.2.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Sparkline.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Charts.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Core.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Docking.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.DocumentViewer.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.DocumentViewer.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Grid.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Grid.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Layout.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.LayoutControl.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Printing.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Ribbon.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2016Colorful.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Themes.Office2016Colorful.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2016White.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Themes.Office2016White.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.VS2017Light.v17.2">
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Themes.VS2017Light.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpo.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.XtraCharts.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.XtraGauges.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.XtraReports.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2005">
+      <HintPath>..\..\03.External\AxisCamera\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AXISMEDIACONTROLLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AXISMEDIACONTROLLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AxisMediaParserLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AxisMediaParserLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AxisMediaViewerLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AxisMediaViewerLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AxisVideoTransformLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AxisVideoTransformLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\ActionNameConverter.cs" />
+    <Compile Include="Converters\TimeBookmarkPositionConverter.cs" />
+    <Compile Include="Converters\PlatteSomeColorConverter.cs" />
+    <Compile Include="Events\AlarmActionPropertiesCloseEvent.cs" />
+    <Compile Include="Events\AlarmActionPropertiesOpenEvent.cs" />
+    <Compile Include="Events\AlarmActionPropertiesSaveEvent.cs" />
+    <Compile Include="Events\IPCamRecordingTargetListCloseEvent.cs" />
+    <Compile Include="Events\IPCamRecordingTargetListOpenEvent.cs" />
+    <Compile Include="Events\IPCamRecordingTargetListSaveEvent.cs" />
+    <Compile Include="Events\AlarmScenarioTargetListOpenEvent.cs" />
+    <Compile Include="Events\AlarmScenarioTargetListCloseEvent.cs" />
+    <Compile Include="Events\AlarmScenarioTargetListSaveEvent.cs" />
+    <Compile Include="Events\ManagementSelectedEvent.cs" />
+    <Compile Include="Events\IPCamRecordPlayerCloseEvent.cs" />
+    <Compile Include="Events\AlarmScenarioPropertiesCloseEvent.cs" />
+    <Compile Include="Events\AlarmScenarioPropertiesOpenEvent.cs" />
+    <Compile Include="Events\AlarmScenarioPropertiesSaveEvent.cs" />
+    <Compile Include="Events\ScenarioPropertiesSaveEvent.cs" />
+    <Compile Include="Events\ScenarioPropertiesOpenEvent.cs" />
+    <Compile Include="Events\ScenarioPropertiesCloseEvent.cs" />
+    <Compile Include="Events\ActionPropertiesSaveEvent.cs" />
+    <Compile Include="Events\ActionPropertiesCloseEvent.cs" />
+    <Compile Include="Events\ActionPropertiesOpenEvent.cs" />
+    <Compile Include="Infrastructure\ConstantManager.cs" />
+    <Compile Include="Infrastructure\EnumManager.cs" />
+    <Compile Include="Infrastructure\ModuleSettingManager.cs" />
+    <Compile Include="Managers\IIPCamRecordingInquiryManager.cs" />
+    <Compile Include="Managers\IAlarmScenarioManagementManager.cs" />
+    <Compile Include="Managers\IScenarioManagementManager.cs" />
+    <Compile Include="Managers\IManagementFrameManager.cs" />
+    <Compile Include="Model\DmBaseInfoModel.cs" />
+    <Compile Include="Model\RestAPI\DmComponentProperty.cs" />
+    <Compile Include="Model\Recording\RecordAlarmModel.cs" />
+    <Compile Include="Model\Recording\Recording.cs" />
+    <Compile Include="Model\RestAPI\DmComponentMst.cs" />
+    <Compile Include="Model\RestAPI\DmRoutingConfigurationStatusModel.cs" />
+    <Compile Include="Model\CompSelectionModel.cs" />
+    <Compile Include="Model\TargetModel.cs" />
+    <Compile Include="Model\SelectionModel.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="Network\WebRequests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Res.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Res.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Res.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Res.ko-KR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.ko-KR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AlarmManagementViewModel.cs" />
+    <Compile Include="ViewModel\Recording\IPCamRecordPalyerViewModel.cs" />
+    <Compile Include="ViewModel\Recording\IPCamRecordInquiryViewModel.cs" />
+    <Compile Include="ViewModel\RoutingConfigStatusViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\ActionItemViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\AlarmScenarioTargetListViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\AlarmActionPropertiesViewModel.cs" />
+    <Compile Include="ViewModel\ManagementFrameViewModel.cs" />
+    <Compile Include="ViewModel\ManagementListViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\AlarmScenarioListViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\AlarmScenarioManagementViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\AlarmScenarioPropertiesViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\AlarmScenarioMappingCheckableItemViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\AlarmScenarioTargetItemViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\ScenarioItemViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\ScenarioPropertiesViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\ActionPropertiesViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\ScenarioListViewModel.cs" />
+    <Compile Include="ViewModel\Scenario\ScenarioManagementViewModel.cs" />
+    <Compile Include="View\AlarmManagementView.xaml.cs">
+      <DependentUpon>AlarmManagementView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Recording\IPCamRecordPalyerView.xaml.cs">
+      <DependentUpon>IPCamRecordPalyerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Recording\IPCamRecordInquiryView.xaml.cs">
+      <DependentUpon>IPCamRecordInquiryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Items\RecordAlarmItem.xaml.cs">
+      <DependentUpon>RecordAlarmItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Popups\RecordAlarmPopup.xaml.cs">
+      <DependentUpon>RecordAlarmPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoutingConfigStatusView.xaml.cs">
+      <DependentUpon>RoutingConfigStatusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\AlarmActionPropertiesView.xaml.cs">
+      <DependentUpon>AlarmActionPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\ActionPropertiesView.xaml.cs">
+      <DependentUpon>ActionPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\AlarmScenarioTargetListView.xaml.cs">
+      <DependentUpon>AlarmScenarioTargetListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\AlarmScenarioListView.xaml.cs">
+      <DependentUpon>AlarmScenarioListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManagementFrameView.xaml.cs">
+      <DependentUpon>ManagementFrameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManagementListView.xaml.cs">
+      <DependentUpon>ManagementListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\ScenarioListView.xaml.cs">
+      <DependentUpon>ScenarioListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\ScenarioManagementView.xaml.cs">
+      <DependentUpon>ScenarioManagementView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\AlarmScenarioPropertiesView.xaml.cs">
+      <DependentUpon>AlarmScenarioPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\ScenarioPropertiesView.xaml.cs">
+      <DependentUpon>ScenarioPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Scenario\AlarmScenarioManagementView.xaml.cs">
+      <DependentUpon>AlarmScenarioManagementView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Global.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionaries\DataTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\ImageResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AlarmManagementView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Recording\IPCamRecordPalyerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Recording\IPCamRecordInquiryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Items\RecordAlarmItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Popups\RecordAlarmPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RoutingConfigStatusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Scenario\AlarmActionPropertiesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Scenario\ActionPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Scenario\AlarmScenarioTargetListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Scenario\AlarmScenarioListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ManagementFrameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ManagementListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Scenario\ScenarioListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Scenario\ScenarioManagementView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Scenario\AlarmScenarioPropertiesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Scenario\ScenarioPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Scenario\AlarmScenarioManagementView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Res.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Res.ja-JP.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.ja-JP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Res.ko-KR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.ko-KR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Res.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Res.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-add_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-add_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-add_72x72.png" />
+    <Resource Include="Resource\Images\ImgFind_16x16.png" />
+    <Resource Include="Resource\Images\ImgFind_32x32.png" />
+    <Resource Include="Resource\Images\ImgClose_16x16.png" />
+    <Resource Include="Resource\Images\ImgClose_32x32.png" />
+    <Resource Include="Resource\Images\ImgDelete_16x16.png" />
+    <Resource Include="Resource\Images\ImgDelete_32x32.png" />
+    <Resource Include="Resource\Images\ImgCancel_16x16.png" />
+    <Resource Include="Resource\Images\ImgCancel_32x32.png" />
+    <Resource Include="Resource\Images\ImgAdd_16x16.png" />
+    <Resource Include="Resource\Images\ImgAdd_32x32.png" />
+    <Resource Include="Resource\Images\ImgNext_16x16.png" />
+    <Resource Include="Resource\Images\ImgNext_32x32.png" />
+    <Resource Include="Resource\Images\ImgPrevious_16x16.png" />
+    <Resource Include="Resource\Images\ImgPrevious_32x32.png" />
+    <Resource Include="Resource\Images\ImgShow_16x16.png" />
+    <Resource Include="Resource\Images\ImgShow_32x32.png" />
+    <Resource Include="Resource\Images\ImgSave_16x16.png" />
+    <Resource Include="Resource\Images\ImgSave_32x32.png" />
+    <Resource Include="Resource\Images\ImgProperties_16x16.png" />
+    <Resource Include="Resource\Images\ImgProperties_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgProcess.png" />
+    <Resource Include="Resource\Images\ImgSensor.png" />
+    <Resource Include="Resource\Images\ImgUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgCopy_16x16.png" />
+    <Resource Include="Resource\Images\ImgCopy_32x32.png" />
+    <Resource Include="Resource\Images\ImgModify.png" />
+    <Resource Include="Resource\Images\ImgTrash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgRefresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgRefresh_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="AxisCamera.mft, Version=0.1.4.0, Type=win32">
+      <Name>AxisCamera.mft.manifest</Name>
+      <HintPath>..\..\03.External\AxisCamera\AxisCamera.mft.manifest</HintPath>
+    </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgCalculator_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgDiagram_64x64.png" />
+    <Resource Include="Resource\Images\ImgWatch_32x32.png" />
+    <Resource Include="Resource\Images\ImgUnkownSettings_32x32.png" />
+    <Resource Include="Resource\Images\ImgUnkownSettings_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgDebugging_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgRouting_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgActiveAction_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgFailed_32x32.png" />
+    <Resource Include="Resource\Images\ImgOutput_32x32.png" />
+    <Resource Include="Resource\Images\ImgSuccess_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgInput_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\ImgQuestion_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-02-monitor_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-02-monitor_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-02-monitor_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-03-alarm_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-03-alarm_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-03-alarm_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-04-rule_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-04-rule_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-04-rule_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-05-i-pcamera_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-05-i-pcamera_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-05-i-pcamera_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-06-rec_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-06-rec_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-06-rec_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-07-3-color_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-07-3-color_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-menufold_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-menufold_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-menufold_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-01-composition_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-01-composition_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-admin-01-composition_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-none-admin_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-none-admin_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-none-admin_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-none-monitoring_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-none-monitoring_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-none-monitoring_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-sel-admin_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-sel-admin_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-sel-admin_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-sel-monitoring_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-sel-monitoring_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-sel-monitoring_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\logo_120x44.png" />
+    <Resource Include="Resource\Images\Blue\logo_240x88.png" />
+    <Resource Include="Resource\Images\Blue\logo_360x142.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-ptint_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-ptint_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-ptint_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-refresh_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-refresh_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-refresh_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-down_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-down_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-down_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-remove_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-remove_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-remove_72x72.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-up_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-up_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-up_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-search_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-search_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-search_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\Blue\blue-ic-set_24x24.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-set_48x48.png" />
+    <Resource Include="Resource\Images\Blue\blue-ic-set_72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\coever.lib.axis.core\Coever.Lib.Axis.Core.csproj">
+      <Project>{b3baeb31-6216-407f-9609-073f490cb32b}</Project>
+      <Name>Coever.Lib.Axis.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.alarmstate.core\Coever.Lib.CoPlatform.AlarmState.Core.csproj">
+      <Project>{638a1bb8-ec66-4c45-a5d6-427daed8566a}</Project>
+      <Name>Coever.Lib.CoPlatform.AlarmState.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.core\Coever.Lib.CoPlatform.Core.csproj">
+      <Project>{21a397ef-35fd-41ac-8fd4-7644a268bcd1}</Project>
+      <Name>Coever.Lib.CoPlatform.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.ipcam.core\Coever.Lib.CoPlatform.IPCam.Core.csproj">
+      <Project>{da935408-7e7c-4fb7-9319-8d7083907b4c}</Project>
+      <Name>Coever.Lib.CoPlatform.IPCam.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.scenario.core\Coever.Lib.CoPlatform.Scenario.Core.csproj">
+      <Project>{41616c14-8ed9-483b-a66a-e84ed79de18a}</Project>
+      <Name>Coever.Lib.CoPlatform.Scenario.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.core\Coever.Lib.Core.csproj">
+      <Project>{7b49cb8d-b3b4-4f08-a4ae-8efb1c77c633}</Project>
+      <Name>Coever.Lib.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.mqtt.core\Coever.Lib.Mqtt.Core.csproj">
+      <Project>{92f442b6-4ddd-47ce-8d63-40e3026bb219}</Project>
+      <Name>Coever.Lib.Mqtt.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.wf.axis\Coever.Lib.WF.Axis.csproj">
+      <Project>{bece3579-75a5-4686-b1c4-980fe7d38678}</Project>
+      <Name>Coever.Lib.WF.Axis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.wpf.axis\Coever.Lib.WPF.Axis.csproj">
+      <Project>{c3ec101c-90fb-4cd7-8457-ecf1e53c6543}</Project>
+      <Name>Coever.Lib.WPF.Axis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.wpf.core\Coever.Lib.WPF.Core.csproj">
+      <Project>{686bc368-a67a-4374-b0a4-e1bacf8d6a2a}</Project>
+      <Name>Coever.Lib.WPF.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMS.Module.EnvironmentSetting\DMS.Module.EnvironmentSetting.csproj">
+      <Project>{fe637b7b-41aa-4761-ae52-e999136c2b35}</Project>
+      <Name>DMS.Module.EnvironmentSetting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMS.Module.Map\DMS.Module.Map.csproj">
+      <Project>{288130b9-6d9b-4f12-ad11-487482051949}</Project>
+      <Name>DMS.Module.Map</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismWPF.Common\PrismWPF.Common.csproj">
+      <Project>{5f4030c6-0ab1-465b-9322-2f8740ec9832}</Project>
+      <Name>PrismWPF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\prismwpf.control\PrismWPF.Control.csproj">
+      <Project>{00e22dd2-918b-406a-8a60-9d490961b7a5}</Project>
+      <Name>PrismWPF.Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator">
+      <Version>2.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="M2Mqtt">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

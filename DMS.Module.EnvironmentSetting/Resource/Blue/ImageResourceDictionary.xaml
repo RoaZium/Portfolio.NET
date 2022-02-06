@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!-- 닫기 -->
+    <DrawingImage x:Key="xblue_ic_closeDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF254264" Geometry="F0 M24,24z M0,0z M17,8.007L15.993,7 12,10.993 8.007,7 7,8.007 10.993,12 7,15.993 8.007,17 12,13.007 15.993,17 17,15.993 13.007,12z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--닫기모듈-Black-->
+    <DrawingImage x:Key="bla_ic_closeDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M17,8.007L15.993,7 12,10.993 8.007,7 7,8.007 10.993,12 7,15.993 8.007,17 12,13.007 15.993,17 17,15.993 13.007,12z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+</ResourceDictionary>

@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_AlarmStatePropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AlarmStateM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="알람 상태" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+                    <!--배경색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="배경색" />
+
+                    <!--보기-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="보기" />
+
+                    <!--불투명-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="불투명" />
+
+                    <!--알람-배경색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="알람-배경색" />
+
+                    <!--알람-테두리-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="알람-테두리" />
+
+                    <!--알람-정상-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="알람-정상" />
+                    
+                    <!--RadiusX-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="RadiusX" />
+
+                    <!--RadiusY-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="RadiusY" />
+
+                    <!--테두리 두께-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 두께" />
+
+                    <!--테두리 색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 색" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--배경색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Text="{Binding ComponentMst.PropertyM.AlarmStateM.Fill}"
+                      Foreground="{Binding ComponentMst.PropertyM.AlarmStateM.Fill}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.AlarmStateM.Fill}" />
+
+                    <!--보기-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                              ItemsSource="{Binding Source={StaticResource sVisibilityArray}}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.AlarmStateM.Visibility}" />
+
+                    <!--불투명-->
+                    <ComboBox Style="{StaticResource xComboBox_OpacityArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.AlarmStateM.Opacity}" />
+
+                    <!--알람-배경색-->
+                    <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                      IsChecked="{Binding ComponentMst.PropertyM.AlarmStateM.BackgroundAlarmVisibility}" />
+
+                    <!--알람-테두리-->
+                    <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                      IsChecked="{Binding ComponentMst.PropertyM.AlarmStateM.BorderAlarmVisibility}" />
+
+                    <!--알람-정상-->
+                    <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                              IsChecked="{Binding ComponentMst.PropertyM.AlarmStateM.NormalAlarmVisibility}" />
+                    
+                    <!--RadiusX-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                             Text="{Binding ComponentMst.PropertyM.AlarmStateM.RadiusX}" />
+
+                    <!--RadiusY-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                             Text="{Binding ComponentMst.PropertyM.AlarmStateM.RadiusY}" />
+
+                    <!--테두리 두께-->
+                    <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.PropertyM.AlarmStateM.StrokeThickness}"
+                                TextType="Number" />
+
+                    <!--테두리 색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Foreground="{Binding ComponentMst.PropertyM.AlarmStateM.Stroke}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.AlarmStateM.Stroke}"
+                      Text="{Binding ComponentMst.PropertyM.AlarmStateM.Stroke}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

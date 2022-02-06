@@ -1,0 +1,126 @@
+﻿<UserControl x:Class="DMS.Module.Management.View.RecordAlarmPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Management.Properties"
+             xmlns:Converters="clr-namespace:DMS.Module.Management.Converters"
+             xmlns:common_converters="clr-namespace:PrismWPF.Common.Converter;assembly=PrismWPF.Common"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" Width="160">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Management;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Converters:PlatteSomeColorConverter x:Key="PlatteConverter"/>
+            <common_converters:SingleRangeConverter x:Key="singleRangeConverter" StartValue="1" EndValue="0.2"/>
+            <common_converters:MultiMultiplyConverter x:Key="multiMultiplyConverter"/>
+            <common_converters:MultiMinConverter x:Key="multiMinConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border
+        DockPanel.Dock="Left" CornerRadius="5" Padding="5" Background="{Binding Source={x:Static res:Res.ColorLightBlack_1}}"
+        BorderBrush="{Binding Source={x:Static res:Res.ColorLightGray_1}}" BorderThickness="1">
+        <StackPanel>
+            <TextBlock
+                HorizontalAlignment="Left"
+                Text="{Binding SensorName, FallbackValue='센서 이름'}"
+                Foreground="White"
+                FontSize="14"
+                FontWeight="Bold"
+                TextWrapping="Wrap"/>
+            <StackPanel Margin="0,8,0,0" Orientation="Horizontal">
+                <Grid Width="22" Height="22">
+                    <Ellipse
+                        x:Name="wave1" Height="{Binding Width, RelativeSource={RelativeSource Self}, Mode=OneWay}"
+                        Fill="{Binding AlarmLevel, Converter={StaticResource xAlarmStateColorConverter}}">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <Style.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding BlinkLevel}"
+                                        Value="1">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                        <Ellipse.Tag>
+                            <sys:Double>0</sys:Double>
+                        </Ellipse.Tag>
+                        <Ellipse.Width>
+                            <MultiBinding Converter="{StaticResource multiMultiplyConverter}">
+                                <Binding Path="ActualWidth" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}"/>
+                                <Binding Path="Tag" RelativeSource="{RelativeSource Self}"/>
+                            </MultiBinding>
+                        </Ellipse.Width>
+                        <Ellipse.Opacity>
+                            <Binding Path="Tag" RelativeSource="{RelativeSource Self}" Converter="{StaticResource singleRangeConverter}"/>
+                        </Ellipse.Opacity>
+                        <Ellipse.Triggers>
+                            <EventTrigger SourceName="wave1" RoutedEvent="Loaded">
+                                <BeginStoryboard Name="wave1_storyboard">
+                                    <Storyboard Storyboard.TargetName="wave1" Storyboard.TargetProperty="Tag">
+                                        <DoubleAnimation From="0" To="1" Duration="0:0:2" RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger SourceName="wave1" RoutedEvent="Unloaded">
+                                <StopStoryboard BeginStoryboardName="wave1_storyboard" />
+                            </EventTrigger>
+                        </Ellipse.Triggers>
+                    </Ellipse>
+                    <Ellipse
+                        x:Name="wave2" Height="{Binding Width, RelativeSource={RelativeSource Self}, Mode=OneWay}"
+                        Fill="{Binding AlarmLevel, Converter={StaticResource xAlarmStateColorConverter}}">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding BlinkLevel}"
+                                        Value="1">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                        <Ellipse.Tag>
+                            <sys:Double>0</sys:Double>
+                        </Ellipse.Tag>
+                        <Ellipse.Width>
+                            <MultiBinding Converter="{StaticResource multiMultiplyConverter}">
+                                <Binding Path="ActualWidth" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}"/>
+                                <Binding Path="Tag" RelativeSource="{RelativeSource Self}"/>
+                            </MultiBinding>
+                        </Ellipse.Width>
+                        <Ellipse.Opacity>
+                            <Binding Path="Tag" RelativeSource="{RelativeSource Self}" Converter="{StaticResource singleRangeConverter}"/>
+                        </Ellipse.Opacity>
+                        <Ellipse.Triggers>
+                            <EventTrigger SourceName="wave2" RoutedEvent="Loaded">
+                                <BeginStoryboard Name="wave2_storyboard">
+                                    <Storyboard Storyboard.TargetName="wave2" Storyboard.TargetProperty="Tag">
+                                        <DoubleAnimation From="0" To="1" Duration="0:0:0.5" RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger SourceName="wave2" RoutedEvent="Unloaded">
+                                <StopStoryboard BeginStoryboardName="wave2_storyboard" />
+                            </EventTrigger>
+                        </Ellipse.Triggers>
+                    </Ellipse>
+                </Grid>
+                <TextBlock
+                    Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12"
+                    Text="{Binding AlarmTime, FallbackValue='2019-11-12 13:02:33', StringFormat={}{0:yyyy-MM-dd HH:mm:ss}}"
+                    Foreground="White"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

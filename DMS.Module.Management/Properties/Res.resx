@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ImgAdd_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgAdd_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgAdd_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgAdd_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgCancel_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgCancel_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgCancel_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgCancel_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgClose_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgClose_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgClose_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgClose_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgDelete_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgDelete_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgDelete_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgDelete_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgFind_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgFind_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgFind_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgFind_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgNext_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgNext_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgNext_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgNext_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgPrevious_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgPrevious_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgPrevious_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgPrevious_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgProperties_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgProperties_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgProperties_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgProperties_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgSave_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgSave_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgSave_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgSave_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgShow_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgShow_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgShow_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Images\ImgShow_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgCantChangeTypeWhileEdittingScenario" xml:space="preserve">
+    <value>You can not change scenario type while editing a scenario.</value>
+  </data>
+  <data name="MsgCantSaveScenarioWhileEdittingAction" xml:space="preserve">
+    <value>Scenarios can not be saved while editing an action.</value>
+  </data>
+  <data name="MsgCantSaveScenarioWhileEdittingSensorList" xml:space="preserve">
+    <value>Scenarios can not be saved while editing an sensors.</value>
+  </data>
+  <data name="MsgFailedDeleteReq" xml:space="preserve">
+    <value>The deletion request failed.</value>
+  </data>
+  <data name="MsgFailedSaveReq" xml:space="preserve">
+    <value>The save request failed.</value>
+  </data>
+  <data name="MsgPleaseCompleateNewAction" xml:space="preserve">
+    <value>Please compleate the new action</value>
+  </data>
+  <data name="MsgPleaseSelectActionsType" xml:space="preserve">
+    <value>Please select action's type</value>
+  </data>
+  <data name="MsgPleaseSelectLayout" xml:space="preserve">
+    <value>Please select layout</value>
+  </data>
+  <data name="MsgPleaseSetActionProerties" xml:space="preserve">
+    <value>Please set the action properties</value>
+  </data>
+  <data name="StrActionNameAlarmLayout" xml:space="preserve">
+    <value>Go to alarm occurrence layout</value>
+  </data>
+  <data name="StrActionNameLayout" xml:space="preserve">
+    <value>Go to Layout</value>
+  </data>
+  <data name="StrActionProperties" xml:space="preserve">
+    <value>Action Properties</value>
+  </data>
+  <data name="StrActionTypeAlarmLayout" xml:space="preserve">
+    <value>Go to alarm occurrence layout</value>
+  </data>
+  <data name="StrActionTypeLayout" xml:space="preserve">
+    <value>Go to Layout</value>
+  </data>
+  <data name="StrAlarmScenario" xml:space="preserve">
+    <value>Alarm Scenario</value>
+  </data>
+  <data name="StrConfigureActions" xml:space="preserve">
+    <value>Configure Actions</value>
+  </data>
+  <data name="StrInfoIncorrect" xml:space="preserve">
+    <value>Scenario information is incorrect.</value>
+  </data>
+  <data name="StrInvalidActon" xml:space="preserve">
+    <value>Invalid action</value>
+  </data>
+  <data name="StrMonitoringScenario" xml:space="preserve">
+    <value>Monitoring scenario</value>
+  </data>
+  <data name="StrName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="StrScenario" xml:space="preserve">
+    <value>Scenario</value>
+  </data>
+  <data name="StrScenarioList" xml:space="preserve">
+    <value>Scenario List</value>
+  </data>
+  <data name="StrScenarioProperties" xml:space="preserve">
+    <value>Scenario Properties</value>
+  </data>
+  <data name="StrSelectSensors" xml:space="preserve">
+    <value>Select Sensors</value>
+  </data>
+  <data name="StrSensors" xml:space="preserve">
+    <value>Sensors</value>
+  </data>
+  <data name="StrTargetSensor" xml:space="preserve">
+    <value>Target sensor</value>
+  </data>
+  <data name="StrTimeSecond" xml:space="preserve">
+    <value>Time(sec)</value>
+  </data>
+  <data name="StrUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="StrIPCam" xml:space="preserve">
+    <value>IP Camera</value>
+  </data>
+  <data name="MsgPleaseCompleateNewArea" xml:space="preserve">
+    <value>Please compleate the new area</value>
+  </data>
+  <data name="NameIPCameraType_PANO_360" xml:space="preserve">
+    <value>360° Panorama</value>
+  </data>
+  <data name="StrAccount" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="StrAreaSettings" xml:space="preserve">
+    <value>Area settings</value>
+  </data>
+  <data name="StrCameraOrientation" xml:space="preserve">
+    <value>Camera orientaion</value>
+  </data>
+  <data name="StrCameraSettings" xml:space="preserve">
+    <value>Camera settings</value>
+  </data>
+  <data name="StrCameraType" xml:space="preserve">
+    <value>Camera type</value>
+  </data>
+  <data name="StrCeiling" xml:space="preserve">
+    <value>Ceiling</value>
+  </data>
+  <data name="StrConnectionSettings" xml:space="preserve">
+    <value>Connection settings</value>
+  </data>
+  <data name="StrDetailSettings" xml:space="preserve">
+    <value>Camera detail settings</value>
+  </data>
+  <data name="StrFloor" xml:space="preserve">
+    <value>Floor</value>
+  </data>
+  <data name="StrIPAddress" xml:space="preserve">
+    <value>IP address</value>
+  </data>
+  <data name="StrPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="StrWall" xml:space="preserve">
+    <value>Wall</value>
+  </data>
+  <data name="MsgDuplicateAreaName" xml:space="preserve">
+    <value>An area with the same name already exists.
+Would you overwrite it?</value>
+  </data>
+  <data name="MsgFailedConnectIPCam" xml:space="preserve">
+    <value>Failed to connect to IP camera.
+Please check your connection settings.</value>
+  </data>
+  <data name="StrAddArea" xml:space="preserve">
+    <value>Add area</value>
+  </data>
+  <data name="StrAreaRegistration" xml:space="preserve">
+    <value>Area registration</value>
+  </data>
+  <data name="StrDuplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="MsgCantSaveIPCamWhileEdittingArea" xml:space="preserve">
+    <value>IP camera can not be saved while editing an area.</value>
+  </data>
+  <data name="MsgChangeTypeAreaRemove" xml:space="preserve">
+    <value>If you change the camera type, you can not use the existing area you set.
+Is it ok?</value>
+  </data>
+  <data name="MsgPleaseSelectCameraType" xml:space="preserve">
+    <value>Please select camera's type</value>
+  </data>
+  <data name="NameIPCameraType_FLAT" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="MsgPleaseSelectArea" xml:space="preserve">
+    <value>Please select area</value>
+  </data>
+  <data name="MsgPleaseSelectIPCamComponent" xml:space="preserve">
+    <value>Please select ip camera component</value>
+  </data>
+  <data name="StrActionNameIPCamComponent" xml:space="preserve">
+    <value>Go to camera component</value>
+  </data>
+  <data name="StrActionTypeIPCamComponent" xml:space="preserve">
+    <value>Go to ip camera component</value>
+  </data>
+  <data name="StrArea" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="StrAreaNameOfNull" xml:space="preserve">
+    <value>Main area</value>
+  </data>
+  <data name="StrCenterValue" xml:space="preserve">
+    <value>Center value</value>
+  </data>
+  <data name="StrComparisonValue" xml:space="preserve">
+    <value>Comparison value</value>
+  </data>
+  <data name="StrOption" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="StrNumber" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="StrLightBarTitle" xml:space="preserve">
+    <value>Tri-color LED alarm settings</value>
+  </data>
+  <data name="StrLeftOperand" xml:space="preserve">
+    <value>Left operand</value>
+  </data>
+  <data name="StrOperator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="StrRightOperand" xml:space="preserve">
+    <value>Right operand</value>
+  </data>
+  <data name="StrValue" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="StrVariable" xml:space="preserve">
+    <value>Variable</value>
+  </data>
+  <data name="StrVariableName" xml:space="preserve">
+    <value>Variable name to create</value>
+  </data>
+  <data name="AlarmTimeStamp" xml:space="preserve">
+    <value>AlarmTimeStamp</value>
+  </data>
+  <data name="StrControlLimit" xml:space="preserve">
+    <value>Control Limit</value>
+  </data>
+  <data name="StrControlLimitHigh" xml:space="preserve">
+    <value>Control Limit Max</value>
+  </data>
+  <data name="StrControlLimitLow" xml:space="preserve">
+    <value>Control Limit Min</value>
+  </data>
+  <data name="StrCurrentState" xml:space="preserve">
+    <value>Current State</value>
+  </data>
+  <data name="StrCurrentValue" xml:space="preserve">
+    <value>Current Value</value>
+  </data>
+  <data name="StrLastMonthState" xml:space="preserve">
+    <value>Last Month State</value>
+  </data>
+  <data name="StrLimit" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="StrLimitHigh" xml:space="preserve">
+    <value>Limit Max</value>
+  </data>
+  <data name="StrLimitLow" xml:space="preserve">
+    <value>Limit Min</value>
+  </data>
+  <data name="StrModify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="StrPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="StrProcessCode" xml:space="preserve">
+    <value>Process Code</value>
+  </data>
+  <data name="StrProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="StrRefresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="StrRoutingConfigStatus" xml:space="preserve">
+    <value>Routing config status</value>
+  </data>
+  <data name="StrSensor" xml:space="preserve">
+    <value>Sensor</value>
+  </data>
+  <data name="StrSensorCode" xml:space="preserve">
+    <value>Sensor Code</value>
+  </data>
+  <data name="StrSensorName" xml:space="preserve">
+    <value>Sensor Name</value>
+  </data>
+  <data name="StrSensorUnit" xml:space="preserve">
+    <value>Measure Unit</value>
+  </data>
+  <data name="MsgFailedLoadProcessList" xml:space="preserve">
+    <value>Failed to load process list.</value>
+  </data>
+  <data name="MsgIncorrectInput" xml:space="preserve">
+    <value>The input value is invalid.</value>
+  </data>
+  <data name="MsgInsertSensorFailed" xml:space="preserve">
+    <value>Addition failed. Please make sure that the sensor code is not duplicated and that the data you entered is correct.</value>
+  </data>
+  <data name="MsgModifySensorFailed" xml:space="preserve">
+    <value>Modication failed. Please make sure that the sensor code is not duplicated and that the data you entered is correct.</value>
+  </data>
+  <data name="MsgProcessDidnSelected" xml:space="preserve">
+    <value>Please select a process.</value>
+  </data>
+  <data name="MsgRemoveSensorFailed" xml:space="preserve">
+    <value>Remove failed. Please make sure the sensor has already been deleted.</value>
+  </data>
+  <data name="MsgSensorCodeDidnEnter" xml:space="preserve">
+    <value>Please enter the sensor code.</value>
+  </data>
+  <data name="MsgSensorNameDidnEnter" xml:space="preserve">
+    <value>Please enter the sensor name.</value>
+  </data>
+  <data name="MsgSensorRemove" xml:space="preserve">
+    <value>Please enter the code "{0}" for the item to delete it.</value>
+  </data>
+  <data name="StrCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="StrDecimalPlaces" xml:space="preserve">
+    <value>Decimal Places</value>
+  </data>
+  <data name="StrEditSensor" xml:space="preserve">
+    <value>Edit Sensor</value>
+  </data>
+  <data name="StrOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="StrRemoveSensor" xml:space="preserve">
+    <value>Remove Sensor</value>
+  </data>
+  <data name="StrSerialNumber" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="StrSortOrder" xml:space="preserve">
+    <value>Sort Order</value>
+  </data>
+  <data name="StrType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="StrCategoricalSensor" xml:space="preserve">
+    <value>Categorical Sensor</value>
+  </data>
+  <data name="StrNumericalSensor" xml:space="preserve">
+    <value>Numerical Sensor</value>
+  </data>
+  <data name="StrProcess" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="MsgNotSelectedItem" xml:space="preserve">
+    <value>No items selected.</value>
+  </data>
+  <data name="StrAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="StrPMSType" xml:space="preserve">
+    <value>PMS</value>
+  </data>
+  <data name="StrRoutingConfigCode" xml:space="preserve">
+    <value>Routing Config Code</value>
+  </data>
+  <data name="StrRoutingConfigName" xml:space="preserve">
+    <value>Routing Config Name</value>
+  </data>
+  <data name="StrUSERType" xml:space="preserve">
+    <value>USER</value>
+  </data>
+  <data name="ImgCopy_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgcopy_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgCopy_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgcopy_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgPleaseSetTrigger" xml:space="preserve">
+    <value>Please set trigger.</value>
+  </data>
+  <data name="MsgCantDeleteEditingItem" xml:space="preserve">
+    <value>The item you are editing can not be deleted.</value>
+  </data>
+  <data name="MsgFailedLoadData" xml:space="preserve">
+    <value>Failed to load data.</value>
+  </data>
+  <data name="MsgFailedLoadSensorInfo" xml:space="preserve">
+    <value>Failed to get sensor information from the server.</value>
+  </data>
+  <data name="MsgPleaseCompleateEditItem" xml:space="preserve">
+    <value>Please compleate editing item.</value>
+  </data>
+  <data name="StrAlertStateName_0" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StrAlertStateName_1" xml:space="preserve">
+    <value>Abnormal</value>
+  </data>
+  <data name="StrAlertStateName_2" xml:space="preserve">
+    <value>Danger</value>
+  </data>
+  <data name="StrAlertStateName_900" xml:space="preserve">
+    <value>Stoped</value>
+  </data>
+  <data name="StrFlashingStateName_0" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StrFlashingStateName_1" xml:space="preserve">
+    <value>Fast</value>
+  </data>
+  <data name="StrAbnormal" xml:space="preserve">
+    <value>Abnormal</value>
+  </data>
+  <data name="StrCondition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="StrConditionVariable" xml:space="preserve">
+    <value>Condition variable</value>
+  </data>
+  <data name="StrCountingCondition_COMP" xml:space="preserve">
+    <value>Comparison</value>
+  </data>
+  <data name="StrCountingCondition_NONE" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="StrCountingCondition_RORF" xml:space="preserve">
+    <value>Rise or Fall</value>
+  </data>
+  <data name="StrCountingCondition_ZIZG" xml:space="preserve">
+    <value>ZigZag</value>
+  </data>
+  <data name="StrDanger" xml:space="preserve">
+    <value>Danger</value>
+  </data>
+  <data name="StrFast" xml:space="preserve">
+    <value>Fast</value>
+  </data>
+  <data name="StrSpeed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="StrState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="StrStop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="StrTrigger" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="Str_RORF_OptionName_BOTH" xml:space="preserve">
+    <value>Increases or Decreases</value>
+  </data>
+  <data name="Str_RORF_OptionName_CLIMB" xml:space="preserve">
+    <value>Only increases</value>
+  </data>
+  <data name="Str_RORF_OptionName_FALL" xml:space="preserve">
+    <value>Only Decreases</value>
+  </data>
+  <data name="StrEquipmentCode" xml:space="preserve">
+    <value>Equipment Code</value>
+  </data>
+  <data name="StrEquipmentName" xml:space="preserve">
+    <value>Equipment Name</value>
+  </data>
+  <data name="StrWorkCenterCode" xml:space="preserve">
+    <value>WorkCenter Code</value>
+  </data>
+  <data name="StrWorkCenterName" xml:space="preserve">
+    <value>WorkCenter Name</value>
+  </data>
+  <data name="StrAddSensor" xml:space="preserve">
+    <value>Add Sensor</value>
+  </data>
+  <data name="ColorBorder_1" xml:space="preserve">
+    <value>#FFA0A0A0</value>
+  </data>
+  <data name="StrCalcSensor" xml:space="preserve">
+    <value>Calc Sensor</value>
+  </data>
+  <data name="StrEndTime" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="StrLength" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="StrOffset" xml:space="preserve">
+    <value>Offset</value>
+  </data>
+  <data name="StrPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="StrRange" xml:space="preserve">
+    <value>StrRange</value>
+  </data>
+  <data name="StrStartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="StrTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="ImgRefresh_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgrefresh_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgRefresh_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgrefresh_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgIsOkRemoveItem" xml:space="preserve">
+    <value>Deleted items cannot be recovered. Are you sure you want to delete?</value>
+  </data>
+  <data name="StrIsUse" xml:space="preserve">
+    <value>Is use</value>
+  </data>
+  <data name="StrRemoveItem" xml:space="preserve">
+    <value>Remove item</value>
+  </data>
+  <data name="MsgWarningRefresh" xml:space="preserve">
+    <value>When you refresh, the contents you are currently modifying will disappear.
+Do you want to refresh?</value>
+  </data>
+  <data name="StrBaseTime" xml:space="preserve">
+    <value>Base time</value>
+  </data>
+  <data name="StrInputTime" xml:space="preserve">
+    <value>Input time</value>
+  </data>
+  <data name="StrOperations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="StrTimeSpan" xml:space="preserve">
+    <value>Span</value>
+  </data>
+  <data name="StrTimeSpanType" xml:space="preserve">
+    <value>Span type</value>
+  </data>
+  <data name="StrTimeSpanTypeName_DAY" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="StrTimeSpanTypeName_HOUR" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="StrTimeSpanTypeName_MINUTE" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="StrTimeSpanTypeName_MONTH" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="StrTimeSpanTypeName_SECOND" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="StrTimeSpanTypeName_WEEK" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="StrTimeSpanTypeName_YEAR" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="NameIPCameraType_PTZ" xml:space="preserve">
+    <value>PTZ</value>
+  </data>
+  <data name="MsgWarnPTZControl" xml:space="preserve">
+    <value>If you control the position of the PTZ camera, It may be disturb other users who are observing the scene with this camera.</value>
+  </data>
+  <data name="StrEquipment1" xml:space="preserve">
+    <value>Equipment Name</value>
+  </data>
+  <data name="StrEquipment2" xml:space="preserve">
+    <value>Equipment Detail Name</value>
+  </data>
+  <data name="StrRecordingTargetSettings" xml:space="preserve">
+    <value>Recording target settings</value>
+  </data>
+  <data name="StrRecordInquiry" xml:space="preserve">
+    <value>Record inquiry</value>
+  </data>
+  <data name="StrInquiryRange" xml:space="preserve">
+    <value>Inquiry range</value>
+  </data>
+  <data name="StrCamera" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="MsgFailedLoadRecording" xml:space="preserve">
+    <value>Could not get information of the recording file.
+Do you want to remove the record from history?</value>
+  </data>
+  <data name="StrRemovePreItem" xml:space="preserve">
+    <value>Remove all previous items</value>
+  </data>
+  <data name="StrWarning" xml:space="preserve">
+    <value>Warning ! ! !</value>
+  </data>
+  <data name="StrReceivers" xml:space="preserve">
+    <value>Receivers</value>
+  </data>
+  <data name="MsgExceedTextLength" xml:space="preserve">
+    <value>Exceeded maximum text length.</value>
+  </data>
+  <data name="StrContents" xml:space="preserve">
+    <value>Contents</value>
+  </data>
+  <data name="StrSubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="StrUseVariables" xml:space="preserve">
+    <value>Use variables</value>
+  </data>
+  <data name="MsgFormatCheckNotCompatibleRutinesWithTrigger" xml:space="preserve">
+    <value>Rutines '{1}' are not compatible with the '{0}' trigger.
+Do you want to proceed?</value>
+  </data>
+  <data name="ColorLightBlack_1" xml:space="preserve">
+    <value>#FF3A3A3A</value>
+  </data>
+  <data name="ColorLightGray_1" xml:space="preserve">
+    <value>#FFC5C5C5</value>
+  </data>
+  <data name="ColorLightGray_2" xml:space="preserve">
+    <value>#FFDFDFDF</value>
+  </data>
+  <data name="ImgCalculator_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgcalculator_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColorCoral_1" xml:space="preserve">
+    <value>#FF7F50</value>
+  </data>
+  <data name="ColorOrangeRed_1" xml:space="preserve">
+    <value>#FF4500</value>
+  </data>
+  <data name="ColorRed_1" xml:space="preserve">
+    <value>#FF3500</value>
+  </data>
+  <data name="ImgActiveAction_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgactiveaction_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgDebugging_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgdebugging_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgRouting_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgrouting_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgUnkownSettings_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgunkownsettings_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgUnkownSettings_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgunkownsettings_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgWatch_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgwatch_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StrRun" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="StrTest" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="ImgFailed_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgfailed_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgInput_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imginput_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgOutput_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgoutput_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgSuccess_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgsuccess_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgFailedRequest" xml:space="preserve">
+    <value>The request failed.</value>
+  </data>
+  <data name="MsgIsResumeRequest" xml:space="preserve">
+    <value>The request is in progress.
+Do you want to restart the request?</value>
+  </data>
+  <data name="StrConditionResult" xml:space="preserve">
+    <value>Condition result</value>
+  </data>
+  <data name="StrRunningResults" xml:space="preserve">
+    <value>Running results</value>
+  </data>
+  <data name="StrRunningTime" xml:space="preserve">
+    <value>Running time</value>
+  </data>
+  <data name="ImgQuestion_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\images\imgquestion_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StrSec" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="StrActionEdit" xml:space="preserve">
+    <value>Action Edit</value>
+  </data>
+  <data name="StrSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="StrActionDetail" xml:space="preserve">
+    <value>Action Detail</value>
+  </data>
+  <data name="StrItem" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="StrActionType" xml:space="preserve">
+    <value>Action Type</value>
+  </data>
+  <data name="StrKeywardSearch" xml:space="preserve">
+    <value>Search Keyward</value>
+  </data>
+  <data name="StrKeywardDetail" xml:space="preserve">
+    <value>Detail Keyward</value>
+  </data>
+  <data name="MsgRangeNumError" xml:space="preserve">
+    <value>Please enter a number between 3 and 3600.</value>
+  </data>
+  <data name="StrCaution" xml:space="preserve">
+    <value>Caution</value>
+  </data>
+  <data name="StrCopy" xml:space="preserve">
+    <value>_Copy</value>
+  </data>
+  <data name="StrLayoutSearch" xml:space="preserve">
+    <value>Layout search</value>
+  </data>
+  <data name="StrNoname" xml:space="preserve">
+    <value>No name</value>
+  </data>
+  <data name="StrScenarioSearch" xml:space="preserve">
+    <value>Scenario Search</value>
+  </data>
+  <data name="StrSelectedItem" xml:space="preserve">
+    <value>Please select an item.</value>
+  </data>
+  <data name="StrActionSearch" xml:space="preserve">
+    <value>Action search</value>
+  </data>
+  <data name="StrCameraName" xml:space="preserve">
+    <value>Camera name</value>
+  </data>
+  <data name="MsgLimitCharacters" xml:space="preserve">
+    <value>Must be written within 50 characters.</value>
+  </data>
+</root>

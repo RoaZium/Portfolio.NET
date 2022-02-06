@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.EditableNavigationItem"
+             xmlns:extensions="clr-namespace:PrismWPF.Control;assembly=PrismWPF.Control"
+             xmlns:converter="clr-namespace:PrismWPF.Common.Converter;assembly=PrismWPF.Common"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             MouseDown="OnContainerMouseDown"
+             mc:Ignorable="d" x:Name="root">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converter:SingleInverseBooleanConverter x:Key="singleInverseBooleanConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Horizontal">
+        <TextBox Style="{StaticResource xListTextBox}"
+                 Text="{Binding Caption, ElementName=root}"
+                 IsReadOnly="{Binding IsEditMode, ElementName=root, Converter={StaticResource singleInverseBooleanConverter}}"
+                 Focusable="{Binding IsEditMode, ElementName=root}" 
+                 extensions:FocusExtension.IsFocused="{Binding IsEditMode, ElementName=root}"
+                 IsHitTestVisible="{Binding IsEditMode, ElementName=root}" 
+                 KeyDown="OnTextBoxKeyDown"
+                 LostFocus="OnLostFocus" 
+                 GotFocus="OnGotFocus">
+            
+        </TextBox>
+    </StackPanel>
+</UserControl>

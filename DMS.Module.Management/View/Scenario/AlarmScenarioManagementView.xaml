@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="DMS.Module.Management.View.AlarmScenarioManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Management.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Management;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="12"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="12"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="16"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="0" 
+                   Style="{StaticResource FontSize20TextBlock}"
+                   Text="{x:Static res:Res.StrAlarmScenario}"/>
+
+        <!-- 알람 시나리오 -->
+        <Grid Grid.Column="1" Grid.Row="1" DataContext="{Binding ScenarioListVM}">
+            <ContentPresenter Content="{Binding}"/>
+            
+        </Grid>
+
+        <!-- 알람 시나리오 속성 & 액션 수정 -->
+        <Grid Grid.Column="3" Grid.Row="1" 
+              Style="{StaticResource xScenarioGrid}"
+              DataContext="{Binding ScenarioPropVM}">
+
+            <ContentPresenter Content="{Binding}"/>
+        </Grid>
+
+        <Grid Grid.Column="5" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- 센서 선택 -->
+            <Grid x:Name="Grid01" Grid.Column="5"
+                  DataContext="{Binding TargetListVM}">
+                <Grid.Style>
+                    <Style TargetType="{x:Type Grid}">
+                        <Setter Property="Grid.Row" Value="0"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext, ElementName=Grid02}" Value="{x:Null}">
+                                <Setter Property="Grid.Row" Value="0"/>
+                                <Setter Property="Grid.RowSpan" Value="3"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+
+                <ContentPresenter Content="{Binding}"/>
+
+            </Grid>
+            
+            <!-- 액션 속성 -->
+            <Grid x:Name="Grid02" Grid.Column="5"
+                  DataContext="{Binding ActionPropVM}">
+                <Grid.Style>
+                    <Style TargetType="{x:Type Grid}">
+                        <Setter Property="Grid.Row" Value="2"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext, ElementName=Grid01}" Value="{x:Null}">
+                                <Setter Property="Grid.Row" Value="0"/>
+                                <Setter Property="Grid.RowSpan" Value="3"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+
+                <ContentPresenter Content="{Binding}"/>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

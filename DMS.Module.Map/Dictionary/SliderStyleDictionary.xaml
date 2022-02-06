@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="xSliderBase" TargetType="{x:Type Slider}">
+        <Setter Property="Minimum" Value="0.1" />
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1.5" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+        
+    <!--레이아웃 Zoom In/Out-->
+    <Style x:Key="xSlider_Zoom" TargetType="{x:Type Slider}" BasedOn="{StaticResource xSliderBase}">
+        <Setter Property="Maximum" Value="5" />
+        <Setter Property="LargeChange" Value="0.01" />
+        <Setter Property="SmallChange" Value="0.01" />
+    </Style>
+
+    <!--패널 투명도-->
+    <Style x:Key="xSlider_OpacityPanel" TargetType="{x:Type Slider}" BasedOn="{StaticResource xSliderBase}">
+        <Setter Property="Maximum" Value="1"/>
+        <Setter Property="LargeChange" Value="0.1" />
+        <Setter Property="SmallChange" Value="0.1" />
+    </Style>
+</ResourceDictionary>

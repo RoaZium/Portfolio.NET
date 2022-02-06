@@ -1,0 +1,169 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_LineSeriesChartPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:PropertyView="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <!--AxisX2D-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisX2DM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisX2D" />
+            </Expander.Header>
+
+            <PropertyView:AxisX2DPropertyView />
+        </Expander>
+
+        <!--AxisXLabel-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisXLabelM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisXLabel" />
+            </Expander.Header>
+
+            <PropertyView:AxisXLabelPropertyView />
+        </Expander>
+
+        <!--AxisXRange-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisXRangeM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisXRange" />
+            </Expander.Header>
+
+            <PropertyView:AxisXRangePropertyView />
+        </Expander>
+
+        <!--AxisXTitle-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisXTitleM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisXTitle" />
+            </Expander.Header>
+
+            <PropertyView:AxisXTitlePropertyView />
+        </Expander>
+
+        <!--AxisY2D-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisY2DM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisY2D" />
+            </Expander.Header>
+
+            <PropertyView:AxisY2DPropertyView />
+        </Expander>
+
+        <!--AxisYLabel-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisYLabelM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisYLabel" />
+            </Expander.Header>
+
+            <PropertyView:AxisYLabelPropertyView />
+        </Expander>
+
+        <!--AxisYRange-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisYRangeM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisYRange" />
+            </Expander.Header>
+
+            <PropertyView:AxisYRangePropertyView />
+        </Expander>
+
+        <!--AxisYTitle-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AxisYTitleM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AxisYTitle" />
+            </Expander.Header>
+
+            <PropertyView:AxisYTitlePropertyView />
+        </Expander>
+
+        <!--ChartControl-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.ChartControlM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="ChartControl" />
+            </Expander.Header>
+
+            <PropertyView:ChartControlPropertyView />
+        </Expander>
+
+        <!--Legend-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.LegendM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="Legend" />
+            </Expander.Header>
+
+            <PropertyView:LegendPropertyView />
+        </Expander>
+
+        <!--LineSeries2D-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.LineSeries2DM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="LineSeries2D" />
+            </Expander.Header>
+
+            <PropertyView:LineSeries2DPropertyView />
+        </Expander>
+        
+        <!--Pane-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.PaneM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="Pane" />
+            </Expander.Header>
+
+            <PropertyView:PanePropertyView />
+        </Expander>
+
+        <!--SeriesLabel-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.SeriesLabelM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="SeriesLabel" />
+            </Expander.Header>
+
+            <PropertyView:SeriesLabelPropertyView />
+        </Expander>
+
+        <!--Title-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.TitleM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="Title" />
+            </Expander.Header>
+
+            <PropertyView:TitlePropertyView />
+        </Expander>
+
+        <!--XYDiagram2D-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.XYDiagram2DM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="XYDiagram2D" />
+            </Expander.Header>
+
+            <PropertyView:XYDiagram2DPropertyView />
+        </Expander>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,183 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.Popup.CP_RoutingConfigurationPopupView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMS.Module.Map.View.Popup"
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             MinWidth="100"
+             mc:Ignorable="d" Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="xlocal_TextBlock" 
+                   TargetType="{x:Type TextBlock}"
+                   BasedOn="{StaticResource sFont14TextBlock}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601001">
+                        <Setter Property="Text" Value="{x:Static res:Res.StrProcess}"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601002">
+                        <Setter Property="Text" Value="{x:Static res:Res.StrWorkCenter}"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601003">
+                        <Setter Property="Text" Value="{x:Static res:Res.StrEquipment}"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601004">
+                        <Setter Property="Text" Value="{x:Static res:Res.StrTerminal}"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601005">
+                        <Setter Property="Text" Value="{x:Static res:Res.StrResource}"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM701000">
+                        <Setter Property="Text" Value="{x:Static res:Res.StrResource}"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="xlocal_TextBlock02" 
+                   TargetType="{x:Type TextBlock}"
+                   BasedOn="{StaticResource sFont12TextBlock}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM701000">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="xlocal_TextBlock03" 
+                   TargetType="{x:Type TextBlock}"
+                   BasedOn="{StaticResource FontSize12TextBlock}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM701000">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="xlocal_Grid" TargetType="{x:Type Grid}">
+                <Setter Property="Visibility" Value="Collapsed" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601005">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Border Style="{StaticResource sPopupBorder}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="26"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Style="{StaticResource xlocal_TextBlock}" />
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="0.6"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="0.6"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" 
+                           Style="{StaticResource xlocal_TextBlock02}" 
+                           Text="{x:Static res:Res.StrCode}">
+                </TextBlock>
+
+                <TextBlock Grid.Row="1"
+                           Style="{StaticResource xlocal_TextBlock03}" 
+                           Text="{Binding DmComponentM.RoutingCode}" >
+
+                </TextBlock>
+
+                <Rectangle Grid.Row="2" Style="{StaticResource HorizontalRectangle}"/>
+
+                <TextBlock Grid.Row="3"
+                           Style="{StaticResource sFont12TextBlock}" 
+                           Text="{x:Static res:Res.StrName}" >
+
+                </TextBlock>
+
+                <TextBlock Grid.Row="4"
+                           Style="{StaticResource FontSize12TextBlock}"
+                           Text="{Binding DmComponentM.RoutingName}" >
+
+                </TextBlock>
+
+                <Rectangle Grid.Row="5" Style="{StaticResource HorizontalRectangle}"/>
+
+                <Grid Grid.Row="6" Style="{StaticResource xlocal_Grid}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="24"/>
+                        <RowDefinition Height="24"/>
+                        <RowDefinition Height="0.6"/>
+                        <RowDefinition Height="24"/>
+                        <RowDefinition Height="24"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- 관리치 -->
+                    <TextBlock Grid.Row="0"
+                           Style="{StaticResource sFont12TextBlock}" 
+                           Text="{x:Static res:Res.StrControlLimit}"/>
+
+                    <StackPanel Grid.Row="1" 
+                                Style="{StaticResource xStackPanelHorizontal}">
+
+                        <TextBlock Style="{StaticResource FontSize12TextBlock}" 
+                                   Text="{Binding DmComponentM.ResourceM.MLimitLow, FallbackValue='', TargetNullValue='', StringFormat={}{0:0.##}}" >
+
+                        </TextBlock>
+
+                        <TextBlock Style="{StaticResource sFont12TextBlock}" 
+                               Text="~" >
+
+                        </TextBlock>
+
+                        <TextBlock Style="{StaticResource FontSize12TextBlock}" 
+                               Text="{Binding DmComponentM.ResourceM.MLimitHigh, FallbackValue='', TargetNullValue='', StringFormat={}{0:0.##}}" >
+
+                        </TextBlock>
+
+                    </StackPanel>
+
+                    <Rectangle Grid.Row="2" Style="{StaticResource HorizontalRectangle}"/>
+
+                    <!-- 한계치 -->
+                    <TextBlock Grid.Row="3"
+                               Style="{StaticResource sFont12TextBlock}" 
+                               Text="{x:Static res:Res.StrLimit}" >
+
+                    </TextBlock>
+
+                    <StackPanel Grid.Row="4" Style="{StaticResource xStackPanelHorizontal}">
+                        <TextBlock Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{Binding DmComponentM.ResourceM.LimitLow, FallbackValue='', TargetNullValue='', StringFormat={}{0:0.##}}" >
+
+                        </TextBlock>
+
+                        <TextBlock Style="{StaticResource sFont12TextBlock}" 
+                                   Text="~" >
+
+                        </TextBlock>
+
+                        <TextBlock Style="{StaticResource FontSize12TextBlock}" 
+                                   Text="{Binding DmComponentM.ResourceM.LimitHigh, FallbackValue='', TargetNullValue='', StringFormat={}{0:0.##}}" >
+
+                        </TextBlock>
+
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

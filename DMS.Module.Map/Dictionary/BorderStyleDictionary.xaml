@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Border: Slider-->
+    <Style x:Key="xSilderPanelBorderTemplate" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="#FF323232" />
+        <Setter Property="BorderBrush" Value="#FF323232" />
+        <Setter Property="BorderThickness" Value="5" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="Width" Value="300" />
+    </Style>
+
+    <Style x:Key="xBorder_AutoModeBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.AutoModeM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.AutoModeM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.AutoModeM.BorderThickness}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.AutoModeM.Opacity}" />
+    </Style>
+
+    <Style x:Key="xBorder_Animation" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.AnimationM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.AnimationM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.AnimationM.BorderThickness}" />
+        <Setter Property="CornerRadius" Value="{Binding DmComponentM.PropertyM.AnimationM.CornerRadius}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.AnimationM.BorderAlarmVisibility }" Value="True">
+                <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.AnimationM.BackgroundAlarmVisibility }" Value="True">
+                <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

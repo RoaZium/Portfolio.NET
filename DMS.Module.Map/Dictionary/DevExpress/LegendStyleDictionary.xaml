@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sLegendBase" TargetType="{x:Type dxc:Legend}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.LegendM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.LegendM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.LegendM.BorderThickness}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.LegendM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.LegendM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.LegendM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.LegendM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.LegendM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.LegendM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.LegendM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.LegendM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.LegendM.HorizontalContentAlignment}" />
+        <Setter Property="HorizontalPosition" Value="{Binding DmComponentM.PropertyM.LegendM.HorizontalPosition}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.LegendM.Margin}" />
+        <Setter Property="MarkerMode" Value="{Binding DmComponentM.PropertyM.LegendM.MarkerMode}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.LegendM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.LegendM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.LegendM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.LegendM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.LegendM.Opacity}" />
+        <Setter Property="Orientation" Value="{Binding DmComponentM.PropertyM.LegendM.Orientation}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.LegendM.Padding}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.LegendM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.LegendM.VerticalContentAlignment}" />
+        <Setter Property="VerticalPosition" Value="{Binding DmComponentM.PropertyM.LegendM.VerticalPosition}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.LegendM.Visibility}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.LegendM.Visible}"/>
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.LegendM.Width}" />
+    </Style>   
+</ResourceDictionary>

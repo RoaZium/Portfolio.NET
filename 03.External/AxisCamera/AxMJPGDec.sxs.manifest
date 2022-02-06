@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxMJPGDec.sxs"
+    version="1.0.0.0" />
+
+<file name="AxMJPGDec.dll">
+
+    <comClass
+        description="CAxMJPGDec Class"
+        clsid="{29020fe0-3833-4be2-a7f0-42841d4b45f0}"
+        threadingModel="Both"
+        progid="DMO.AxMJPGDec" />
+
+    <comClass
+        description="CAxMJPGDecProp Class"
+        clsid="{d5ab8976-a067-4d86-a934-5d1860e1d271}"
+        threadingModel="Both"
+        progid="DMO.AxMJPGDecProp" />
+
+</file>
+
+</assembly>

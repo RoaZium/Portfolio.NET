@@ -1,0 +1,209 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.AxisYTitlePropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+            <!--글꼴 두께-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="글꼴 두께" />
+
+            <!--글꼴 색-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="글꼴 색" />
+
+            <!--글꼴 스타일-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="글꼴 스타일" />
+
+            <!--글꼴 크기-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="글꼴 크기" />
+
+            <!--내용-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="내용" />
+
+            <!--너비-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="너비" />
+
+            <!--높이-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="높이" />
+
+            <!--방향-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="방향" />
+
+            <!--배경색-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="배경색" />
+
+            <!--보기-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="보기" />
+
+            <!--불투명-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="불투명" />
+
+            <!--수직 정렬-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="수직 정렬" />
+
+            <!--수평 정렬-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="수평 정렬" />
+
+            <!--여백-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="여백" />
+
+            <!--여백 메우기-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="여백 메우기" />
+
+            <!--최대 높이-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="최대 높이" />
+
+            <!--최대 너비-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="최대 너비" />
+
+            <!--최소 높이-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="최소 높이" />
+
+            <!--최소 너비-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="최소 너비" />
+
+            <!--테두리 두께-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="테두리 두께" />
+
+            <!--테두리 색-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                       Content="테두리 색" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+            <!--글꼴 두께-->
+            <ComboBox Style="{StaticResource xComboBox_FontWeightArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.AxisYTitleM.FontWeight}" />
+
+            <!--글꼴 색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Text="{Binding ComponentMst.PropertyM.AxisYTitleM.Foreground}"
+                      Foreground="{Binding ComponentMst.PropertyM.AxisYTitleM.Foreground}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.AxisYTitleM.Foreground}" />
+
+            <!--글꼴 스타일-->
+            <ComboBox Style="{StaticResource xComboBox_FontStyleArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.AxisYTitleM.FontStyle}" />
+
+            <!--글꼴 크기-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.AxisYTitleM.FontSize}" />
+
+            <!--내용-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.AxisYTitleM.Content}" />
+
+            <!--너비-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.PropertyM.AxisYTitleM.Width, StringFormat=N2}"
+                                TextType="Decimal" />
+
+            <!--높이-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                Text="{Binding ComponentMst.PropertyM.AxisYTitleM.Height, StringFormat=N2}"
+                                TextType="Decimal" />
+
+            <!--방향-->
+            <ComboBox Style="{StaticResource xComboBox_AlignmentArray}"
+                          SelectedItem="{Binding ComponentMst.PropertyM.AxisYTitleM.FlowDirection}" />
+
+            <!--배경색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                          Text="{Binding ComponentMst.PropertyM.AxisYTitleM.Background}"
+                          Foreground="{Binding ComponentMst.PropertyM.AxisYTitleM.Background}"
+                          SelectedValue="{Binding ComponentMst.PropertyM.AxisYTitleM.Background}" />
+
+            <!--보기-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                          IsChecked="{Binding ComponentMst.PropertyM.AxisYTitleM.Visible}" />
+
+            <!--불투명-->
+            <ComboBox Style="{StaticResource xComboBox_OpacityArray}"
+                          SelectedItem="{Binding ComponentMst.PropertyM.AxisYTitleM.Opacity}" />
+
+            <!--수직 정렬-->
+            <ComboBox Style="{StaticResource xComboBox_VerticalAlignmentArray}" 
+                          SelectedItem="{Binding ComponentMst.PropertyM.AxisYTitleM.VerticalAlignment}" />
+
+            <!--수평 정렬-->
+            <ComboBox Style="{StaticResource xComboBox_HorizontalAlignmentArray}" 
+                          SelectedItem="{Binding ComponentMst.PropertyM.AxisYTitleM.HorizontalAlignment}" />
+
+            <!--여백-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                         Text="{Binding ComponentMst.PropertyM.AxisYTitleM.Margin}" />
+
+            <!--여백 메우기-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                         Text="{Binding ComponentMst.PropertyM.AxisYTitleM.Padding}" />
+
+            <!--최대 높이-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                    Text="{Binding ComponentMst.PropertyM.AxisYTitleM.MaxHeight, StringFormat=N2}"
+                                    TextType="Decimal" />
+
+            <!--최대 너비-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                    Text="{Binding ComponentMst.PropertyM.AxisYTitleM.MaxWidth, StringFormat=N2}"
+                                    TextType="Decimal" />
+
+            <!--최소 높이-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                    Text="{Binding ComponentMst.PropertyM.AxisYTitleM.MinHeight, StringFormat=N2}"
+                                    TextType="Decimal" />
+
+            <!--최소 너비-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                    Text="{Binding ComponentMst.PropertyM.AxisYTitleM.MinWidth, StringFormat=N2}"
+                                    TextType="Decimal" />
+
+            <!--테두리 두께-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                    Text="{Binding ComponentMst.PropertyM.AxisYTitleM.BorderThickness}"
+                                    TextType="Number" />
+
+            <!--테두리 색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                          Foreground="{Binding ComponentMst.PropertyM.AxisYTitleM.BorderBrush}"
+                          SelectedValue="{Binding ComponentMst.PropertyM.AxisYTitleM.BorderBrush}"
+                          Text="{Binding ComponentMst.PropertyM.AxisYTitleM.BorderBrush}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

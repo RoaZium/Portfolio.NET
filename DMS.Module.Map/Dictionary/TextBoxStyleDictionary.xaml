@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="xTextBoxBorderTemplate01" TargetType="{x:Type Border}" BasedOn="{StaticResource sBaseBorder}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.TextBoxM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.TextBoxM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.TextBoxM.BorderThickness}" />
+        <Setter Property="CornerRadius" Value="{Binding DmComponentM.PropertyM.TextBoxM.CornerRadius}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.TextBoxM.Opacity}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.TextBoxM.Visibility}" />
+    </Style>
+
+    <Style x:Key="xTextBoxTextBlockTemplate01" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.TextBoxM.FontSize}" />
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.TextBoxM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.TextBoxM.Foreground}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.TextBoxM.HorizontalAlignment}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.TextBoxM.Opacity}" />
+        <Setter Property="Text" Value="{Binding DmComponentM.PropertyM.TextBoxM.Text}" />
+        <Setter Property="TextWrapping" Value="{Binding DmComponentM.PropertyM.TextBoxM.TextWrapping}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.TextBoxM.VerticalAlignment}" />
+    </Style>
+
+</ResourceDictionary>

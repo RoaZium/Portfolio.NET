@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sAxisY2DBase" TargetType="{x:Type dxc:AxisY2D}">
+        <Setter Property="Alignment" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Alignment}" />
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.AxisY2DM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.AxisY2DM.BorderThickness}" />
+        <Setter Property="Brush" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Brush}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.AxisY2DM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.AxisY2DM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.AxisY2DM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.AxisY2DM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.AxisY2DM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Foreground}" />
+        <Setter Property="GridLinesBrush" Value="{Binding DmComponentM.PropertyM.AxisY2DM.GridLinesBrush}" />
+        <Setter Property="GridLinesLineStyle">
+            <Setter.Value>
+                <dxc:LineStyle Thickness="{Binding DmComponentM.PropertyM.AxisY2DM.LineStyleThickness}">
+                    <dxc:LineStyle.DashStyle>
+                        <!--Freezable을 고정할 수 없습니다. 에러 발생-->
+                        <DashStyle Dashes="1" />
+                    </dxc:LineStyle.DashStyle>
+                </dxc:LineStyle>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="GridLinesMinorBrush" Value="{Binding DmComponentM.PropertyM.AxisY2DM.GridLinesMinorBrush}" />
+        <Setter Property="GridLinesMinorVisible" Value="{Binding DmComponentM.PropertyM.AxisY2DM.GridLinesMinorVisible}" />
+        <Setter Property="GridLinesVisible" Value="{Binding DmComponentM.PropertyM.AxisY2DM.GridLinesVisible}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.AxisY2DM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.AxisY2DM.HorizontalContentAlignment}" />
+        <Setter Property="Interlaced" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Interlaced}" />
+        <Setter Property="InterlacedBrush" Value="{Binding DmComponentM.PropertyM.AxisY2DM.InterlacedBrush}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.AxisY2DM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.AxisY2DM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.AxisY2DM.MinHeight}" />
+        <Setter Property="MinorCount" Value="{Binding DmComponentM.PropertyM.AxisY2DM.MinorCount}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.AxisY2DM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Padding}" />
+        <Setter Property="Thickness" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Thickness}" />
+        <Setter Property="TickmarksCrossAxis" Value="{Binding DmComponentM.PropertyM.AxisY2DM.TickmarksCrossAxis}" />
+        <Setter Property="TickmarksLength" Value="{Binding DmComponentM.PropertyM.AxisY2DM.TickmarksLength}" />
+        <Setter Property="TickmarksMinorThickness" Value="{Binding DmComponentM.PropertyM.AxisY2DM.TickmarksMinorThickness}" />
+        <Setter Property="TickmarksThickness" Value="{Binding DmComponentM.PropertyM.AxisY2DM.TickmarksThickness}" />
+        <Setter Property="TickmarksMinorVisible" Value="{Binding DmComponentM.PropertyM.AxisY2DM.TickmarksMinorVisible}" />
+        <Setter Property="TickmarksVisible" Value="{Binding DmComponentM.PropertyM.AxisY2DM.TickmarksVisible}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.AxisY2DM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.AxisY2DM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Visible}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.AxisY2DM.Width}" />
+    </Style>
+
+</ResourceDictionary>

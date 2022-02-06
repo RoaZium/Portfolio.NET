@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MsgCantChangeTypeWhileEdittingScenario" xml:space="preserve">
+    <value>シナリオの修正中にシナリオタイプを変更することができません。</value>
+  </data>
+  <data name="MsgCantSaveScenarioWhileEdittingAction" xml:space="preserve">
+    <value>アクションの変更中にシナリオを保存することができません。</value>
+  </data>
+  <data name="MsgCantSaveScenarioWhileEdittingSensorList" xml:space="preserve">
+    <value>センサーのリストの変更中にシナリオを保存することができません。</value>
+  </data>
+  <data name="MsgFailedDeleteReq" xml:space="preserve">
+    <value>削除要求を失敗しました。</value>
+  </data>
+  <data name="MsgFailedSaveReq" xml:space="preserve">
+    <value>保存することができません。</value>
+  </data>
+  <data name="MsgPleaseCompleateNewAction" xml:space="preserve">
+    <value>アクションの追加を完了してください。</value>
+  </data>
+  <data name="MsgPleaseSelectActionsType" xml:space="preserve">
+    <value>アクションタイプを選択してください。</value>
+  </data>
+  <data name="MsgPleaseSelectLayout" xml:space="preserve">
+    <value>レイアウトを選択してください。</value>
+  </data>
+  <data name="MsgPleaseSetActionProerties" xml:space="preserve">
+    <value>アクションのプロパティを設定してください。</value>
+  </data>
+  <data name="StrActionNameAlarmLayout" xml:space="preserve">
+    <value>アラーム発生のレイアウトに移動</value>
+  </data>
+  <data name="StrActionNameLayout" xml:space="preserve">
+    <value>レイアウトに移動</value>
+  </data>
+  <data name="StrActionProperties" xml:space="preserve">
+    <value>アクションのプロパティ</value>
+  </data>
+  <data name="StrActionTypeAlarmLayout" xml:space="preserve">
+    <value>アラーム発生のレイアウトに移動</value>
+  </data>
+  <data name="StrActionTypeLayout" xml:space="preserve">
+    <value>レイアウトに移動</value>
+  </data>
+  <data name="StrAlarmScenario" xml:space="preserve">
+    <value>アラームシナリオ</value>
+  </data>
+  <data name="StrConfigureActions" xml:space="preserve">
+    <value>アクションの変更</value>
+  </data>
+  <data name="StrInfoIncorrect" xml:space="preserve">
+    <value>シナリオ情報が正しくありません。</value>
+  </data>
+  <data name="StrInvalidActon" xml:space="preserve">
+    <value>無効な操作</value>
+  </data>
+  <data name="StrMonitoringScenario" xml:space="preserve">
+    <value>モニタリングシナリオ</value>
+  </data>
+  <data name="StrName" xml:space="preserve">
+    <value>シナリオ名</value>
+  </data>
+  <data name="StrScenario" xml:space="preserve">
+    <value>シナリオ</value>
+  </data>
+  <data name="StrScenarioList" xml:space="preserve">
+    <value>シナリオ一覧</value>
+  </data>
+  <data name="StrScenarioProperties" xml:space="preserve">
+    <value>シナリオのプロパティ</value>
+  </data>
+  <data name="StrSelectSensors" xml:space="preserve">
+    <value>センサーの選択</value>
+  </data>
+  <data name="StrSensors" xml:space="preserve">
+    <value>センサーリスト</value>
+  </data>
+  <data name="StrTargetSensor" xml:space="preserve">
+    <value>ターゲットセンサー</value>
+  </data>
+  <data name="StrTimeSecond" xml:space="preserve">
+    <value>min.３（秒）</value>
+  </data>
+  <data name="StrUser" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+  <data name="StrIPCam" xml:space="preserve">
+    <value>IPカメラ</value>
+  </data>
+  <data name="MsgPleaseCompleateNewArea" xml:space="preserve">
+    <value>エリアの追加を完了してください。</value>
+  </data>
+  <data name="NameIPCameraType_PANO_360" xml:space="preserve">
+    <value>360°パノラマ</value>
+  </data>
+  <data name="StrAccount" xml:space="preserve">
+    <value>アカウント</value>
+  </data>
+  <data name="StrAreaSettings" xml:space="preserve">
+    <value>エリア設定</value>
+  </data>
+  <data name="StrCameraOrientation" xml:space="preserve">
+    <value>カメラの向き</value>
+  </data>
+  <data name="StrCameraSettings" xml:space="preserve">
+    <value>カメラ設定</value>
+  </data>
+  <data name="StrCameraType" xml:space="preserve">
+    <value>カメラの種類</value>
+  </data>
+  <data name="StrCeiling" xml:space="preserve">
+    <value>天井</value>
+  </data>
+  <data name="StrConnectionSettings" xml:space="preserve">
+    <value>接続設定</value>
+  </data>
+  <data name="StrDetailSettings" xml:space="preserve">
+    <value>詳細設定</value>
+  </data>
+  <data name="StrFloor" xml:space="preserve">
+    <value>床</value>
+  </data>
+  <data name="StrIPAddress" xml:space="preserve">
+    <value>IPアドレス</value>
+  </data>
+  <data name="StrPassword" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="StrWall" xml:space="preserve">
+    <value>壁</value>
+  </data>
+  <data name="MsgDuplicateAreaName" xml:space="preserve">
+    <value>同じ名前を持つエリアが存在します。
+上書きしますか？</value>
+  </data>
+  <data name="MsgFailedConnectIPCam" xml:space="preserve">
+    <value>IPカメラへの接続に失敗しました。
+接続設定を確認してください。</value>
+  </data>
+  <data name="StrAddArea" xml:space="preserve">
+    <value>エリアを追加</value>
+  </data>
+  <data name="StrAreaRegistration" xml:space="preserve">
+    <value>エリア登録</value>
+  </data>
+  <data name="StrDuplicate" xml:space="preserve">
+    <value>重複</value>
+  </data>
+  <data name="MsgCantSaveIPCamWhileEdittingArea" xml:space="preserve">
+    <value>エリアの変更中にカメラを保存することができません。</value>
+  </data>
+  <data name="MsgChangeTypeAreaRemove" xml:space="preserve">
+    <value>カメラのタイプを変更すると、設定しておいた既存のエリアを使用することができません。
+同意しますか？</value>
+  </data>
+  <data name="MsgPleaseSelectCameraType" xml:space="preserve">
+    <value>カメラの種類を選択してください。</value>
+  </data>
+  <data name="NameIPCameraType_FLAT" xml:space="preserve">
+    <value>フラット</value>
+  </data>
+  <data name="MsgPleaseSelectArea" xml:space="preserve">
+    <value>エリアを選択してください。</value>
+  </data>
+  <data name="MsgPleaseSelectIPCamComponent" xml:space="preserve">
+    <value>IPカメラコンポーネントを選択してください。</value>
+  </data>
+  <data name="StrActionNameIPCamComponent" xml:space="preserve">
+    <value>カメラコンポーネントに移動</value>
+  </data>
+  <data name="StrActionTypeIPCamComponent" xml:space="preserve">
+    <value>IPカメラコンポーネントに移動</value>
+  </data>
+  <data name="StrArea" xml:space="preserve">
+    <value>エリア</value>
+  </data>
+  <data name="StrAreaNameOfNull" xml:space="preserve">
+    <value>メインエリア</value>
+  </data>
+  <data name="StrCenterValue" xml:space="preserve">
+    <value>中間値</value>
+  </data>
+  <data name="StrComparisonValue" xml:space="preserve">
+    <value>比較値</value>
+  </data>
+  <data name="StrOption" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="StrNumber" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="StrLightBarTitle" xml:space="preserve">
+    <value>3色LED警報設定</value>
+  </data>
+  <data name="StrLeftOperand" xml:space="preserve">
+    <value>左項</value>
+  </data>
+  <data name="StrOperator" xml:space="preserve">
+    <value>演算子</value>
+  </data>
+  <data name="StrRightOperand" xml:space="preserve">
+    <value>右項</value>
+  </data>
+  <data name="StrValue" xml:space="preserve">
+    <value>値</value>
+  </data>
+  <data name="StrVariable" xml:space="preserve">
+    <value>変数</value>
+  </data>
+  <data name="StrVariableName" xml:space="preserve">
+    <value>作成する変数名</value>
+  </data>
+  <data name="AlarmTimeStamp" xml:space="preserve">
+    <value>最終アラーム発生時刻</value>
+  </data>
+  <data name="StrControlLimit" xml:space="preserve">
+    <value>管理値</value>
+  </data>
+  <data name="StrControlLimitHigh" xml:space="preserve">
+    <value>管理値上限</value>
+  </data>
+  <data name="StrControlLimitLow" xml:space="preserve">
+    <value>管理値下限</value>
+  </data>
+  <data name="StrCurrentState" xml:space="preserve">
+    <value>現在の状態</value>
+  </data>
+  <data name="StrCurrentValue" xml:space="preserve">
+    <value>現在値</value>
+  </data>
+  <data name="StrLastMonthState" xml:space="preserve">
+    <value>一ヶ月間の状態</value>
+  </data>
+  <data name="StrLimit" xml:space="preserve">
+    <value>限界値</value>
+  </data>
+  <data name="StrLimitHigh" xml:space="preserve">
+    <value>限界値上限</value>
+  </data>
+  <data name="StrLimitLow" xml:space="preserve">
+    <value>限界値下限</value>
+  </data>
+  <data name="StrModify" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="StrPrint" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="StrProcessCode" xml:space="preserve">
+    <value>工程コード</value>
+  </data>
+  <data name="StrProcessName" xml:space="preserve">
+    <value>工程名</value>
+  </data>
+  <data name="StrRefresh" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="StrRoutingConfigStatus" xml:space="preserve">
+    <value>センサーデータ一覧</value>
+  </data>
+  <data name="StrSensor" xml:space="preserve">
+    <value>センサー</value>
+  </data>
+  <data name="StrSensorCode" xml:space="preserve">
+    <value>センサーコード</value>
+  </data>
+  <data name="StrSensorName" xml:space="preserve">
+    <value>センサー名</value>
+  </data>
+  <data name="StrSensorUnit" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="MsgFailedLoadProcessList" xml:space="preserve">
+    <value>工程リストの呼び出しに失敗しました。</value>
+  </data>
+  <data name="MsgIncorrectInput" xml:space="preserve">
+    <value>入力情報が正しくありません。</value>
+  </data>
+  <data name="MsgInsertSensorFailed" xml:space="preserve">
+    <value>追加失敗。センサーコードが重ねてないか、入力情報が正しいか確認してください。</value>
+  </data>
+  <data name="MsgModifySensorFailed" xml:space="preserve">
+    <value>修正失敗。センサーコードが重ねてないか、入力情報が正しいか確認してください。</value>
+  </data>
+  <data name="MsgProcessDidnSelected" xml:space="preserve">
+    <value>工程を選んでください。</value>
+  </data>
+  <data name="MsgRemoveSensorFailed" xml:space="preserve">
+    <value>削除失敗。センサーが既に削除されていないか確認してください。</value>
+  </data>
+  <data name="MsgSensorCodeDidnEnter" xml:space="preserve">
+    <value>センサーコードを入力してください。</value>
+  </data>
+  <data name="MsgSensorNameDidnEnter" xml:space="preserve">
+    <value>センサー名を入力してください。</value>
+  </data>
+  <data name="MsgSensorRemove" xml:space="preserve">
+    <value>この項目を削除するには、項目のコードである「{0}」を入力してください。</value>
+  </data>
+  <data name="StrCancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="StrDecimalPlaces" xml:space="preserve">
+    <value>小数点以下桁</value>
+  </data>
+  <data name="StrEditSensor" xml:space="preserve">
+    <value>センサー修正</value>
+  </data>
+  <data name="StrOK" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="StrRemoveSensor" xml:space="preserve">
+    <value>センサー削除</value>
+  </data>
+  <data name="StrSerialNumber" xml:space="preserve">
+    <value>シリアル番号</value>
+  </data>
+  <data name="StrSortOrder" xml:space="preserve">
+    <value>整列順序</value>
+  </data>
+  <data name="StrType" xml:space="preserve">
+    <value>タイプ</value>
+  </data>
+  <data name="StrCategoricalSensor" xml:space="preserve">
+    <value>範疇型センサー</value>
+  </data>
+  <data name="StrNumericalSensor" xml:space="preserve">
+    <value>数値型センサー</value>
+  </data>
+  <data name="StrProcess" xml:space="preserve">
+    <value>工程</value>
+  </data>
+  <data name="MsgPleaseSetTrigger" xml:space="preserve">
+    <value>トリガーを設定してください。</value>
+  </data>
+  <data name="MsgNotSelectedItem" xml:space="preserve">
+    <value>アイテムが選択されていません。</value>
+  </data>
+  <data name="StrPMSType" xml:space="preserve">
+    <value>PMS</value>
+  </data>
+  <data name="StrRoutingConfigCode" xml:space="preserve">
+    <value>工程の構成コード</value>
+  </data>
+  <data name="StrRoutingConfigName" xml:space="preserve">
+    <value>工程の構成の名前</value>
+  </data>
+  <data name="StrUSERType" xml:space="preserve">
+    <value>USER</value>
+  </data>
+  <data name="MsgCantDeleteEditingItem" xml:space="preserve">
+    <value>編集中の項目は削除できません。</value>
+  </data>
+  <data name="MsgFailedLoadData" xml:space="preserve">
+    <value>情報の読み込みに失敗しました。</value>
+  </data>
+  <data name="MsgFailedLoadSensorInfo" xml:space="preserve">
+    <value>サーバーからセンサー情報が受信できませんでした。</value>
+  </data>
+  <data name="MsgPleaseCompleateEditItem" xml:space="preserve">
+    <value>項目の変更を完了してください。</value>
+  </data>
+  <data name="StrAlertStateName_0" xml:space="preserve">
+    <value>定常</value>
+  </data>
+  <data name="StrAlertStateName_1" xml:space="preserve">
+    <value>異常</value>
+  </data>
+  <data name="StrAlertStateName_2" xml:space="preserve">
+    <value>危険</value>
+  </data>
+  <data name="StrAlertStateName_900" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="StrFlashingStateName_0" xml:space="preserve">
+    <value>普通の速さ</value>
+  </data>
+  <data name="StrFlashingStateName_1" xml:space="preserve">
+    <value>高速</value>
+  </data>
+  <data name="StrAbnormal" xml:space="preserve">
+    <value>異常</value>
+  </data>
+  <data name="StrCondition" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="StrConditionVariable" xml:space="preserve">
+    <value>条件変数</value>
+  </data>
+  <data name="StrCountingCondition_COMP" xml:space="preserve">
+    <value>比較</value>
+  </data>
+  <data name="StrCountingCondition_NONE" xml:space="preserve">
+    <value>条件なし</value>
+  </data>
+  <data name="StrCountingCondition_RORF" xml:space="preserve">
+    <value>値の連続上昇/下落</value>
+  </data>
+  <data name="StrCountingCondition_ZIZG" xml:space="preserve">
+    <value>値の連続ジグザグ</value>
+  </data>
+  <data name="StrDanger" xml:space="preserve">
+    <value>危険</value>
+  </data>
+  <data name="StrFast" xml:space="preserve">
+    <value>高速</value>
+  </data>
+  <data name="StrSpeed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="StrState" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="StrStop" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="StrTrigger" xml:space="preserve">
+    <value>実行条件</value>
+  </data>
+  <data name="Str_RORF_OptionName_BOTH" xml:space="preserve">
+    <value>上昇/下落</value>
+  </data>
+  <data name="Str_RORF_OptionName_CLIMB" xml:space="preserve">
+    <value>上昇だけ</value>
+  </data>
+  <data name="Str_RORF_OptionName_FALL" xml:space="preserve">
+    <value>下落だけ</value>
+  </data>
+  <data name="StrEquipmentCode" xml:space="preserve">
+    <value>設備コード</value>
+  </data>
+  <data name="StrEquipmentName" xml:space="preserve">
+    <value>機器名</value>
+  </data>
+  <data name="StrWorkCenterCode" xml:space="preserve">
+    <value>ワークセンターコード</value>
+  </data>
+  <data name="StrWorkCenterName" xml:space="preserve">
+    <value>工程詳細名</value>
+  </data>
+  <data name="StrAddSensor" xml:space="preserve">
+    <value>センサー追加</value>
+  </data>
+  <data name="StrAll" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="StrCalcSensor" xml:space="preserve">
+    <value>計算センサー</value>
+  </data>
+  <data name="StrEndTime" xml:space="preserve">
+    <value>終了時間</value>
+  </data>
+  <data name="StrLength" xml:space="preserve">
+    <value>長さ</value>
+  </data>
+  <data name="StrOffset" xml:space="preserve">
+    <value>オフセット</value>
+  </data>
+  <data name="StrPosition" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="StrRange" xml:space="preserve">
+    <value>範囲</value>
+  </data>
+  <data name="StrStartTime" xml:space="preserve">
+    <value>開始時間</value>
+  </data>
+  <data name="StrTime" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="MsgIsOkRemoveItem" xml:space="preserve">
+    <value>削除した項目は、回復が不可能です。削除しますか？</value>
+  </data>
+  <data name="StrIsUse" xml:space="preserve">
+    <value>使用区分</value>
+  </data>
+  <data name="StrRemoveItem" xml:space="preserve">
+    <value>項目の削除</value>
+  </data>
+  <data name="MsgWarningRefresh" xml:space="preserve">
+    <value>更新をすると、現在作業中の内容は失われます。
+更新しますか？</value>
+  </data>
+  <data name="StrBaseTime" xml:space="preserve">
+    <value>基準時間値</value>
+  </data>
+  <data name="StrInputTime" xml:space="preserve">
+    <value>入力する時間値</value>
+  </data>
+  <data name="StrOperations" xml:space="preserve">
+    <value>演算リスト</value>
+  </data>
+  <data name="StrTimeSpan" xml:space="preserve">
+    <value>期間</value>
+  </data>
+  <data name="StrTimeSpanType" xml:space="preserve">
+    <value>期間形式</value>
+  </data>
+  <data name="StrTimeSpanTypeName_DAY" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="StrTimeSpanTypeName_HOUR" xml:space="preserve">
+    <value>時</value>
+  </data>
+  <data name="StrTimeSpanTypeName_MINUTE" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="StrTimeSpanTypeName_MONTH" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="StrTimeSpanTypeName_SECOND" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="StrTimeSpanTypeName_WEEK" xml:space="preserve">
+    <value>週</value>
+  </data>
+  <data name="StrTimeSpanTypeName_YEAR" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="NameIPCameraType_PTZ" xml:space="preserve">
+    <value>PTZ</value>
+  </data>
+  <data name="MsgWarnPTZControl" xml:space="preserve">
+    <value>PTZカメラの位置を操作する場合には、このカメラで現場を観察している他のユーザーに邪魔になります。</value>
+  </data>
+  <data name="StrEquipment1" xml:space="preserve">
+    <value>設備名</value>
+  </data>
+  <data name="StrEquipment2" xml:space="preserve">
+    <value>設備詳細名</value>
+  </data>
+  <data name="StrRecordingTargetSettings" xml:space="preserve">
+    <value>録画ターゲット設定</value>
+  </data>
+  <data name="StrRecordInquiry" xml:space="preserve">
+    <value>録画照会</value>
+  </data>
+  <data name="StrInquiryRange" xml:space="preserve">
+    <value>照会の範囲</value>
+  </data>
+  <data name="StrCamera" xml:space="preserve">
+    <value>カメラ</value>
+  </data>
+  <data name="MsgFailedLoadRecording" xml:space="preserve">
+    <value>録画ファイルの情報を取得に失敗しました。
+記録を履歴から削除しますか？</value>
+  </data>
+  <data name="StrRemovePreItem" xml:space="preserve">
+    <value>前のエントリすべて削除</value>
+  </data>
+  <data name="StrWarning" xml:space="preserve">
+    <value>警告 ！ ！ ！</value>
+  </data>
+  <data name="StrReceivers" xml:space="preserve">
+    <value>受信者</value>
+  </data>
+  <data name="MsgExceedTextLength" xml:space="preserve">
+    <value>最大文字数を超えています。</value>
+  </data>
+  <data name="StrContents" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="StrSubject" xml:space="preserve">
+    <value>件名</value>
+  </data>
+  <data name="StrUseVariables" xml:space="preserve">
+    <value>変数使用</value>
+  </data>
+  <data name="MsgFormatCheckNotCompatibleRutinesWithTrigger" xml:space="preserve">
+    <value>'{0}'トリガーで「{1}」のルーチンたちは動作しません。
+そのまま続行しますか？</value>
+  </data>
+  <data name="StrRun" xml:space="preserve">
+    <value>実行</value>
+  </data>
+  <data name="StrTest" xml:space="preserve">
+    <value>テスト</value>
+  </data>
+  <data name="MsgFailedRequest" xml:space="preserve">
+    <value>要求を失敗しました。</value>
+  </data>
+  <data name="MsgIsResumeRequest" xml:space="preserve">
+    <value>現在、要求が進行中です。
+キャンセルして再度要求しますか？</value>
+  </data>
+  <data name="StrConditionResult" xml:space="preserve">
+    <value>条件の結果</value>
+  </data>
+  <data name="StrRunningResults" xml:space="preserve">
+    <value>実行結果</value>
+  </data>
+  <data name="StrRunningTime" xml:space="preserve">
+    <value>所要時間</value>
+  </data>
+  <data name="StrSec" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="StrActionEdit" xml:space="preserve">
+    <value>アクション変更</value>
+  </data>
+  <data name="StrSave" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="StrActionDetail" xml:space="preserve">
+    <value>アクション詳細</value>
+  </data>
+  <data name="StrItem" xml:space="preserve">
+    <value>項目</value>
+  </data>
+  <data name="StrActionType" xml:space="preserve">
+    <value>アクションタイプ</value>
+  </data>
+  <data name="StrKeywardSearch" xml:space="preserve">
+    <value>シナリオ検索</value>
+  </data>
+  <data name="StrKeywardDetail" xml:space="preserve">
+    <value>シナリオ詳細</value>
+  </data>
+  <data name="MsgRangeNumError" xml:space="preserve">
+    <value>3以上3600以下の数字を入力してください。</value>
+  </data>
+  <data name="StrCaution" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="StrActionSearch" xml:space="preserve">
+    <value>アクション検索</value>
+  </data>
+  <data name="StrCopy" xml:space="preserve">
+    <value>_Copy</value>
+  </data>
+  <data name="StrLayoutSearch" xml:space="preserve">
+    <value>レイアウト検索</value>
+  </data>
+  <data name="StrNoname" xml:space="preserve">
+    <value>名前なし</value>
+  </data>
+  <data name="StrScenarioSearch" xml:space="preserve">
+    <value>シナリオ検索</value>
+  </data>
+  <data name="StrSelectedItem" xml:space="preserve">
+    <value>項目を選択してください</value>
+  </data>
+  <data name="StrCameraName" xml:space="preserve">
+    <value>カメラ名</value>
+  </data>
+  <data name="MsgLimitCharacters" xml:space="preserve">
+    <value>文字数50文字以内作成する必要があります。</value>
+  </data>
+</root>

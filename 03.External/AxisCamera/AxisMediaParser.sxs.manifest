@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisMediaParser.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisMediaParser.dll">
+
+	<comClass 
+		description="AxisMediaParser coclass"
+		clsid="{C6C6F73C-D2FC-49CB-97AE-CD15251FE33E}" 
+		threadingModel="Both" 
+		progid="AxisMediaParserLib.AxisMediaParser"
+		tlbid="{951BE58F-1EF5-4ECF-9556-4A350EADE8A8}" />
+	
+	<typelib tlbid="{951BE58F-1EF5-4ECF-9556-4A350EADE8A8}" 
+		version="3.40" 
+		helpdir="" />
+		
+</file>
+
+<comInterfaceExternalProxyStub
+    name="IAxisMediaParser"
+    iid="{F5D9F289-40FC-4C03-86FD-535FEFE88BA4}"
+    proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{951BE58F-1EF5-4ECF-9556-4A350EADE8A8}" />
+
+<comInterfaceExternalProxyStub
+    name="IAxisMediaParserEvents"
+    iid="{15AAA339-730D-472B-9A9D-8B3432C1AF7B}"
+    proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{951BE58F-1EF5-4ECF-9556-4A350EADE8A8}" />
+
+<comInterfaceExternalProxyStub
+    name="IAxisJitterStatistics"
+    iid="{B6F47CA4-4024-4B46-AA55-B39E8FDB70CA}"
+    proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{951BE58F-1EF5-4ECF-9556-4A350EADE8A8}" />
+
+</assembly>

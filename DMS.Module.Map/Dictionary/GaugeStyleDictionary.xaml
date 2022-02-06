@@ -1,0 +1,135 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing">
+
+    <!--배경-->
+    <Style x:Key="xGaugeBackgroundTemplate" TargetType="{x:Type ed:Arc}">
+        <Setter Property="ArcThickness" Value="{Binding DmComponentM.PropertyM.ArcM.ArcThickness}" />
+        <Setter Property="ArcThicknessUnit" Value="{Binding DmComponentM.PropertyM.ArcM.ArcThicknessUnit}" />
+        <Setter Property="EndAngle" Value="{Binding DmComponentM.PropertyM.ArcM.EndAngle}" />
+        <Setter Property="Fill" Value="{Binding DmComponentM.PropertyM.ArcM.Stroke}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.ArcM.FlowDirection}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.ArcM.Height}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.ArcM.Margin}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.ArcM.Opacity}" />
+        <Setter Property="StartAngle" Value="{Binding DmComponentM.PropertyM.ArcM.StartAngle}" />
+        <Setter Property="Stroke" Value="{Binding DmComponentM.PropertyM.ArcM.Stroke}" />
+        <Setter Property="StrokeLineJoin" Value="{Binding DmComponentM.PropertyM.ArcM.StrokeLineJoin}" />
+        <Setter Property="StrokeThickness" Value="{Binding DmComponentM.PropertyM.ArcM.StrokeThickness}" />
+        <Setter Property="Stretch" Value="None" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.ArcM.Width}" />
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <RotateTransform Angle="{Binding DmComponentM.PropertyM.ArcM.Angle}" 
+                                 CenterX="0.5" 
+                                 CenterY="0.5">
+                </RotateTransform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--표출 값-->
+    <Style x:Key="xGaugeFillTemplate" TargetType="{x:Type ed:Arc}">
+        <Setter Property="ArcThickness" Value="{Binding DmComponentM.PropertyM.ArcM.ArcThickness}" />
+        <Setter Property="ArcThicknessUnit" Value="{Binding DmComponentM.PropertyM.ArcM.ArcThicknessUnit}" />
+        <Setter Property="EndAngle">
+            <Setter.Value>
+                <MultiBinding Converter="{StaticResource xValueToPercentageConverter}">
+                    <Binding Path="DmComponentM.PropertyM.ArcM.EndAngle" />
+                    <Binding Path="DmComponentM.PropertyM.TotalValueM.Value" />
+                    <Binding Path="DmComponentM.PropertyM.ArcM.TotalValue" />
+                </MultiBinding>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Fill" Value="{Binding DmComponentM.PropertyM.ArcM.Fill}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.ArcM.FlowDirection}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.ArcM.Height}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.ArcM.Margin}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.ArcM.Opacity}" />
+        <Setter Property="StartAngle" Value="{Binding DmComponentM.PropertyM.ArcM.StartAngle}" />
+        <Setter Property="Stroke" Value="Transparent" />
+        <Setter Property="StrokeLineJoin" Value="{Binding DmComponentM.PropertyM.ArcM.StrokeLineJoin}" />
+        <Setter Property="StrokeThickness" Value="{Binding DmComponentM.PropertyM.ArcM.StrokeThickness}" />
+        <Setter Property="Stretch" Value="None" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.ArcM.Width}" />
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <RotateTransform Angle="{Binding DmComponentM.PropertyM.ArcM.Angle}" 
+                                 CenterX="0.5" 
+                                 CenterY="0.5">
+                </RotateTransform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--패널-->
+    <Style x:Key="xGaugeBorderTemplate" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.ArcPanelM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.ArcPanelM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.ArcPanelM.BorderThickness}" />
+        <Setter Property="CornerRadius" Value="{Binding DmComponentM.PropertyM.ArcPanelM.CornerRadius}" />
+    </Style>
+
+    <!--Total Value-->
+    <Style x:Key="xGaugeTotalValueLabel" TargetType="{x:Type Label}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Content" Value="{Binding DmComponentM.PropertyM.TotalValueM.Value}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.TotalValueM.Foreground}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.TotalValueM.FontSize}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.TotalValueM.FontStyle}" />
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.TotalValueM.FontWeight}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.TotalValueM.HorizontalContentAlignment}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.TotalValueM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.TotalValueM.Padding}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.TotalValueM.VerticalContentAlignment}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.TotalValueM.Visibility}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.ArcM.DataType}" Value="Percent">
+                <Setter Property="ContentStringFormat" Value="{}{0}%"/>
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <MultiBinding Converter="{StaticResource xValueToPercentageConverter}">
+                            <Binding Path="DmComponentM.PropertyM.TotalValueM.Value" />
+                            <Binding Path="DmComponentM.PropertyM.ArcM.TotalValue" />
+                        </MultiBinding>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.ArcM.DataType}" Value="Value">
+                <Setter Property="ContentStringFormat" Value="{}{0}"/>
+                <Setter Property="Content" Value="{Binding DmComponentM.PropertyM.TotalValueM.Value}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Start-->
+    <Style x:Key="xGaugeStartLabelTemplate" TargetType="{x:Type Label}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Content" Value="{Binding DmComponentM.PropertyM.StartLabelM.Content}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.StartLabelM.Foreground}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.StartLabelM.FontSize}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.StartLabelM.FontStyle}" />
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.StartLabelM.FontWeight}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.StartLabelM.HorizontalContentAlignment}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.StartLabelM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.StartLabelM.Padding}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.StartLabelM.VerticalContentAlignment}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.StartLabelM.Visibility}" />
+    </Style>
+
+    <!--End-->
+    <Style x:Key="xGaugeEndLabelBorderTemplate" TargetType="{x:Type Label}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Content" Value="{Binding DmComponentM.PropertyM.EndLabelM.Content}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.EndLabelM.Foreground}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.EndLabelM.FontSize}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.EndLabelM.FontStyle}" />
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.EndLabelM.FontWeight}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.EndLabelM.HorizontalContentAlignment}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.EndLabelM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.EndLabelM.Padding}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.EndLabelM.VerticalContentAlignment}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.EndLabelM.Visibility}" />
+    </Style>
+    
+</ResourceDictionary>

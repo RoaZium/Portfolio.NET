@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:uicon="clr-namespace:PrismWPF.Common.Converter">
+
+    <!-- Converter -->
+    <uicon:AlarmStateColorConverter x:Key="xAlarmStateColorConverter"/>
+    <uicon:AlarmStateStrConverter x:Key="xAlarmStateStrConverter"/>
+    <uicon:BooleanToCollapsedConverter x:Key="xBooleanToCollapsedConverter"/>
+    <uicon:BooleanToVisibilityConverter x:Key="xBooleanToVisibilityConverter"/>
+    <uicon:TreeItemIsFolderConverter x:Key="xTreeItemIsFolderConverter"/>
+    <uicon:VisibilityToBooleanConverter x:Key="xVisibilityToBooleanConverter" />
+    <uicon:ValueToPercentageConverter x:Key="xValueToPercentageConverter" />
+
+    <!-- 재호 작업 내용 -->
+    <uicon:MultiMinConverter x:Key="xMultiMinConverter"/>
+    <uicon:MultiMultiplyConverter x:Key="xMultiMultiplyConverter"/>
+    <uicon:SingleMultiplyConverter x:Key="xSingleMultiplyConverter" ValueToMultiply="30"/>
+    <uicon:SingleRangeConverter x:Key="xSingleRangeConverter" StartValue="1" EndValue="0.2"/>
+
+    
+    <!-- 리팩토링 해야될 대상들 관계가 묶여 있음-->
+    <uicon:SingleChainConverter x:Key="xSingleChainConverter"/>
+    <uicon:SingleInverseBooleanConverter x:Key="xSingleInverseBooleanConverter"/>
+    <uicon:SingleIsEqureConverter x:Key="xSingleIsEqureConverter"/>
+   
+
+</ResourceDictionary>

@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_ImagePropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.DataGridCellM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="{x:Static res:Res.StrImage}" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+                    <!--이미지 명칭-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}" 
+                               Text="{x:Static res:Res.StrName}" />
+
+                    <!--파일 다이알로그-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="{x:Static res:Res.StrImage}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--이미지 명칭-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentTitle}" 
+                               Text="{Binding ComponentMst.PropertyM.ImageName}" 
+                               TextWrapping="NoWrap" />
+
+                    <!--파일 다이알로그-->
+                    <Button Style="{StaticResource xButton_Component}" 
+                            Content="{x:Static res:Res.StrOpenFile}" 
+                            Command="{Binding ImageFileCommand}" />
+
+                    <!--썸네일-->
+                    <Image Grid.Column="0" Grid.ColumnSpan="2"
+                           Source="{Binding ComponentMst.PropertyM.TargetPath}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

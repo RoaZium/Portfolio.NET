@@ -1,0 +1,103 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--DataGrid-->
+    <Style x:Key="xDataGrid_Component" TargetType="{x:Type DataGrid}" BasedOn="{StaticResource xDataGridBase}">
+        <Setter Property="AutoGenerateColumns" Value="True" />
+        <Setter Property="Background" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridM.Background, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="BorderBrush" Value="{x:Null}" />
+        <Setter Property="CanUserResizeRows" Value="False" />
+        <Setter Property="CanUserAddRows" Value="False" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="RowHeaderWidth" Value="0" />
+        <Setter Property="ColumnWidth" Value="*" />
+        <Setter Property="DataGrid.GridLinesVisibility" Value="None" />
+        <Setter Property="OpacityMask">
+            <Setter.Value>
+                <VisualBrush Visual="{Binding ElementName=BDRounded}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--DataGridColumnHeader-->
+    <Style x:Key="xDataGridColumnHeader_Component" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Background" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.Background, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="BorderBrush" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.BorderBrush, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="BorderThickness" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.BorderThickness, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="FontSize" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.FontSize, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+        <Setter Property="FontStyle" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.FontStyle, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="FontWeight" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.FontWeight, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="Foreground" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.Foreground, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+        <Setter Property="Height" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.Height, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+        <Setter Property="VerticalContentAlignment" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridColumnHeaderM.VerticalContentAlignment, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+    </Style>
+
+    <!--DataGridCell-->
+    <Style x:Key="xDataGridCell_Component" TargetType="{x:Type DataGridCell}" >
+        <Setter Property="Background" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.Background, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="FontSize" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.FontSize, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="FontStyle" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.FontStyle, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="FontWeight" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.FontWeight, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <!--<Setter Property="Foreground" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.Foreground, RelativeSource={RelativeSource AncestorType=UserControl}}" />-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Border BorderThickness="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.BorderThickness, RelativeSource={RelativeSource AncestorType=DataGrid}}" 
+                            BorderBrush="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.BorderBrush, RelativeSource={RelativeSource AncestorType=DataGrid}}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.HorizontalAlignment, RelativeSource={RelativeSource AncestorType=DataGrid}}" 
+                                              VerticalAlignment="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.VerticalAlignment, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--DataGridRow-->
+    <Style x:Key="xDataGridRow_Component" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Height" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridRowM.Height, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="Foreground" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.Foreground, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="IsHitTestVisible" Value="False"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=이상이력}" Value="2" >
+                <Setter Property="Foreground" Value="Red"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--DataGridCell_도형-->
+    <Style x:Key="xDataGridCell_Shape" TargetType="{x:Type DataGridCell}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="FontSize" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.FontSize, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="FontStyle" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.FontStyle, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="FontWeight" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.FontWeight, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Border BorderThickness="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.BorderThickness, RelativeSource={RelativeSource AncestorType=DataGrid}}" 
+                            BorderBrush="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.BorderBrush, RelativeSource={RelativeSource AncestorType=DataGrid}}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Column="1"
+                                     Stroke="Gray"
+                                     StrokeThickness="2"
+                                     Fill="{Binding Path=이상이력, Converter={StaticResource xAlarmStateColorConverter}}"
+                                     Height="24"
+                                     Width="24" />
+                            <ContentPresenter Grid.Column="2"
+                                              HorizontalAlignment="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.HorizontalAlignment, RelativeSource={RelativeSource AncestorType=DataGrid}}" 
+                                              VerticalAlignment="{Binding Path=DataContext.DmComponentM.PropertyM.DataGridCellM.VerticalAlignment, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

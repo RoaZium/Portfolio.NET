@@ -1,0 +1,736 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converter="clr-namespace:PrismWPF.Common.Converter;assembly=PrismWPF.Common" >
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Blue/RoutingConfigurationResourceDictionary.xaml"/>
+        <ResourceDictionary Source="Blue/SensorIconResourceDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <converter:MultiMultiplyConverter x:Key="multiMultiplyConverter"/>
+    <converter:MultiMinConverter x:Key="multiMinConverter"/>
+    <converter:SingleRangeConverter x:Key="singleRangeConverter" StartValue="1" EndValue="0.2"/>
+
+    <!--공정 구성 Icon-->
+    <Style x:Key="mRoutingConfigImage" TargetType="{x:Type Image}" BasedOn="{StaticResource xImageBase}">
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.ShapeSize}"/>
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.ShapeSize}"/>
+        <Setter Property="Source" Value="{StaticResource x0000DrawingImage}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601001">
+                <Setter Property="Source" Value="{StaticResource xProcessDrawingImage}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601002">
+                <Setter Property="Source" Value="{StaticResource xWorkCenterDrawingImage}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601003">
+                <Setter Property="Source" Value="{StaticResource xEquipmentDrawingImage}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.RoutingType}" Value="DM601004">
+                <Setter Property="Source" Value="{StaticResource blue_ic_menulist_none_09_inputsensorDrawingImage}"/>
+            </DataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A000"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource x0000DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A010"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA010DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A020"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA020DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A030"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA030DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A040"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA040DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A050"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA050DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A060"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA060DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A070"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA070DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A080"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA080DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A090"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA090DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A100"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA100DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A110"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA110DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A120"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA120DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A130"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA130DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A140"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA140DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A150"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA150DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A160"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA160DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A170"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA170DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A180"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA180DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A190"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA190DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A200"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA200DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A210"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA210DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A220"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA220DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A230"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA230DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A240"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA240DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A250"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA250DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A260"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA260DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A270"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA270DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A280"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA280DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A290"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA290DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A300"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA300DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A310"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA310DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A320"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA320DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A330"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA330DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A340"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA340DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A350"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA350DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A360"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA360DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="A370"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xA370DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B010"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB010DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B020"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB020DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B030"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB030DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B040"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB040DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B050"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB050DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B060"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB060DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B070"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB070DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B080"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB080DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B090"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB090DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B100"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB100DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B110"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB110DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B120"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB120DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B130"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB130DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B140"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB140DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B150"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB150DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B160"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB160DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="B170"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xB170DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C010"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC010DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C020"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC020DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C030"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC030DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C040"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC040DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C050"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC050DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C060"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC060DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C070"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC070DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM601005"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.IconCode}" Value="C080"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xC080DrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM701000"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.ItemType}" Value="DM601001"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xProcessDrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM701000"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.ItemType}" Value="DM601002"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xWorkCenterDrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM701000"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.ItemType}" Value="DM601003"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource xEquipmentDrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM701000"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.ItemType}" Value="DM601004"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource blue_ic_menulist_none_09_inputsensorDrawingImage}" />
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.RoutingType}" Value="DM701000"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.ItemType}" Value="DM601005"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource x0000DrawingImage}" />
+            </MultiDataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <!--공정 구성 알람 상태 표시-->
+    <Style x:Key="mRoutingConfiguBorder" TargetType="{x:Type Border}" BasedOn="{StaticResource xBorderBase}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.BlinkingLevel}" Value="{x:Null}">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard Name="wave_storyboard">
+                        <Storyboard Storyboard.TargetProperty="Width">
+                            <DoubleAnimation From="0" To="1" Duration="0:0:2" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <StopStoryboard BeginStoryboardName="wave_storyboard"/>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.BlinkingLevel}" Value="0">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard Name="wave_storyboard0">
+                        <Storyboard Storyboard.TargetProperty="Width">
+                            <DoubleAnimation From="0" To="1" Duration="0:0:2" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <StopStoryboard BeginStoryboardName="wave_storyboard0"/>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.BlinkingLevel}" Value="1">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard Name="wave_storyboard1">
+                        <Storyboard Storyboard.TargetProperty="Width">
+                            <DoubleAnimation From="0" To="1" Duration="0:0:0.5" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <StopStoryboard BeginStoryboardName="wave_storyboard1"/>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--공정 구성 알람 상태 Grid-->
+    <Style x:Key="mRoutingConfigGrid" TargetType="{x:Type Grid}" BasedOn="{StaticResource sBaseGrid}">
+        <Setter Property="Height" Value="{Binding Width, RelativeSource={RelativeSource Self}, Mode=OneWay}"/>
+        <Setter Property="Visibility" Value="Hidden"/>
+        <Setter Property="Width">
+            <Setter.Value>
+                <MultiBinding Converter="{StaticResource multiMinConverter}">
+                    <Binding Path="ActualWidth" ElementName="root"/>
+                    <Binding Path="ActualHeight" ElementName="root"/>
+                </MultiBinding>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--공정 구성 알람 상태 Ellipse-->
+    <Style x:Key="mRoutingConfigEllipse" TargetType="{x:Type Ellipse}" BasedOn="{StaticResource xEllipseBase}">
+        <Setter Property="Fill" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+        <Setter Property="Height">
+            <Setter.Value>
+                <MultiBinding Converter="{StaticResource multiMultiplyConverter}">
+                    <Binding Path="ActualHeight" ElementName="squre_container"/>
+                    <Binding Path="Width" ElementName="animation_value"/>
+                </MultiBinding>
+            </Setter.Value>
+        </Setter>
+            <Setter Property="Opacity" Value="{Binding ElementName=animation_value, Path=Width, Converter={StaticResource singleRangeConverter}}"/>
+        <Setter Property="Width">
+            <Setter.Value>
+                <MultiBinding Converter="{StaticResource multiMultiplyConverter}">
+                    <Binding Path="ActualWidth" ElementName="squre_container"/>
+                    <Binding Path="Width" ElementName="animation_value"/>
+                </MultiBinding>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--화살표_오른쪽-->
+    <DrawingImage x:Key="arrow_right_bottonDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V40 H40 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing>
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="19" RadiusY="19" Rect="1,1,38,38" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="-1,0,0,1,26,10.818">
+                        <GeometryDrawing Geometry="F0 M40,40z M0,0z M9.636,18.273L0.545,9.182 9.636,0.091">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Round" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--화살표_왼쪽-->
+    <DrawingImage x:Key="arrow_left_bottonDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V40 H40 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing>
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="19" RadiusY="19" Rect="1,1,38,38" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,13.818,10.818">
+                        <GeometryDrawing Geometry="F0 M40,40z M0,0z M9.818,18.273L0.727,9.182 9.818,0.091">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Round" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--화살표_아래-->
+    <DrawingImage x:Key="arrow_down_bottonDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V16 H16 V0 H0 Z">
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M16,16z M0,0z M8,0C3.582,0 0,3.582 0,8 0,12.418 3.582,16 8,16 12.418,16 16,12.418 16,8 16,3.582 12.418,0 8,0z M8,11.207L2.646,5.854 3.353,5.147 8,9.793 12.646,5.147 13.353,5.854 8,11.207z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--화살표_위-->
+    <DrawingImage x:Key="arrow_up_bottonDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V16 H16 V0 H0 Z">
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M16,16z M0,0z M8,0C3.582,0 0,3.582 0,8 0,12.418 3.582,16 8,16 12.418,16 16,12.418 16,8 16,3.582 12.418,0 8,0z M12.646,10.854L8,6.207 3.354,10.853 2.647,10.146 8,4.793 13.354,10.147 12.646,10.854z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--위험 팝업 아이콘-->
+    <DrawingImage x:Key="xDrawingImage_DangerPopup">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V32 H32 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="White" Geometry="F0 M32,32z M0,0z M29.913,28.84C31.567,28.84,32.221,27.693,31.364,26.261L17.487,3.072C16.635,1.649,15.252,1.641,14.395,3.06L0.379,26.274C-0.477,27.691,0.165,28.839,1.824,28.839L29.913,28.839z M15.94,25.836C14.95,25.836 14.147,25.04 14.147,24.043 14.147,23.052 14.943,22.249 15.94,22.249 16.93,22.249 17.734,23.045 17.734,24.043 17.734,25.033 16.938,25.836 15.94,25.836z M14.587,20.456L14.147,11.873 17.734,11.873 17.277,20.455 14.587,20.455z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>

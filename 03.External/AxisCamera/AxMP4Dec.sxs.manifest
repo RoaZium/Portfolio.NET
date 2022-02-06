@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxMP4Dec.sxs"
+    version="1.0.0.0" />
+
+<file name="AxMP4Dec.dll">
+
+    <comClass
+        description="CAxMP4Dec Class"
+        clsid="{c32fe9f1-a857-48b0-b7bf-065b5792f28d}"
+        threadingModel="Both"
+        progid="DMO.AxMP4Dec" />
+
+    <comClass
+        description="CAxMP4DecProp Class"
+        clsid="{fbfadba2-1171-4266-b366-389c168dd363}"
+        threadingModel="Both"
+        progid="DMO.AxMP4DecProp" />
+
+</file>
+
+</assembly>

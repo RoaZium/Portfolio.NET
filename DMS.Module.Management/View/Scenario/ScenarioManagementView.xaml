@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="DMS.Module.Management.View.ScenarioManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Management.Properties"
+             xmlns:prism_control="clr-namespace:PrismWPF.Control;assembly=PrismWPF.Control"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Management;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="12"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="12"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="16"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="0" 
+                   Style="{StaticResource FontSize20TextBlock}"
+                   Text="{x:Static res:Res.StrMonitoringScenario}"/>
+
+        <!-- 시나리오 리스트 -->
+        <Grid Grid.Column="1" Grid.Row="1" DataContext="{Binding ScenarioListVM}">
+            <ContentPresenter Content="{Binding}"/>
+        </Grid>
+
+        <!-- 시나리오 속성 -->
+        <Grid Grid.Column="3" Grid.Row="1"
+              Style="{StaticResource xScenarioGrid}"
+              DataContext="{Binding ScenarioPropVM}">
+
+            <ContentPresenter Content="{Binding}"/>
+
+        </Grid>
+
+        <!-- 액션 속성 -->
+        <Grid Grid.Column="5" Grid.Row="1"
+              Style="{StaticResource xScenarioGrid}"
+              DataContext="{Binding ActionPropVM}">
+            
+            <ContentPresenter Content="{Binding}"/>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

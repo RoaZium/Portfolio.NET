@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxH265Dec.sxs"
+    version="1.0.0.0" />
+
+<file name="AxH265Dec.dll">
+
+    <comClass
+        description="CAxH265Dec Class"
+        clsid="{E3ECEDF2-35C3-4E05-BCA2-F7D138B06265}"
+        threadingModel="Both"
+        progid="DMO.AxH265Dec" />
+
+</file>
+
+</assembly>

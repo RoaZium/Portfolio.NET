@@ -1,0 +1,266 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_DataGridPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:PropertyView="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <!--DataGridCell-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.DataGridCellM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="DataGridCell" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}">
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="배경색" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 색상" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 두께" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 크기" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 스타일" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 두께" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 색상" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="수평 정렬" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="수직 정렬" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--배경색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Text="{Binding ComponentMst.PropertyM.DataGridCellM.Background}"
+                              Foreground="{Binding ComponentMst.PropertyM.DataGridCellM.Background}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.DataGridCellM.Background}" />
+
+                    <!--테두리 색상-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Foreground="{Binding ComponentMst.PropertyM.DataGridCellM.BorderBrush}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.DataGridCellM.BorderBrush}"
+                              Text="{Binding ComponentMst.PropertyM.DataGridCellM.BorderBrush}" />
+
+                    <!--테두리 두께-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                             Text="{Binding ComponentMst.PropertyM.DataGridCellM.BorderThickness}"/>
+
+                    <!--글꼴 크기-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                             Text="{Binding ComponentMst.PropertyM.DataGridCellM.FontSize}" />
+
+                    <!--글꼴 스타일-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}"
+                              ItemsSource="{Binding Source={StaticResource sFontStyleArray}}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridCellM.FontStyle}" />
+
+                    <!--글꼴 두께-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                              ItemsSource="{StaticResource sFontWeightOptionsArray}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridCellM.FontWeight}" />
+
+                    <!--글꼴 색상-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Text="{Binding ComponentMst.PropertyM.DataGridCellM.Foreground}"
+                              Foreground="{Binding ComponentMst.PropertyM.DataGridCellM.Foreground}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.DataGridCellM.Foreground}" />
+
+                    <!--수평 정렬-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                              ItemsSource="{Binding Source={StaticResource sHorizontalAlignmentArray}}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridCellM.HorizontalAlignment}" />
+
+                    <!--수직 정렬-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                              ItemsSource="{Binding Source={StaticResource sVerticalAlignmentArray}}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridCellM.VerticalAlignment}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <!--DataGridColumnHeader-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="DataGridColumnHeader" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}">
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="배경색" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 색상" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 두께" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 크기" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 스타일" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 두께" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 색상" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="높이" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="수평 정렬" />
+
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="수직 정렬" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--배경색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Text="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.Background}"
+                              Foreground="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.Background}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.Background}" />
+
+                    <!--테두리 색상-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Foreground="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.BorderBrush}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.BorderBrush}"
+                              Text="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.BorderBrush}" />
+
+                    <!--테두리 두께-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                             Text="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.BorderThickness}"/>
+
+                    <!--글꼴 크기-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                             Text="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.FontSize}" />
+
+                    <!--글꼴 스타일-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}"
+                              ItemsSource="{Binding Source={StaticResource sFontStyleArray}}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.FontStyle}" />
+
+                    <!--글꼴 두께-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                              ItemsSource="{StaticResource sFontWeightOptionsArray}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.FontWeight}" />
+
+                    <!--글꼴 색상-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Text="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.Foreground}"
+                              Foreground="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.Foreground}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.Foreground}" />
+
+                    <!--높이-->
+                    <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                        Text="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.Height, StringFormat=N2}"
+                                        TextType="Decimal" />
+
+                    <!--수평 정렬-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                              ItemsSource="{Binding Source={StaticResource sHorizontalAlignmentArray}}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.HorizontalContentAlignment}" />
+
+                    <!--수직 정렬-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                              ItemsSource="{Binding Source={StaticResource sVerticalAlignmentArray}}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.DataGridColumnHeaderM.VerticalContentAlignment}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <!--DataGrid-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.DataGridM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="DataGrid" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}">
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="배경색" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--배경색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Text="{Binding ComponentMst.PropertyM.DataGridM.Background}"
+                              Foreground="{Binding ComponentMst.PropertyM.DataGridM.Background}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.DataGridM.Background}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <!--DataGridRow-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.DataGridRowM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="DataGridRow" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}">
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="높이" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                             Text="{Binding ComponentMst.PropertyM.DataGridRowM.Height}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

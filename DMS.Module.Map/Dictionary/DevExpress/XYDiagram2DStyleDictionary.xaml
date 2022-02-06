@@ -1,0 +1,38 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sXYDiagram2DBase" TargetType="{x:Type dxc:XYDiagram2D}">
+        <Setter Property="SeriesDataMember" Value="SeriesDataMember" />
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Background}" />
+        <Setter Property="BarDistance" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.BarDistance}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.BorderThickness}" />
+        <Setter Property="DependentAxesYRange" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.DependentAxesYRange}" />
+        <Setter Property="EnableAxisXNavigation" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.EnableAxisXNavigation}" />
+        <Setter Property="EnableAxisYNavigation" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.EnableAxisYNavigation}" />
+        <Setter Property="EqualBarWidth" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.EqualBarWidth}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.HorizontalContentAlignment}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Padding}" />
+        <Setter Property="PaneOrientation" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.PaneOrientation}" />
+        <Setter Property="Rotated" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Rotated}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.VerticalContentAlignment}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Visibility}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.XYDiagram2DM.Width}" />
+    </Style>   
+</ResourceDictionary>

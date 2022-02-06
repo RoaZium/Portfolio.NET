@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisMediaControl.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisMediaControl.dll">
+
+    <comClass
+        description="AxisMediaControl Class"
+        clsid="{745395C8-D0E1-4227-8586-624CA9A10A8D}"
+        threadingModel="Apartment"
+        progid="AxisMediaControl.AxisMediaControl"
+        tlbid="{A48F4EE0-B408-4376-B4C9-BC9CF6E16EBC}" />
+
+    <typelib tlbid="{A48F4EE0-B408-4376-B4C9-BC9CF6E16EBC}"
+        version="1.0"
+        helpdir="" />
+
+</file>
+
+<comInterfaceExternalProxyStub
+    name="_IAxisMediaControlEvents"
+    iid="{0997C74D-3ACE-4F31-99EC-47BC525E2382}"
+    proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{A48F4EE0-B408-4376-B4C9-BC9CF6E16EBC}" />
+
+<comInterfaceExternalProxyStub
+    name="IAxisMediaControl"
+    iid="{19722801-5830-4EC4-BD69-C3CF70776E0E}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{A48F4EE0-B408-4376-B4C9-BC9CF6E16EBC}" />
+
+</assembly>

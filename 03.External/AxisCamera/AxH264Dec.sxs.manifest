@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxH264Dec.sxs"
+    version="1.0.0.0" />
+
+<file name="AxH264Dec.dll">
+
+    <comClass
+        description="CAxH264Dec Class"
+        clsid="{7340f0e4-aeda-47c6-8971-9db314030bd7}"
+        threadingModel="Both"
+        progid="DMO.AxH264Dec" />
+
+	<comClass
+        description="CAxH264DecProp Class"
+        clsid="{C890422F-01BE-4642-BFD5-416399548729}"
+        threadingModel="Both"
+        progid="DMO.AxH264DecProp" />
+
+</file>
+
+</assembly>

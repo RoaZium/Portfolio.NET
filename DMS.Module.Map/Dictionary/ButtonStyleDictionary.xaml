@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="xMoveButtonTemplate" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.MoveM.FontSize}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.MoveM.FontStyle}" />
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.MoveM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.MoveM.Foreground}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.MoveM.HorizontalContentAlignment}"/>
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.MoveM.Opacity}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.MoveM.VerticalContentAlignment}"/>
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.MoveM.Visibility}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" 
+                                    Background="{Binding DmComponentM.PropertyM.MoveM.Background}"
+                                    BorderBrush="{Binding DmComponentM.PropertyM.MoveM.BorderBrush}"
+                                    BorderThickness="{Binding DmComponentM.PropertyM.MoveM.BorderThickness}"
+                                    CornerRadius="{Binding DmComponentM.PropertyM.MoveM.CornerRadius}" >
+                        <TextBlock HorizontalAlignment="{Binding DmComponentM.PropertyM.MoveM.HorizontalContentAlignment}"
+                                   Text="{Binding DmComponentM.PropertyM.MoveM.Content}"
+                                   TextWrapping="{Binding DmComponentM.PropertyM.MoveM.TextWrapping}"
+                                   VerticalAlignment="{Binding DmComponentM.PropertyM.MoveM.VerticalContentAlignment}"
+                                   Margin="{Binding DmComponentM.PropertyM.MoveM.Margin}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="#FFDDDDDD" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FFDDDDDD"/>
+                                </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--맵 편집/관제-->
+    <Style x:Key="xButton_MapEdit" TargetType="{x:Type Button}" BasedOn="{StaticResource xButtonBase}">
+        <Setter Property="Background" Value="#FFFFFFFF" />
+        <Setter Property="BorderBrush" Value="#FF254264" />
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="Width" Value="24"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="2"
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="1" 
+                                    Background="{TemplateBinding Background}">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--슬라이드 패널 접기/펼치기-->
+    <Style x:Key="xButton_Slider" TargetType="{x:Type Button}" BasedOn="{StaticResource WindowBaseButton}" >
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Width" Value="30" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="xToolbarButtonTemplate" TargetType="{x:Type Button}" BasedOn="{StaticResource RoundImageButton}">
+        <Setter Property="Command" Value="{Binding AddComponentCommand}" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="Width" Value="40" />
+    </Style>
+    
+</ResourceDictionary>

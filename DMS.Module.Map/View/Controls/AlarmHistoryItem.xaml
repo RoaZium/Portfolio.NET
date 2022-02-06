@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.AlarmHistoryItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:converter="clr-namespace:PrismWPF.Common.Converter;assembly=PrismWPF.Common"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="250">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Height="60"
+            CornerRadius="3" 
+            Background="{DynamicResource SolidColorBrush_Layout}">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Setter Property="BorderBrush" Value="#FFB3BECD"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding AlarmProgress}" Value="0">
+                        <Setter Property="BorderBrush" Value="#FF555555"/>
+                        <Setter Property="BorderThickness" Value="2"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+        
+        <DockPanel>
+            <Grid Margin="5,0" DockPanel.Dock="Left">
+                <Grid Height="20" Width="20">
+                    <Border Opacity="0" x:Name="animation_value" Width="0"/>
+                    <Rectangle Height="{Binding Width, RelativeSource={RelativeSource Self}, Mode=OneWay}" 
+                               Fill="{Binding AlarmLevel, Converter={StaticResource xAlarmStateColorConverter}}">
+                        <Rectangle.Style>
+                            <Style TargetType="Rectangle">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding AlarmProgress}" Value="2">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Rectangle.Style>
+                    </Rectangle>
+                    <Ellipse x:Name="wave" 
+                             Height="{Binding Width, RelativeSource={RelativeSource Self}, Mode=OneWay}"
+                             Fill="{Binding AlarmLevel, Converter={StaticResource xAlarmStateColorConverter}}">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding AlarmProgress}" Value="2">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                </Grid>
+            </Grid>
+            
+            <Grid VerticalAlignment="Center" Margin="0,0,5,0" DockPanel.Dock="Right">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Style="{StaticResource FontSize12TextBlock}"
+                               Text="{Binding AlarmDate, StringFormat={}{0:hh:mm}}">
+                        
+                    </TextBlock>
+
+                    <TextBlock Style="{StaticResource FontSize12TextBlock}"
+                               Text="{Binding AlarmDate, StringFormat={}{0:tt}}">
+                        
+                    </TextBlock>
+                    
+                </StackPanel>
+            </Grid>
+            
+            <DockPanel>
+                <Grid VerticalAlignment="Center" Margin="5,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{Binding ResourceName}"
+                                   ToolTip="{Binding ResourceName}">
+                            
+                        </TextBlock>
+
+                        <!--<TextBlock Style="{StaticResource FontSize12TextBlock}">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0}{1}">
+                                    <Binding Path="SensorValue"/>
+                                    <Binding Path="SensorMeasureUnit" FallbackValue="" TargetNullValue=""/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                            
+                        </TextBlock>-->
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
+            
+        </DockPanel>
+        
+    </Border>
+</UserControl>

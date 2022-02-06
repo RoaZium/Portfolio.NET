@@ -1,0 +1,1311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ColorAvgSeries" xml:space="preserve">
+    <value>#FF1E90FF</value>
+  </data>
+  <data name="MsgAllMaplayoutClose" xml:space="preserve">
+    <value>現在開いているすべてのマップレイアウトが閉じられます。
+現在編集中の画面は保存されません。
+同意しますか？</value>
+  </data>
+  <data name="MsgAutoMonitoringCaution" xml:space="preserve">
+    <value>自動監視モード中です。マップタイプの変換時に自動的監視モードが解除されます。</value>
+  </data>
+  <data name="MsgCanOnlyDropInFolder" xml:space="preserve">
+    <value>フォルダのみ移動することができます。</value>
+  </data>
+  <data name="MsgCantLoadImage" xml:space="preserve">
+    <value>イメージの読み込みに失敗しました。</value>
+  </data>
+  <data name="MsgFailedLoadData" xml:space="preserve">
+    <value>データの読み込みに失敗しました。</value>
+  </data>
+  <data name="MsgFailedLoadProcessList" xml:space="preserve">
+    <value>工程リストの呼び出しに失敗しました。</value>
+  </data>
+  <data name="MsgFailedLoadSensorList" xml:space="preserve">
+    <value>センサーリストの呼び出しに失敗しました。</value>
+  </data>
+  <data name="MsgFailedSaveMapLayout" xml:space="preserve">
+    <value>マップレイアウトの保存に失敗しました。</value>
+  </data>
+  <data name="MsgFolderRemoveWarning" xml:space="preserve">
+    <value>該当項目と下位項目が完全に削除されます。
+同意しますか？</value>
+  </data>
+  <data name="MsgIncorrectInput" xml:space="preserve">
+    <value>入力情報が正しくありません。</value>
+  </data>
+  <data name="MsgItemRemoveWarning" xml:space="preserve">
+    <value>該当項目が完全に削除されます。
+同意しますか？</value>
+  </data>
+  <data name="MsgMESReMoveCaution" xml:space="preserve">
+    <value>MES工程の構成は削除できません。</value>
+  </data>
+  <data name="MsgNotProcessConfig" xml:space="preserve">
+    <value>工程構成最下位の項目（「端末」, 「リソース」, 「ツール」）は、レイアウトが存在しません。</value>
+  </data>
+  <data name="MsgNotResource" xml:space="preserve">
+    <value>工程構成最下位の項目（「リソース」）は、レイアウトが存在しません。</value>
+  </data>
+  <data name="MsgNotTerminal" xml:space="preserve">
+    <value>工程構成最下位の項目（「端末」）は、レイアウトが存在しません。</value>
+  </data>
+  <data name="MsgNotTool" xml:space="preserve">
+    <value>工程構成最下位の項目（「ツール」）は、レイアウトが存在しません。</value>
+  </data>
+  <data name="MsgPleaseSelectIPCam" xml:space="preserve">
+    <value>IPカメラを選択してください。</value>
+  </data>
+  <data name="MsgPleaseSelectItem" xml:space="preserve">
+    <value>項目を選択してください。</value>
+  </data>
+  <data name="MsgProcessDidnSelected" xml:space="preserve">
+    <value>工程を選んでください。</value>
+  </data>
+  <data name="MsgSelectFile" xml:space="preserve">
+    <value>ファイルを選択してください。</value>
+  </data>
+  <data name="MsgSensorDidnSelected" xml:space="preserve">
+    <value>センサーを選んでください。</value>
+  </data>
+  <data name="Str0000" xml:space="preserve">
+    <value>(デフォルト)</value>
+  </data>
+  <data name="StrA010" xml:space="preserve">
+    <value>色差計</value>
+  </data>
+  <data name="StrA020" xml:space="preserve">
+    <value>膜厚計</value>
+  </data>
+  <data name="StrA030" xml:space="preserve">
+    <value>粘度計</value>
+  </data>
+  <data name="StrA040" xml:space="preserve">
+    <value>圧力計</value>
+  </data>
+  <data name="StrA050" xml:space="preserve">
+    <value>流量計</value>
+  </data>
+  <data name="StrA060" xml:space="preserve">
+    <value>温度計</value>
+  </data>
+  <data name="StrA070" xml:space="preserve">
+    <value>湿度計</value>
+  </data>
+  <data name="StrA080" xml:space="preserve">
+    <value>風速計</value>
+  </data>
+  <data name="StrA090" xml:space="preserve">
+    <value>電圧計</value>
+  </data>
+  <data name="StrA100" xml:space="preserve">
+    <value>電流計</value>
+  </data>
+  <data name="StrA110" xml:space="preserve">
+    <value>電力計</value>
+  </data>
+  <data name="StrA120" xml:space="preserve">
+    <value>電導度計</value>
+  </data>
+  <data name="StrA130" xml:space="preserve">
+    <value>抵抗値計</value>
+  </data>
+  <data name="StrA140" xml:space="preserve">
+    <value>帯電量計</value>
+  </data>
+  <data name="StrA150" xml:space="preserve">
+    <value>周波数計(Hz)</value>
+  </data>
+  <data name="StrA160" xml:space="preserve">
+    <value>振動計</value>
+  </data>
+  <data name="StrA170" xml:space="preserve">
+    <value>光量計</value>
+  </data>
+  <data name="StrA180" xml:space="preserve">
+    <value>回転計</value>
+  </data>
+  <data name="StrA190" xml:space="preserve">
+    <value>BOD計</value>
+  </data>
+  <data name="StrA200" xml:space="preserve">
+    <value>DO計</value>
+  </data>
+  <data name="StrA210" xml:space="preserve">
+    <value>PH計</value>
+  </data>
+  <data name="StrA220" xml:space="preserve">
+    <value>濁度計</value>
+  </data>
+  <data name="StrA230" xml:space="preserve">
+    <value>VOC計</value>
+  </data>
+  <data name="StrA240" xml:space="preserve">
+    <value>ﾊﾟｰﾃｨｸﾙｶｳﾝﾀｰ</value>
+  </data>
+  <data name="StrA250" xml:space="preserve">
+    <value>騒音ｾﾝｻ</value>
+  </data>
+  <data name="StrA260" xml:space="preserve">
+    <value>ｶﾞｽｾﾝｻ</value>
+  </data>
+  <data name="StrA270" xml:space="preserve">
+    <value>位置ｾﾝｻ</value>
+  </data>
+  <data name="StrA280" xml:space="preserve">
+    <value>液面ｾﾝｻ</value>
+  </data>
+  <data name="StrA290" xml:space="preserve">
+    <value>近接ｾﾝｻ</value>
+  </data>
+  <data name="StrA300" xml:space="preserve">
+    <value>ｴﾝｺｰﾀﾞｰ</value>
+  </data>
+  <data name="StrA310" xml:space="preserve">
+    <value>長さｹﾞｰｼﾞ</value>
+  </data>
+  <data name="StrA320" xml:space="preserve">
+    <value>ﾄﾙｸﾚﾝﾁ</value>
+  </data>
+  <data name="StrA330" xml:space="preserve">
+    <value>ﾉｷﾞｽ</value>
+  </data>
+  <data name="StrA340" xml:space="preserve">
+    <value>ｽﾄｯﾌﾟｳｫｯﾁ</value>
+  </data>
+  <data name="StrA350" xml:space="preserve">
+    <value>ﾀｲﾏｰ</value>
+  </data>
+  <data name="StrA360" xml:space="preserve">
+    <value>ﾒｽｼﾘﾝﾀﾞｰ</value>
+  </data>
+  <data name="StrA370" xml:space="preserve">
+    <value>ﾃｽﾀｰ（電圧、電流、抵抗）</value>
+  </data>
+  <data name="StrAbnomalHistory" xml:space="preserve">
+    <value>異常履歴</value>
+  </data>
+  <data name="StrAbnormalState" xml:space="preserve">
+    <value>異常</value>
+  </data>
+  <data name="StrActionNameAlarmLayout" xml:space="preserve">
+    <value>アラーム発生のレイアウトに移動</value>
+  </data>
+  <data name="StrActionNameCompnent" xml:space="preserve">
+    <value>コンポーネントに移動</value>
+  </data>
+  <data name="StrActionNameDelay" xml:space="preserve">
+    <value>待機</value>
+  </data>
+  <data name="StrActionNameIPCamComponent" xml:space="preserve">
+    <value>カメラコンポーネントに移動</value>
+  </data>
+  <data name="StrActionNameLayout" xml:space="preserve">
+    <value>レイアウトに移動</value>
+  </data>
+  <data name="StrAdd" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="StrAlarm" xml:space="preserve">
+    <value>アラーム</value>
+  </data>
+  <data name="StrAlarmIcon" xml:space="preserve">
+    <value>アラームアイコン</value>
+  </data>
+  <data name="StrAlarmScenario" xml:space="preserve">
+    <value>アラームシナリオ</value>
+  </data>
+  <data name="StrAlarmState" xml:space="preserve">
+    <value>異常履歴</value>
+  </data>
+  <data name="StrAlarmType" xml:space="preserve">
+    <value>アラームタイプ</value>
+  </data>
+  <data name="StrAll" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="StrAreaNameOfNull" xml:space="preserve">
+    <value>メインエリア</value>
+  </data>
+  <data name="StrArrange" xml:space="preserve">
+    <value>整列</value>
+  </data>
+  <data name="StrAssignment" xml:space="preserve">
+    <value>課題名</value>
+  </data>
+  <data name="StrAutoMonitoringMode" xml:space="preserve">
+    <value>自動監視モード</value>
+  </data>
+  <data name="StrB010" xml:space="preserve">
+    <value>制御盤</value>
+  </data>
+  <data name="StrB020" xml:space="preserve">
+    <value>制御盤設定器</value>
+  </data>
+  <data name="StrB030" xml:space="preserve">
+    <value>指示調節器</value>
+  </data>
+  <data name="StrB040" xml:space="preserve">
+    <value>PLC接続ﾃﾞﾊﾞｲｽ</value>
+  </data>
+  <data name="StrB050" xml:space="preserve">
+    <value>LS（LimitSwich）</value>
+  </data>
+  <data name="StrB060" xml:space="preserve">
+    <value>ｳﾙﾄﾗﾋﾞｼﾞｮﾝ</value>
+  </data>
+  <data name="StrB070" xml:space="preserve">
+    <value>ﾌﾚｰﾑ検出器</value>
+  </data>
+  <data name="StrB080" xml:space="preserve">
+    <value>滴定装置</value>
+  </data>
+  <data name="StrB090" xml:space="preserve">
+    <value>ﾛﾎﾞｯﾄ設定値</value>
+  </data>
+  <data name="StrB100" xml:space="preserve">
+    <value>ﾎﾟﾝﾌﾟ調節目盛</value>
+  </data>
+  <data name="StrB110" xml:space="preserve">
+    <value>ｶﾒﾗ</value>
+  </data>
+  <data name="StrB120" xml:space="preserve">
+    <value>ﾀﾌﾞﾚｯﾄ</value>
+  </data>
+  <data name="StrB130" xml:space="preserve">
+    <value>RFID</value>
+  </data>
+  <data name="StrB140" xml:space="preserve">
+    <value>ﾏｲｸﾛｽｺｰﾌﾟ</value>
+  </data>
+  <data name="StrB150" xml:space="preserve">
+    <value>ﾎｲｰﾙﾊﾞﾗﾝｻｰ</value>
+  </data>
+  <data name="StrB160" xml:space="preserve">
+    <value>生体認証(顔､指紋)</value>
+  </data>
+  <data name="StrB170" xml:space="preserve">
+    <value>静電靴抵抗値ﾁｪｯｶｰ</value>
+  </data>
+  <data name="StrBar" xml:space="preserve">
+    <value>棒型</value>
+  </data>
+  <data name="StrBringForward" xml:space="preserve">
+    <value>前へ</value>
+  </data>
+  <data name="StrBringToFront" xml:space="preserve">
+    <value>最表面へ</value>
+  </data>
+  <data name="StrC010" xml:space="preserve">
+    <value>目視</value>
+  </data>
+  <data name="StrC020" xml:space="preserve">
+    <value>触診</value>
+  </data>
+  <data name="StrC030" xml:space="preserve">
+    <value>聴診</value>
+  </data>
+  <data name="StrC040" xml:space="preserve">
+    <value>嗅覚</value>
+  </data>
+  <data name="StrC050" xml:space="preserve">
+    <value>帳票記録</value>
+  </data>
+  <data name="StrC060" xml:space="preserve">
+    <value>ﾒｰｶｰ測定</value>
+  </data>
+  <data name="StrC070" xml:space="preserve">
+    <value>固形分濃度</value>
+  </data>
+  <data name="StrC080" xml:space="preserve">
+    <value>塗着重量</value>
+  </data>
+  <data name="StrCancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="StrCategoryCount" xml:space="preserve">
+    <value>カテゴリー回数</value>
+  </data>
+  <data name="StrCategoryName" xml:space="preserve">
+    <value>カテゴリ名</value>
+  </data>
+  <data name="StrCautionGraphRange" xml:space="preserve">
+    <value>最小範囲が最大の範囲よりも大きいです。再入力してください。</value>
+  </data>
+  <data name="StrCautionVirtualName" xml:space="preserve">
+    <value>仮想アイテムの名前を入力してください。</value>
+  </data>
+  <data name="StrChart" xml:space="preserve">
+    <value>チャート</value>
+  </data>
+  <data name="StrCheck" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="StrComponentItem" xml:space="preserve">
+    <value>コンポーネント項目</value>
+  </data>
+  <data name="StrComponentProperties" xml:space="preserve">
+    <value>コンポーネントの属性</value>
+  </data>
+  <data name="StrControlLimit" xml:space="preserve">
+    <value>管理値</value>
+  </data>
+  <data name="StrDangerState" xml:space="preserve">
+    <value>危険</value>
+  </data>
+  <data name="StrDatabase" xml:space="preserve">
+    <value>データベース</value>
+  </data>
+  <data name="StrDateTime" xml:space="preserve">
+    <value>日時</value>
+  </data>
+  <data name="StrDay" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="StrDetails" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="StrDoorClose" xml:space="preserve">
+    <value>ドア閉</value>
+  </data>
+  <data name="StrDoorOpen" xml:space="preserve">
+    <value>ドア開</value>
+  </data>
+  <data name="StrEmailAddress" xml:space="preserve">
+    <value>Eメールアドレス</value>
+  </data>
+  <data name="StrEquipment" xml:space="preserve">
+    <value>設備</value>
+  </data>
+  <data name="StrExistingItem" xml:space="preserve">
+    <value>既存の項目</value>
+  </data>
+  <data name="StrExplorer" xml:space="preserve">
+    <value>ナビゲーション</value>
+  </data>
+  <data name="StrFilter" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="StrFolder" xml:space="preserve">
+    <value>フォルダ</value>
+  </data>
+  <data name="StrForward" xml:space="preserve">
+    <value>前へ</value>
+  </data>
+  <data name="StrGeneral" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="StrGraphForm" xml:space="preserve">
+    <value>グラフの形</value>
+  </data>
+  <data name="StrGraphRange" xml:space="preserve">
+    <value>グラフの範囲</value>
+  </data>
+  <data name="StrHeight" xml:space="preserve">
+    <value>高さ</value>
+  </data>
+  <data name="StrHour" xml:space="preserve">
+    <value>時</value>
+  </data>
+  <data name="StrImage" xml:space="preserve">
+    <value>イメージ</value>
+  </data>
+  <data name="StrInsert" xml:space="preserve">
+    <value>挿入</value>
+  </data>
+  <data name="StrInvalidActon" xml:space="preserve">
+    <value>無効な操作</value>
+  </data>
+  <data name="StrIPCamera" xml:space="preserve">
+    <value>IPカメラ</value>
+  </data>
+  <data name="StrKPIGraph" xml:space="preserve">
+    <value>KPIグラフ</value>
+  </data>
+  <data name="StrLanguage" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="StrLimit" xml:space="preserve">
+    <value>限界値</value>
+  </data>
+  <data name="StrLine" xml:space="preserve">
+    <value>線形</value>
+  </data>
+  <data name="StrLocale" xml:space="preserve">
+    <value>地域</value>
+  </data>
+  <data name="StrLocation" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="StrManualMonitoringMode" xml:space="preserve">
+    <value>手動監視モード</value>
+  </data>
+  <data name="StrMapModification" xml:space="preserve">
+    <value>レイアウト編集</value>
+  </data>
+  <data name="StrMapObservation" xml:space="preserve">
+    <value>閉じる</value>
+    <comment>キャンセル　→　閉じる です。→  閉じる  としてください -&gt; 閉じる</comment>
+  </data>
+  <data name="StrMapToolBar" xml:space="preserve">
+    <value>マップツールバー</value>
+  </data>
+  <data name="StrMapType" xml:space="preserve">
+    <value>種類</value>
+  </data>
+  <data name="StrMax" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="StrMenu" xml:space="preserve">
+    <value>メニュー</value>
+  </data>
+  <data name="StrMin" xml:space="preserve">
+    <value>最小</value>
+  </data>
+  <data name="StrMinute" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="StrModify" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="StrMonitoring" xml:space="preserve">
+    <value>モニタリング</value>
+  </data>
+  <data name="StrMonth" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="StrName" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="StrNavigate" xml:space="preserve">
+    <value>移動</value>
+  </data>
+  <data name="StrNewFolder" xml:space="preserve">
+    <value>新しいフォルダ</value>
+  </data>
+  <data name="StrNewItem" xml:space="preserve">
+    <value>新しい項目</value>
+  </data>
+  <data name="StrNewLayout" xml:space="preserve">
+    <value>新しいレイアウト</value>
+  </data>
+  <data name="StrNone" xml:space="preserve">
+    <value>無し</value>
+  </data>
+  <data name="StrNormalState" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="StrNotiDateTimeFormat" xml:space="preserve">
+    <value>M\/d HH:mm</value>
+  </data>
+  <data name="StrOK" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="StrOpenFile" xml:space="preserve">
+    <value>ファイルを開く</value>
+  </data>
+  <data name="StrPassword" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="StrPosterior" xml:space="preserve">
+    <value>事後確率値</value>
+  </data>
+  <data name="StrPrint" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="StrProcess" xml:space="preserve">
+    <value>工程</value>
+  </data>
+  <data name="StrProcessCode" xml:space="preserve">
+    <value>工程コード</value>
+  </data>
+  <data name="StrProcessName" xml:space="preserve">
+    <value>工程名</value>
+  </data>
+  <data name="StrProductionInfo" xml:space="preserve">
+    <value>生産情報</value>
+  </data>
+  <data name="StrProductionProcess" xml:space="preserve">
+    <value>生産工程</value>
+  </data>
+  <data name="StrProperties" xml:space="preserve">
+    <value>プロパティ</value>
+  </data>
+  <data name="StrRealTimeSensorGraph" xml:space="preserve">
+    <value>リアルタイムセンサーグラフ</value>
+  </data>
+  <data name="StrRefresh" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="StrRemove" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="StrReport" xml:space="preserve">
+    <value>レポート</value>
+  </data>
+  <data name="StrResource" xml:space="preserve">
+    <value>リソース</value>
+  </data>
+  <data name="StrSave" xml:space="preserve">
+    <value>セーブ</value>
+  </data>
+  <data name="StrScenario" xml:space="preserve">
+    <value>シナリオ</value>
+  </data>
+  <data name="StrScenarioPriority" xml:space="preserve">
+    <value>シナリオの優先順位</value>
+  </data>
+  <data name="StrSearch" xml:space="preserve">
+    <value>照会</value>
+  </data>
+  <data name="StrSelect" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="StrSelectArea" xml:space="preserve">
+    <value>エリアの選択</value>
+  </data>
+  <data name="StrSendBackward" xml:space="preserve">
+    <value>背面へ</value>
+  </data>
+  <data name="StrSendToBack" xml:space="preserve">
+    <value>最背面へ移動</value>
+  </data>
+  <data name="StrSensor" xml:space="preserve">
+    <value>センサー</value>
+  </data>
+  <data name="StrSensorCode" xml:space="preserve">
+    <value>センサーコード</value>
+  </data>
+  <data name="StrSensorName" xml:space="preserve">
+    <value>センサー名</value>
+  </data>
+  <data name="StrSettings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="StrState" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="StrTerminal" xml:space="preserve">
+    <value>端末</value>
+  </data>
+  <data name="StrTitle" xml:space="preserve">
+    <value>タイトル</value>
+  </data>
+  <data name="StrTool" xml:space="preserve">
+    <value>ツール</value>
+  </data>
+  <data name="StrType" xml:space="preserve">
+    <value>タイプ</value>
+  </data>
+  <data name="StrUnknownState" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="StrValue" xml:space="preserve">
+    <value>値</value>
+  </data>
+  <data name="StrVideo" xml:space="preserve">
+    <value>動画</value>
+  </data>
+  <data name="StrVideo1" xml:space="preserve">
+    <value>動画</value>
+  </data>
+  <data name="StrView" xml:space="preserve">
+    <value>ビュー</value>
+  </data>
+  <data name="StrVirtual" xml:space="preserve">
+    <value>仮想</value>
+  </data>
+  <data name="StrWarning" xml:space="preserve">
+    <value>警告！！</value>
+  </data>
+  <data name="StrWeek" xml:space="preserve">
+    <value>週</value>
+  </data>
+  <data name="StrWidth" xml:space="preserve">
+    <value>幅</value>
+  </data>
+  <data name="StrWorkCenter" xml:space="preserve">
+    <value>作業場</value>
+  </data>
+  <data name="StrXPosition" xml:space="preserve">
+    <value>水平位置</value>
+  </data>
+  <data name="StrYPosition" xml:space="preserve">
+    <value>垂直位置</value>
+  </data>
+  <data name="MsgFailedLoadScenarioAction" xml:space="preserve">
+    <value>シナリオアクションの情報読み込みに失敗しました。</value>
+  </data>
+  <data name="StrCautionRangeMax" xml:space="preserve">
+    <value>最大の範囲を入力してください。</value>
+  </data>
+  <data name="StrCautionRangeMin" xml:space="preserve">
+    <value>最小範囲を入力してください。</value>
+  </data>
+  <data name="MsgCautionTabitem" xml:space="preserve">
+    <value>[レイアウト]タブには、8つ以上追加することはできません。</value>
+  </data>
+  <data name="StrDoorAxisTitle" xml:space="preserve">
+    <value>ドア開閉の現状</value>
+  </data>
+  <data name="StrDoorTitle" xml:space="preserve">
+    <value>ドア開閉</value>
+  </data>
+  <data name="StrEmailSubject" xml:space="preserve">
+    <value>アラーム異常履歴</value>
+  </data>
+  <data name="StrComment" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="StrCode" xml:space="preserve">
+    <value>コード</value>
+  </data>
+  <data name="StrEquipmentCode" xml:space="preserve">
+    <value>設備コード</value>
+  </data>
+  <data name="StrEquipmentName" xml:space="preserve">
+    <value>機器名</value>
+  </data>
+  <data name="StrResourceCode" xml:space="preserve">
+    <value>リソースコード</value>
+  </data>
+  <data name="StrResourceName" xml:space="preserve">
+    <value>リソース名</value>
+  </data>
+  <data name="StrTerminalCode" xml:space="preserve">
+    <value>端末コード</value>
+  </data>
+  <data name="StrTerminalName" xml:space="preserve">
+    <value>端末名</value>
+  </data>
+  <data name="StrToolCode" xml:space="preserve">
+    <value>工具コード</value>
+  </data>
+  <data name="StrToolName" xml:space="preserve">
+    <value>工具名</value>
+  </data>
+  <data name="StrWorkCenterCode" xml:space="preserve">
+    <value>ワークセンターコード</value>
+  </data>
+  <data name="StrWorkCenterName" xml:space="preserve">
+    <value>作業名</value>
+  </data>
+  <data name="StrLineGraph" xml:space="preserve">
+    <value>折れ線グラフ</value>
+  </data>
+  <data name="StrVerticalBarGraph" xml:space="preserve">
+    <value>縦棒グラフ</value>
+  </data>
+  <data name="MsgAlarmNotiSystemNotExist" xml:space="preserve">
+    <value>アラーム通報装置のプログラムが存在しません。</value>
+  </data>
+  <data name="StrCategoryType" xml:space="preserve">
+    <value>カテゴリーの種類</value>
+  </data>
+  <data name="StrNumericalType" xml:space="preserve">
+    <value>数値タイプ</value>
+  </data>
+  <data name="StrSensorType" xml:space="preserve">
+    <value>センサーの種類</value>
+  </data>
+  <data name="StrCommentComponent" xml:space="preserve">
+    <value>▣ コメントコンポーネント</value>
+  </data>
+  <data name="StrImageComponent" xml:space="preserve">
+    <value>画像コンポーネント</value>
+  </data>
+  <data name="StrIPCameraComponent" xml:space="preserve">
+    <value>IPカメラコンポーネント</value>
+  </data>
+  <data name="StrLineGraphComponent" xml:space="preserve">
+    <value>折れ線グラフコンポーネント</value>
+  </data>
+  <data name="StrVerticalBarGraphComponent" xml:space="preserve">
+    <value>垂直バーグラフコンポーネント</value>
+  </data>
+  <data name="StrVideoComponent" xml:space="preserve">
+    <value>ビデオコンポーネント</value>
+  </data>
+  <data name="StrVirtualComponent" xml:space="preserve">
+    <value>仮想コンポーネント</value>
+  </data>
+  <data name="StrZoneComponent" xml:space="preserve">
+    <value>ゾーンコンポーネント</value>
+  </data>
+  <data name="StrEquipmentComponent" xml:space="preserve">
+    <value>機器コンポーネント</value>
+  </data>
+  <data name="StrProcessComponent" xml:space="preserve">
+    <value>プロセスコンポーネント</value>
+  </data>
+  <data name="StrResourceComponent" xml:space="preserve">
+    <value>センサーコンポーネント</value>
+  </data>
+  <data name="StrWorkcenterComponent" xml:space="preserve">
+    <value>ワークセンターコンポーネント</value>
+  </data>
+  <data name="StrCautionNotSelectedSensor" xml:space="preserve">
+    <value>センサーを選択する必要があります。</value>
+  </data>
+  <data name="MsgNotExistUser" xml:space="preserve">
+    <value>メールを受信するユーザーがありません。</value>
+  </data>
+  <data name="MsgWarnPTZControl" xml:space="preserve">
+    <value>PTZカメラの位置を操作する場合には、このカメラで現場を観察している他のユーザーに邪魔になります。</value>
+  </data>
+  <data name="StrUnlockControl" xml:space="preserve">
+    <value>ロックを解除する</value>
+  </data>
+  <data name="StrStopState" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="StrFontSize" xml:space="preserve">
+    <value>フォントサイズ</value>
+  </data>
+  <data name="StrText" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="StrTextBox" xml:space="preserve">
+    <value>テキストボックス</value>
+  </data>
+  <data name="StrDataBox" xml:space="preserve">
+    <value>データボックス</value>
+  </data>
+  <data name="StrDataBoxComponent" xml:space="preserve">
+    <value>データボックスコンポーネント</value>
+  </data>
+  <data name="StrTextBoxComponent" xml:space="preserve">
+    <value>テキストボックスコンポーネント</value>
+  </data>
+  <data name="StrBackgroundColor" xml:space="preserve">
+    <value>背景色</value>
+  </data>
+  <data name="StrBorderBrush" xml:space="preserve">
+    <value>枠の色</value>
+  </data>
+  <data name="StrBorderThickness" xml:space="preserve">
+    <value>枠の太さ</value>
+  </data>
+  <data name="StrFontWeight" xml:space="preserve">
+    <value>フォントの太さ</value>
+  </data>
+  <data name="StrForegroundColor" xml:space="preserve">
+    <value>フォントの色</value>
+  </data>
+  <data name="StrHorizontalContentAlignment" xml:space="preserve">
+    <value>水平方向の配置</value>
+  </data>
+  <data name="StrUnit" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="StrVerticalContentAlignment" xml:space="preserve">
+    <value>垂直方向の配置</value>
+  </data>
+  <data name="StrConfigurationItem" xml:space="preserve">
+    <value>構成項目</value>
+  </data>
+  <data name="StrManagement" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="StrMap" xml:space="preserve">
+    <value>マップ</value>
+  </data>
+  <data name="StrToolComponent" xml:space="preserve">
+    <value>ツールコンポーネント</value>
+  </data>
+  <data name="StrGauge" xml:space="preserve">
+    <value>ゲージ</value>
+  </data>
+  <data name="StrIndicator" xml:space="preserve">
+    <value>インジケータ</value>
+  </data>
+  <data name="StrParetoChart" xml:space="preserve">
+    <value>パレート図</value>
+  </data>
+  <data name="StrPieChart" xml:space="preserve">
+    <value>円グラフ</value>
+  </data>
+  <data name="StrScatterChart" xml:space="preserve">
+    <value>散布図</value>
+  </data>
+  <data name="StrXbarChart" xml:space="preserve">
+    <value>Xバーチャート</value>
+  </data>
+  <data name="StrGaugeComponent" xml:space="preserve">
+    <value>ゲージコンポーネント</value>
+  </data>
+  <data name="StrIndicatorComponent" xml:space="preserve">
+    <value>インジケーターコンポーネント</value>
+  </data>
+  <data name="StrParetoChartComponent" xml:space="preserve">
+    <value>パレート図コンポーネント</value>
+  </data>
+  <data name="StrPieChartComponent" xml:space="preserve">
+    <value>円グラフコンポーネント</value>
+  </data>
+  <data name="StrScatterChartComponent" xml:space="preserve">
+    <value>散布図コンポーネント</value>
+  </data>
+  <data name="StrXbarChartComponent" xml:space="preserve">
+    <value>Xbar Chartコンポーネント</value>
+  </data>
+  <data name="StrItem" xml:space="preserve">
+    <value>項目</value>
+  </data>
+  <data name="StrClose" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="StrBarSeriesComponent" xml:space="preserve">
+    <value>ラインシリーズコンポーネント</value>
+  </data>
+  <data name="StrLineSeriesComponent" xml:space="preserve">
+    <value>ラインシリーズコンポーネント</value>
+  </data>
+  <data name="StrContent" xml:space="preserve">
+    <value>コンテンツ</value>
+  </data>
+  <data name="StrKind" xml:space="preserve">
+    <value>種類</value>
+  </data>
+  <data name="StrTime" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="StrDataGridComponent" xml:space="preserve">
+    <value>DataGridコンポーネント</value>
+  </data>
+  <data name="StrRadialProgressBarComponent" xml:space="preserve">
+    <value>RadialProgressBarコンポーネント</value>
+  </data>
+  <data name="StrTerminalComponent" xml:space="preserve">
+    <value>端子コンポーネント</value>
+  </data>
+  <data name="StrNestedDonutSeriesComponent" xml:space="preserve">
+    <value>ネストされたドーナツコンポーネント</value>
+  </data>
+  <data name="StrHoleRadiusPercent" xml:space="preserve">
+    <value>穴半径パーセント</value>
+  </data>
+  <data name="StrInnerIndent" xml:space="preserve">
+    <value>インナーインデント</value>
+  </data>
+  <data name="StrAbnormalhistory" xml:space="preserve">
+    <value>異常な歴史</value>
+  </data>
+  <data name="StrAction" xml:space="preserve">
+    <value>アクション</value>
+  </data>
+  <data name="StrActionMan" xml:space="preserve">
+    <value>アクションマン</value>
+  </data>
+  <data name="StrLabelVisibility" xml:space="preserve">
+    <value>ラベルの可視性</value>
+  </data>
+  <data name="StrLabelPosition" xml:space="preserve">
+    <value>ラベルの位置</value>
+  </data>
+  <data name="MsgSystemUseCheck" xml:space="preserve">
+    <value>レイアウトは別のユーザーによって変更されています。</value>
+  </data>
+  <data name="StrAxisXTitle" xml:space="preserve">
+    <value>軸Xタイトル</value>
+  </data>
+  <data name="StrAxisYTitle" xml:space="preserve">
+    <value>軸Yタイトル</value>
+  </data>
+  <data name="StrSize" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="StrDataGrid" xml:space="preserve">
+    <value>データグリッド</value>
+  </data>
+  <data name="MsgNotRemoveRoutingConfig" xml:space="preserve">
+    <value>プロセス構成は削除できません。</value>
+  </data>
+  <data name="StrLimitHigh" xml:space="preserve">
+    <value>限界上限値</value>
+  </data>
+  <data name="StrLimitLow" xml:space="preserve">
+    <value>限界下限値</value>
+  </data>
+  <data name="StrMLimitHigh" xml:space="preserve">
+    <value>管理上限値</value>
+  </data>
+  <data name="StrMLimitLow" xml:space="preserve">
+    <value>管理下限値</value>
+  </data>
+  <data name="StrNoImage" xml:space="preserve">
+    <value>画像無し</value>
+  </data>
+  <data name="StrAnimationMode" xml:space="preserve">
+    <value>アニメーションモード</value>
+  </data>
+  <data name="StrAxisYLabel" xml:space="preserve">
+    <value>Y軸ラベル</value>
+  </data>
+  <data name="StrAxisYRange" xml:space="preserve">
+    <value>Y軸の範囲</value>
+  </data>
+  <data name="StrBarBrush" xml:space="preserve">
+    <value>バーブラシ</value>
+  </data>
+  <data name="StrBarWidth" xml:space="preserve">
+    <value>バー幅</value>
+  </data>
+  <data name="StrBrush" xml:space="preserve">
+    <value>色</value>
+    <comment>みがきます→ 色</comment>
+  </data>
+  <data name="StrDirection" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="StrFontStaggered" xml:space="preserve">
+    <value>千鳥フォント</value>
+  </data>
+  <data name="StrGridLinesBrush" xml:space="preserve">
+    <value>グリッド線ブラシ</value>
+  </data>
+  <data name="StrInterlaced" xml:space="preserve">
+    <value>インターレース</value>
+  </data>
+  <data name="StrInterlacedBrush" xml:space="preserve">
+    <value>インターレースブラシ</value>
+  </data>
+  <data name="StrLayout" xml:space="preserve">
+    <value>レイアウト</value>
+  </data>
+  <data name="StrLegend" xml:space="preserve">
+    <value>伝説</value>
+  </data>
+  <data name="StrLineBrush" xml:space="preserve">
+    <value>ラインブラシ</value>
+  </data>
+  <data name="StrMarkSize" xml:space="preserve">
+    <value>マークサイズ</value>
+  </data>
+  <data name="StrMLimitLimit" xml:space="preserve">
+    <value>管理限界/限界</value>
+  </data>
+  <data name="StrNavigation" xml:space="preserve">
+    <value>ナビゲーション</value>
+  </data>
+  <data name="StrNestedDonuts" xml:space="preserve">
+    <value>ネストされたドーナツ</value>
+  </data>
+  <data name="StrOpacity" xml:space="preserve">
+    <value>不透明度</value>
+  </data>
+  <data name="StrPane" xml:space="preserve">
+    <value>ペイン</value>
+  </data>
+  <data name="StrPosition" xml:space="preserve">
+    <value>ポジション</value>
+  </data>
+  <data name="StrRadialProgressBar" xml:space="preserve">
+    <value>ラジアルプログレスバー</value>
+  </data>
+  <data name="StrRangeMaxValue" xml:space="preserve">
+    <value>範囲の最大値</value>
+  </data>
+  <data name="StrRangeMinValue" xml:space="preserve">
+    <value>範囲の最小値</value>
+  </data>
+  <data name="StrRotation" xml:space="preserve">
+    <value>回転</value>
+  </data>
+  <data name="StrSeriesLabel" xml:space="preserve">
+    <value>シリーズラベル</value>
+  </data>
+  <data name="StrShape" xml:space="preserve">
+    <value>形状</value>
+  </data>
+  <data name="StrSideMargins" xml:space="preserve">
+    <value>サイドマージン</value>
+  </data>
+  <data name="StrStartEnd" xml:space="preserve">
+    <value>始まりと終わり</value>
+  </data>
+  <data name="StrStraightLine" xml:space="preserve">
+    <value>直線</value>
+  </data>
+  <data name="StrTickmarks" xml:space="preserve">
+    <value>目盛り</value>
+  </data>
+  <data name="StrTickmarksMinor" xml:space="preserve">
+    <value>目盛り</value>
+  </data>
+  <data name="StrToolTipEnabled" xml:space="preserve">
+    <value>ツールチップが有効</value>
+  </data>
+  <data name="StrVertical" xml:space="preserve">
+    <value>棒グラフ</value>
+  </data>
+  <data name="StrVisible" xml:space="preserve">
+    <value>目に見える</value>
+  </data>
+  <data name="StrXAxisLabel" xml:space="preserve">
+    <value>X軸ラベル</value>
+  </data>
+  <data name="StrXAxisModel" xml:space="preserve">
+    <value>X軸モデル</value>
+  </data>
+  <data name="StrXAxisRange" xml:space="preserve">
+    <value>X軸の範囲</value>
+  </data>
+  <data name="StrXAxisTitle" xml:space="preserve">
+    <value>X軸のタイトル</value>
+  </data>
+  <data name="StrXYDiagram" xml:space="preserve">
+    <value>XYダイアグラム</value>
+  </data>
+  <data name="StrYAxisModel" xml:space="preserve">
+    <value>Y軸モデル</value>
+  </data>
+  <data name="MsgNotExistLayout" xml:space="preserve">
+    <value>レイアウトは存在しません</value>
+  </data>
+  <data name="StrRoutingConfiguration" xml:space="preserve">
+    <value>ルーティング構成</value>
+  </data>
+  <data name="StrRange" xml:space="preserve">
+    <value>範囲</value>
+  </data>
+  <data name="StrCornerRadius" xml:space="preserve">
+    <value>角の半径</value>
+  </data>
+  <data name="StrProgressBar" xml:space="preserve">
+    <value>プログレスバー</value>
+  </data>
+  <data name="StrAlarmDisplay" xml:space="preserve">
+    <value>アラーム表示</value>
+  </data>
+  <data name="StrBackgroundAlarm" xml:space="preserve">
+    <value>背景アラーム</value>
+  </data>
+  <data name="StrBorderAlarm" xml:space="preserve">
+    <value>枠アラーム</value>
+  </data>
+  <data name="StrFontAlarm" xml:space="preserve">
+    <value>文アラーム</value>
+  </data>
+  <data name="StrShapeColor" xml:space="preserve">
+    <value>形色</value>
+  </data>
+  <data name="StrSampleData" xml:space="preserve">
+    <value>サンプルデータ</value>
+  </data>
+  <data name="StrDust" xml:space="preserve">
+    <value>ほこり</value>
+  </data>
+  <data name="StrHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="StrTemperature" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="StrEquipment01" xml:space="preserve">
+    <value>金型設備</value>
+  </data>
+  <data name="StrEquipment02" xml:space="preserve">
+    <value>射出装置</value>
+  </data>
+  <data name="StrEquipment03" xml:space="preserve">
+    <value>加工設備</value>
+  </data>
+  <data name="StrEquipment04" xml:space="preserve">
+    <value>研磨設備</value>
+  </data>
+  <data name="StrEquipment05" xml:space="preserve">
+    <value>塗装設備</value>
+  </data>
+  <data name="StrProcess01" xml:space="preserve">
+    <value>第1工場</value>
+  </data>
+  <data name="StrProcess02" xml:space="preserve">
+    <value>第2工場</value>
+  </data>
+  <data name="StrResourceSensor01" xml:space="preserve">
+    <value>温度センサー</value>
+  </data>
+  <data name="StrResourceSensor02" xml:space="preserve">
+    <value>塵のセンサー</value>
+  </data>
+  <data name="StrResourceSensor03" xml:space="preserve">
+    <value>湿度センサー</value>
+  </data>
+  <data name="StrResourceSensor04" xml:space="preserve">
+    <value>VOCセンサー</value>
+  </data>
+  <data name="StrResourceSensor05" xml:space="preserve">
+    <value>圧力センサ</value>
+  </data>
+  <data name="StrWorkCenter01" xml:space="preserve">
+    <value>1-1ワークショップ</value>
+  </data>
+  <data name="StrWorkCenter02" xml:space="preserve">
+    <value>1-2ワークショップ</value>
+  </data>
+  <data name="StrWorkCenter03" xml:space="preserve">
+    <value>2-1ワークショップ</value>
+  </data>
+  <data name="StrWorkCenter04" xml:space="preserve">
+    <value>2-2ワークショップ</value>
+  </data>
+  <data name="StrWorkCenter05" xml:space="preserve">
+    <value>2-3ワークショップ</value>
+  </data>
+  <data name="StrLayoutComponent" xml:space="preserve">
+    <value>レイアウトコンポーネント</value>
+  </data>
+  <data name="StrTextWrapping" xml:space="preserve">
+    <value>テキスト折り返し</value>
+  </data>
+  <data name="StrPie" xml:space="preserve">
+    <value>円形</value>
+  </data>
+  <data name="StrTextPattern" xml:space="preserve">
+    <value>テキストパターン</value>
+  </data>
+  <data name="StrAddress" xml:space="preserve">
+    <value>アドレス</value>
+  </data>
+  <data name="StrPlay" xml:space="preserve">
+    <value>再生</value>
+  </data>
+  <data name="StrStreaming" xml:space="preserve">
+    <value>ストリーミング</value>
+  </data>
+  <data name="StrAutoPlay" xml:space="preserve">
+    <value>自動再生</value>
+  </data>
+  <data name="StrStreamingComponent" xml:space="preserve">
+    <value>ストリーミングコンポーネント</value>
+  </data>
+  <data name="StrAsset" xml:space="preserve">
+    <value>資産</value>
+  </data>
+  <data name="StrScreen" xml:space="preserve">
+    <value>画面</value>
+  </data>
+  <data name="StrNewScreen" xml:space="preserve">
+    <value>新しい画面</value>
+  </data>
+</root>

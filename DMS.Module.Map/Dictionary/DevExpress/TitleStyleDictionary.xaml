@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sTitleBase" TargetType="{x:Type dxc:Title}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.TitleM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.TitleM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.TitleM.BorderThickness}" />
+        <Setter Property="Content" Value="{Binding DmComponentM.PropertyM.TitleM.Content}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.TitleM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.TitleM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.TitleM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.TitleM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.TitleM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.TitleM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.TitleM.HorizontalAlignment}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.TitleM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.TitleM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.TitleM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.TitleM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.TitleM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.TitleM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.TitleM.Padding}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.TitleM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.TitleM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.TitleM.Visible}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.TitleM.Width}" />
+    </Style>
+
+    <DataTemplate x:Key="xTitleTemplate">
+            <Label Content="{Binding Text}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="xseriesLabel">
+        <Border BorderThickness="0" 
+                    Opacity="1.0" 
+                    BorderBrush="DarkGray">
+            <Border.Background>
+                <SolidColorBrush Color="{Binding Path=Color}"/>
+            </Border.Background>
+            <Label Content="{Binding Path=Content}" 
+                       Padding="2,1" 
+                       Foreground="Black"
+                       FontFamily="SegoeUI"
+                       FontStyle="Normal"
+                       FontSize="25"
+                       FontWeight="Bold"
+                       FontStretch="Normal"
+                       Background="Black"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="sTemplate">
+        <TextBlock Style="{StaticResource xTextBlockBase}" 
+                   Text="{Binding}"
+                   FontSize="20"
+                   TextAlignment="Center" 
+                   TextWrapping="Wrap" 
+                   Foreground="#FFDDDDDD" >
+
+        </TextBlock>
+    </DataTemplate>
+    
+    <!--<DataTemplate x:Key="xSeriesLabelTemplate">
+        <TextBlock Margin="0,0,4,0" 
+                   Text="{Binding ElementName=xName, Path=DataContext.DmComponentM.PropertyM.TitleM.Content}" 
+                   TextWrapping="WrapWithOverflow" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        --><!--<Image Grid.Column="1" 
+                           Width="32" 
+                           Height="32">
+                <Image.Source>
+                    <BitmapImage UriSource="{Binding ImageSource}"/>
+                </Image.Source>
+            </Image>--><!--
+    </DataTemplate>-->
+
+
+</ResourceDictionary>

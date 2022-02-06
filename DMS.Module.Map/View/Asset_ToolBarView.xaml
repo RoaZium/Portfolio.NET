@@ -1,0 +1,217 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.Asset_ToolBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:local="clr-namespace:DMS.Module.Map.Infrastructure"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" 
+                   Style="{StaticResource FontSize14TextBlock}" 
+                   Text="기본"/>
+
+        <WrapPanel Grid.Row="2">
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}"
+                    CommandParameter="{x:Static local:ComponentType.DM701001}"
+                    ToolTip="{x:Static res:Res.StrImage}">
+                <Image Style="{StaticResource xToolbarImageTemplate}" 
+                       Source="{StaticResource xDrwaingImage_ImageComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.DM701002}" 
+                    ToolTip="{x:Static res:Res.StrVideo}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_VideoComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}"
+                    CommandParameter="{x:Static local:ComponentType.DM701003}" 
+                    ToolTip="{x:Static res:Res.StrIPCamera}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_IPCameraComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}"
+                    CommandParameter="{x:Static local:ComponentType.DM701005}" 
+                    ToolTip="{x:Static res:Res.StrTextBox}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_TextBoxComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}"
+                    CommandParameter="{x:Static local:ComponentType.DM801003}" 
+                    ToolTip="{x:Static res:Res.StrDataBox}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_DataBoxComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.DataGrid}"
+                    ToolTip="{x:Static res:Res.StrDataGridComponent}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_DataGridComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.Gauge}"
+                    ToolTip="{x:Static res:Res.StrGauge}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_GaugeComponent}"/>
+            </Button>
+
+            <!--<Button Style="{StaticResource xToolbarButtonTemplate}" 
+                CommandParameter="{x:Static local:ComponentType.Indicator}"
+                ToolTip="{x:Static res:Res.StrIndicator}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                   Source="{StaticResource blue_ic_compo_none_contorlDrawingImage}"/>
+            </Button>-->
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.ProgressBar}"
+                    ToolTip="{x:Static res:Res.StrProgressBar}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_ProgressbarComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.Move}"
+                    ToolTip="이동">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_MoveComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.Streaming}"
+                    ToolTip="스트리밍">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_StreamingComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.ImageViewer}"
+                    ToolTip="이미지 뷰어">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                   Source="{StaticResource xDrwaingImage_ImageViewerComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.Layout}"
+                    ToolTip="레이아웃">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_LayoutComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.Gif}"
+                    ToolTip="GIF">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                   Source="{StaticResource xDrwaingImage_GIFComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.AutoMode}"
+                    ToolTip="자동 모드">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_AutoModeComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.DetailInfo}"
+                    ToolTip="상세 정보">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_DetailInfoComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.AlarmState}"
+                    ToolTip="알람 상태">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_AlarmStateComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.AlarmHistory}"
+                    ToolTip="이상 알람 이력">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_HistoryComponent}"/>
+            </Button>
+            
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.Animation}"
+                    ToolTip="애니메이션">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_AnimationComponent}"/>
+            </Button>
+        </WrapPanel>
+
+        <TextBlock Grid.Row="4"
+                   Style="{StaticResource FontSize14TextBlock}" 
+                   Text="{x:Static res:Res.StrChart}">
+        </TextBlock>
+
+        <WrapPanel Grid.Row="5">
+            <Button Style="{StaticResource xToolbarButtonTemplate}"
+                    CommandParameter="{x:Static local:ComponentType.DM801001}"
+                    ToolTip="{x:Static res:Res.StrLineGraph}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_LineChartComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.DM801002}"
+                    ToolTip="{x:Static res:Res.StrVerticalBarGraph}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_VerticalChartComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.LineSeries}"
+                    ToolTip="{x:Static res:Res.StrLineSeriesComponent}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_LineSeriesChartComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.BarSeries}"
+                    ToolTip="{x:Static res:Res.StrBarSeriesComponent}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_BarSeriesChartComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}"
+                    CommandParameter="{x:Static local:ComponentType.PieChart}"
+                    ToolTip="{x:Static res:Res.StrPieChart}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_PieChartComponent}"/>
+            </Button>
+
+            <Button Style="{StaticResource xToolbarButtonTemplate}" 
+                    CommandParameter="{x:Static local:ComponentType.NestedDonutSeries}"
+                    ToolTip="{x:Static res:Res.StrNestedDonutSeriesComponent}">
+                <Image Style="{StaticResource xToolbarImageTemplate}"
+                       Source="{StaticResource xDrwaingImage_NestedDonutSeriesChartComponent}"/>
+            </Button>
+        </WrapPanel>
+    </Grid>
+</UserControl>

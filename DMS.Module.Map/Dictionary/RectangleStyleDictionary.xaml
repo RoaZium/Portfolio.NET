@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="xAlarmStateRectangleTemplate" TargetType="{x:Type Rectangle}">
+        <Setter Property="Fill" Value="{Binding DmComponentM.PropertyM.AlarmStateM.Fill}"/>
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.AlarmStateM.Opacity}" />
+        <Setter Property="RadiusX" Value="{Binding DmComponentM.PropertyM.AlarmStateM.RadiusX}" />
+        <Setter Property="RadiusY" Value="{Binding DmComponentM.PropertyM.AlarmStateM.RadiusY}" />
+        <Setter Property="Stroke" Value="{Binding DmComponentM.PropertyM.AlarmStateM.Stroke}" />
+        <Setter Property="StrokeThickness" Value="{Binding DmComponentM.PropertyM.AlarmStateM.StrokeThickness}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.AlarmStateM.Visibility}" />
+        <Setter Property="Width" Value="Auto" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.AlarmStateM.BorderAlarmVisibility }" Value="True">
+                <Setter Property="Stroke" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.AlarmStateM.BackgroundAlarmVisibility }" Value="True">
+                <Setter Property="Fill" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+            </DataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.AlarmStateM.NormalAlarmVisibility}" Value="True"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.AlarmState}" Value="0"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Fill" Value="{Binding DmComponentM.PropertyM.AlarmStateM.Background}" />
+            </MultiDataTrigger>
+            
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

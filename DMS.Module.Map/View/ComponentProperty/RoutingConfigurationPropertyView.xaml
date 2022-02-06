@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.RoutingConfigurationPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <Expander IsExpanded="True">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="구성" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+                    <!--타이틀-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}" 
+                               Text="{x:Static res:Res.StrName}" />
+
+                    <!--크기-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="{x:Static res:Res.StrSize}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--타이틀-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="{Binding ComponentMst.PropertyM.ItemName}" />
+
+                    <!--크기-->
+                    <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                        Text="{Binding ComponentMst.PropertyM.ShapeSize}"
+                                        TextType="PositiveInteger" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander>
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="{x:Static res:Res.StrSensor}" />
+            </Expander.Header>
+            <Expander.Style>
+                <Style TargetType="{x:Type Expander}">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601005">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Expander.Style>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Style="{StaticResource xStackPanelVertical}" >
+                    <!--센서 아이콘-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="{x:Static res:Res.StrAlarmIcon}" />
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource xStackPanelVertical}">
+                    <!--센서 아이콘-->
+                    <ComboBox Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                          ItemsSource="{Binding ResourceIconList}" 
+                          SelectedItem="{Binding SelectedResourceIcon}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

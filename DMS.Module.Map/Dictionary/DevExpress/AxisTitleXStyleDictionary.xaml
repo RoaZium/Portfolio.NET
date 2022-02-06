@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sAxisXTitleBase" TargetType="{x:Type dxc:AxisTitle}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.BorderThickness}" />
+        <Setter Property="Content" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Content}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.HorizontalContentAlignment}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Padding}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Visible}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.AxisXTitleM.Width}" />
+    </Style>
+   
+</ResourceDictionary>

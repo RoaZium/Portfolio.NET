@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sPaneBase" TargetType="{x:Type dxc:Pane}">
+        <Setter Property="AxisXScrollBarOptions">
+            <Setter.Value>
+                <dxc:ScrollBarOptions Visible="False" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.PaneM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.PaneM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.PaneM.BorderThickness}" />
+        <Setter Property="DomainBorderBrush" Value="{x:Null}" />
+        <Setter Property="DomainBrush" Value="{Binding DmComponentM.PropertyM.PaneM.DomainBrush}" />
+        <Setter Property="EnableAxisXNavigation" Value="{Binding DmComponentM.PropertyM.PaneM.EnableAxisXNavigation}" />
+        <Setter Property="EnableAxisYNavigation" Value="{Binding DmComponentM.PropertyM.PaneM.EnableAxisYNavigation}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.PaneM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.PaneM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.PaneM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.PaneM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.PaneM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.PaneM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.PaneM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.PaneM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.PaneM.HorizontalContentAlignment}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.PaneM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.PaneM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.PaneM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.PaneM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.PaneM.MinWidth}" />
+        <Setter Property="MirrorHeight" Value="{Binding DmComponentM.PropertyM.PaneM.MirrorHeight}"/>
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.PaneM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.PaneM.Padding}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.PaneM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.PaneM.VerticalContentAlignment}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.PaneM.Visibility}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.PaneM.Width}" />
+    </Style>
+   
+</ResourceDictionary>

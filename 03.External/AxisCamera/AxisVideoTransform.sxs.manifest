@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisVideoTransform.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisVideoTransform.dll">
+
+    <comClass
+        description="DewarpingTransform Class"
+        clsid="{D91FAF34-A52A-48B8-82E6-324A0BD096B0}"
+        threadingModel="Both"
+        progid="AxisVideoTransform.DewarpingTransform"
+        tlbid="{A1337948-3929-46A0-AFC1-AC6D0289361D}" />
+
+    <comClass
+        description="AcceleratorFilter Class"
+        clsid="{75B8CD8E-0978-4329-9F5F-085203800434}"
+        threadingModel="Both"
+        progid="AxisVideoTransform.AcceleratorFilter"
+        tlbid="{A1337948-3929-46A0-AFC1-AC6D0289361D}" />
+		
+    <typelib tlbid="{A1337948-3929-46A0-AFC1-AC6D0289361D}"
+        version="1.0"
+        helpdir="" />
+		
+</file>
+
+<comInterfaceExternalProxyStub
+    name="IDewarpingTransform"
+    iid="{C15B411B-AC23-46B7-B319-093CB3E158A9}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{A1337948-3929-46A0-AFC1-AC6D0289361D}" />
+
+<comInterfaceExternalProxyStub
+    name="IRectangle"
+    iid="{54610A7E-EF70-4FBE-97CF-07C47E04ED39}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{A1337948-3929-46A0-AFC1-AC6D0289361D}" />
+
+<comInterfaceExternalProxyStub
+    name="IAccelerator"
+    iid="{C86E28F4-653B-4DB2-9883-E6EC3E0D402B}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{A1337948-3929-46A0-AFC1-AC6D0289361D}" />
+
+</assembly>

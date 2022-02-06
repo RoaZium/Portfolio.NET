@@ -1,0 +1,1133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{288130B9-6D9B-4F12-AD11-487482051949}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMS.Module.Map</RootNamespace>
+    <AssemblyName>DMS.Module.Map</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AXISMEDIACONTROLLib">
+      <HintPath>..\..\03.External\AxisCamera\AxInterop.AXISMEDIACONTROLLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Charts.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Data.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.DataAccess.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Images.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Mvvm.v17.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Office.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Pdf.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Printing.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.RichEdit.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.RichEdit.v17.2.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Charts.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Core.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Docking.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.DocumentViewer.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.DocumentViewer.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Gauges.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Gauges.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Grid.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Grid.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Layout.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.LayoutControl.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Printing.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Ribbon.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2016White.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03.External\DevExpress 17.2.7\DevExpress.Xpf.Themes.Office2016White.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2005">
+      <HintPath>..\..\03.External\AxisCamera\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AXISMEDIACONTROLLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AXISMEDIACONTROLLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AxisMediaParserLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AxisMediaParserLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AxisMediaViewerLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AxisMediaViewerLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AxisVideoTransformLib">
+      <HintPath>..\..\03.External\AxisCamera\Interop.AxisVideoTransformLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="XamlRadialProgressBar.DotNet">
+      <HintPath>..\..\03.External\XamlRadialProgressBar.DotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\ActionNameConverter.cs" />
+    <Compile Include="Demo\Demo_ChartData.cs" />
+    <Compile Include="Infrastructure\BaseSingletonManager.cs" />
+    <Compile Include="Infrastructure\LinqManager.cs" />
+    <Compile Include="Infrastructure\MqttReceiveManager.cs" />
+    <Compile Include="Model\Component\AlarmStateModel.cs" />
+    <Compile Include="Model\Component\AnimationModel.cs" />
+    <Compile Include="Model\Component\AutoModeModel.cs" />
+    <Compile Include="Model\Component\DetailInfoModel.cs" />
+    <Compile Include="Model\Component\DetailInfoTitleModel.cs" />
+    <Compile Include="Model\Component\DetailInfoValueModel.cs" />
+    <Compile Include="Model\Component\Gauge\ArcModel.cs" />
+    <Compile Include="Model\Component\AxisX2DModel.cs" />
+    <Compile Include="Model\Component\AxisXLabelModel.cs" />
+    <Compile Include="Model\Component\AxisXRangeModel.cs" />
+    <Compile Include="Model\Component\AxisXTitleModel.cs" />
+    <Compile Include="Model\Component\AxisY2DModel.cs" />
+    <Compile Include="Model\Component\AxisYLabelModel.cs" />
+    <Compile Include="Model\Component\AxisYRangeModel.cs" />
+    <Compile Include="Model\Component\AxisYTitleModel.cs" />
+    <Compile Include="Model\Component\BarSideBySideSeries2DModel.cs" />
+    <Compile Include="Model\Component\BaseComponentModel.cs" />
+    <Compile Include="Model\Component\ChartControlModel.cs" />
+    <Compile Include="Model\Component\DataBoxModel.cs" />
+    <Compile Include="Model\Component\Gauge\ArcPanelModel.cs" />
+    <Compile Include="Model\Component\Gauge\EndLabelModel.cs" />
+    <Compile Include="Model\Component\Gauge\StartLabelModel.cs" />
+    <Compile Include="Model\Component\Gauge\TotalValueModel.cs" />
+    <Compile Include="Model\Component\GifModel.cs" />
+    <Compile Include="Model\Component\ImageViewerModel.cs" />
+    <Compile Include="Model\Component\LayoutModel.cs" />
+    <Compile Include="Model\Component\LegendModel.cs" />
+    <Compile Include="Model\Component\LineSeries2DModel.cs" />
+    <Compile Include="Model\Component\MoveModel.cs" />
+    <Compile Include="Model\Component\NestedDonutSeries2DModel.cs" />
+    <Compile Include="Model\Component\PaneModel.cs" />
+    <Compile Include="Model\Component\PieSeries2DModel.cs" />
+    <Compile Include="Model\Component\PieTotalLabelModel.cs" />
+    <Compile Include="Model\Component\PlaybackModel.cs" />
+    <Compile Include="Model\Component\PointSeries2DModel.cs" />
+    <Compile Include="Model\Component\ProgressBarModel.cs" />
+    <Compile Include="Model\Component\SeriesLabelModel.cs" />
+    <Compile Include="Model\Component\SimpleDiagram2DModel.cs" />
+    <Compile Include="Model\Component\TextBoxModel.cs" />
+    <Compile Include="Model\Component\TitleModel.cs" />
+    <Compile Include="Model\Component\XYDiagram2DModel.cs" />
+    <Compile Include="Model\Component\DataGridCellModel.cs" />
+    <Compile Include="Model\Component\DataGridColumnHeaderModel.cs" />
+    <Compile Include="Model\Component\DataGridModel.cs" />
+    <Compile Include="Model\Component\DataGridRowModel.cs" />
+    <Compile Include="Model\MasterDetailInfoModel.cs" />
+    <Compile Include="Model\RestAPI\DmBaseInfoModel.cs" />
+    <Compile Include="Model\RestAPI\DmBaseInfoTypeModel.cs" />
+    <Compile Include="Infrastructure\PropertyMappingConverter.cs" />
+    <Compile Include="Model\RestAPI\DmDataCollectionModel.cs" />
+    <Compile Include="Model\RestAPI\DmEquipmentModel.cs" />
+    <Compile Include="Model\RestAPI\DmProcessModel.cs" />
+    <Compile Include="Model\RestAPI\DmRoutingConfigurationAlarmStatusModel.cs" />
+    <Compile Include="Model\RestAPI\DmRoutingConfigurationModel.cs" />
+    <Compile Include="Model\Scenario\AlarmMonitoringTargetModel.cs" />
+    <Compile Include="Model\DmChartDataModel.cs" />
+    <Compile Include="Model\DmComponentProperty.cs" />
+    <Compile Include="Model\RestAPI\CustomFileManager.cs" />
+    <Compile Include="Model\RestAPI\DmAlarmStatus.cs" />
+    <Compile Include="Model\RestAPI\DmComponentMst.cs" />
+    <Compile Include="Model\RestAPI\DmResourceSensorModel.cs" />
+    <Compile Include="Model\RestAPI\SystemUseCheck.cs" />
+    <Compile Include="Model\Settings\IPCamPopupState.cs" />
+    <Compile Include="Network\WebRequests.cs" />
+    <Compile Include="Properties\NoSaveSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>NoSaveSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Res.en-US1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Res.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Res.ko-KR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.ko-KR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\ExecuteActionRequest.cs" />
+    <Compile Include="Events\MapTypeChangedEvent.cs" />
+    <Compile Include="Events\ActionExecutedEvent.cs" />
+    <Compile Include="Infrastructure\ConstantManager.cs" />
+    <Compile Include="Infrastructure\EnumManager.cs" />
+    <Compile Include="Managers\IMonitoringManager.cs" />
+    <Compile Include="Model\MapModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Res.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ActionPackerModel.cs" />
+    <Compile Include="ViewModel\Asset_ListViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_AlarmHistoryViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_AlarmStateViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_AnimationViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_AutoModeViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_BarSeriesChartViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_CommonBaseViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_DataBoxViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_DataGridViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_DetailInformationViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_GaugeViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_GifViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_ImageViewerViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_ImageViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_IndicatorViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_IPCameraViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_LayoutViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_LineGraphViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_LineSeriesChartViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_MoveViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_NestedDonutSeriesViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_ParetoChartViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_PieSeriesViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_ProgressBarViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_RadialProgressBarViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_ScatterChartViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_StreamingViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_TextBoxViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_VerticalGraphViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_VideoViewMode.cs" />
+    <Compile Include="ViewModel\Component\CP_VirtualViewModel.cs" />
+    <Compile Include="ViewModel\Component\CP_XbarChartViewModel.cs" />
+    <Compile Include="ViewModel\Control\AbnormalAlarmPopupViewModel.cs" />
+    <Compile Include="ViewModel\Control\Arc.cs" />
+    <Compile Include="ViewModel\Control\ArcMode.cs" />
+    <Compile Include="ViewModel\Control\ArcShape.cs" />
+    <Compile Include="ViewModel\Control\ProgressToAngleConverter.cs" />
+    <Compile Include="ViewModel\Control\RadialProgressBar.cs" />
+    <Compile Include="ViewModel\IPCamera\IPCam_PTZ_ViewModel.cs" />
+    <Compile Include="ViewModel\ILayoutViewModel.cs" />
+    <Compile Include="ViewModel\Popup\CP_CommonPopupViewModel.cs" />
+    <Compile Include="ViewModel\MapFrameViewModel.cs" />
+    <Compile Include="ViewModel\MapListItemViewModel.cs" />
+    <Compile Include="ViewModel\PMSLayoutViewModel.cs" />
+    <Compile Include="ViewModel\IPCamera\IPCamViewModelBase.cs" />
+    <Compile Include="ViewModel\IPCamera\IPCam_FLAT_ViewModel.cs" />
+    <Compile Include="ViewModel\IPCamera\IPCam_PANO_360_ViewModel.cs" />
+    <Compile Include="ViewModel\Popup\IPCamPopupWindowViewModel.cs" />
+    <Compile Include="ViewModel\ScenarioViewModel.cs" />
+    <Compile Include="View\Asset_LayoutView.xaml.cs">
+      <DependentUpon>Asset_LayoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Asset_ListView.xaml.cs">
+      <DependentUpon>Asset_ListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Asset_PropertyView.xaml.cs">
+      <DependentUpon>Asset_PropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Asset_ToolBarView.xaml.cs">
+      <DependentUpon>Asset_ToolBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisX2DPropertyView.xaml.cs">
+      <DependentUpon>AxisX2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisXLabelPropertyView.xaml.cs">
+      <DependentUpon>AxisXLabelPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisXRangePropertyView.xaml.cs">
+      <DependentUpon>AxisXRangePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisXTitlePropertyView.xaml.cs">
+      <DependentUpon>AxisXTitlePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisY2DPropertyView.xaml.cs">
+      <DependentUpon>AxisY2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisYLabelPropertyView.xaml.cs">
+      <DependentUpon>AxisYLabelPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisYRangePropertyView.xaml.cs">
+      <DependentUpon>AxisYRangePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\AxisYTitlePropertyView.xaml.cs">
+      <DependentUpon>AxisYTitlePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\BarSideBySideSeries2DPropertyView.xaml.cs">
+      <DependentUpon>BarSideBySideSeries2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\ChartControlPropertyView.xaml.cs">
+      <DependentUpon>ChartControlPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_AlarmStatePropertyView.xaml.cs">
+      <DependentUpon>CP_AlarmStatePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_AnimationPropertyView.xaml.cs">
+      <DependentUpon>CP_AnimationPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_AutoModePropertyView.xaml.cs">
+      <DependentUpon>CP_AutoModePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_BarSeriesChartPropertyView.xaml.cs">
+      <DependentUpon>CP_BarSeriesChartPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_DataBoxPropertyView.xaml.cs">
+      <DependentUpon>CP_DataBoxPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_DataGridPropertyView.xaml.cs">
+      <DependentUpon>CP_DataGridPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_DetailInformationPropertyView.xaml.cs">
+      <DependentUpon>CP_DetailInformationPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_GaugePropertyView.xaml.cs">
+      <DependentUpon>CP_GaugePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_GifPropertyView.xaml.cs">
+      <DependentUpon>CP_GifPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_ImagePropertyView.xaml.cs">
+      <DependentUpon>CP_ImagePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_ImageViewerPropertyView.xaml.cs">
+      <DependentUpon>CP_ImageViewerPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_IPCameraPropertyView.xaml.cs">
+      <DependentUpon>CP_IPCameraPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_LayoutPropertyView.xaml.cs">
+      <DependentUpon>CP_LayoutPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_LineChartPropertyView.xaml.cs">
+      <DependentUpon>CP_LineChartPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_LineSeriesChartPropertyView.xaml.cs">
+      <DependentUpon>CP_LineSeriesChartPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_MovePropertyView.xaml.cs">
+      <DependentUpon>CP_MovePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_NestedDonutSeriesPropertyView.xaml.cs">
+      <DependentUpon>CP_NestedDonutSeriesPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_PieChartPropertyView.xaml.cs">
+      <DependentUpon>CP_PieChartPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_ProgressBarPropertyView.xaml.cs">
+      <DependentUpon>CP_ProgressBarPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_ResourceSensorPropertyView.xaml.cs">
+      <DependentUpon>CP_ResourceSensorPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_SensorPropertyView.xaml.cs">
+      <DependentUpon>CP_SensorPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_StreamingPropertyView.xaml.cs">
+      <DependentUpon>CP_StreamingPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_TextBoxPropertyView.xaml.cs">
+      <DependentUpon>CP_TextBoxPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_VerticalBarChartPropertyView.xaml.cs">
+      <DependentUpon>CP_VerticalBarChartPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\CP_VideoPropertyView.xaml.cs">
+      <DependentUpon>CP_VideoPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\LegendPropertyView.xaml.cs">
+      <DependentUpon>LegendPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\LineSeries2DPropertyView.xaml.cs">
+      <DependentUpon>LineSeries2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\NestedDonutSeries2DPropertyView.xaml.cs">
+      <DependentUpon>NestedDonutSeries2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\PanePropertyView.xaml.cs">
+      <DependentUpon>PanePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\PointSeries2DPropertyView.xaml.cs">
+      <DependentUpon>PointSeries2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\RoutingConfigurationPropertyView.xaml.cs">
+      <DependentUpon>RoutingConfigurationPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\SeriesLabelPropertyView.xaml.cs">
+      <DependentUpon>SeriesLabelPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\SimpleDiagram2DPropertyView.xaml.cs">
+      <DependentUpon>SimpleDiagram2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\TitlePropertyView.xaml.cs">
+      <DependentUpon>TitlePropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentProperty\XYDiagram2DPropertyView.xaml.cs">
+      <DependentUpon>XYDiagram2DPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AbnormalAlarmPopupView.xaml.cs">
+      <DependentUpon>AbnormalAlarmPopupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\Block.xaml.cs">
+      <DependentUpon>Block.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PMSLayoutView.xaml.cs">
+      <DependentUpon>PMSLayoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\CP_IPCameraView.xaml.cs">
+      <DependentUpon>CP_IPCameraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\EditableNavigationItem.xaml.cs">
+      <DependentUpon>EditableNavigationItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\CartridgeDialogView.xaml.cs">
+      <DependentUpon>CartridgeDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MapFrameView.xaml.cs">
+      <DependentUpon>MapFrameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\IPCam\IPCamView.xaml.cs">
+      <DependentUpon>IPCamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Popup\CP_RoutingConfigurationPopupView.xaml.cs">
+      <DependentUpon>CP_RoutingConfigurationPopupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Popup\IPCamPopupWindowView.xaml.cs">
+      <DependentUpon>IPCamPopupWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ScenarioView.xaml.cs">
+      <DependentUpon>ScenarioView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AlarmHistoryItem.xaml.cs">
+      <DependentUpon>AlarmHistoryItem.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Dictionary\PopupStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\GridStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ControlStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ToggleButtonStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\RectangleStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DataTemplateDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ArrayDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\TextBlockStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\StackPanelStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\BorderStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ComponentPropertyDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DataBoxStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DataGridStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\AxisLabelXStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\AxisLabelYStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\AxisTitleXStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\AxisTitleYStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\AxisX2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\AxisY2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\BarSideBySideSeries2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\ChartControlStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\DevExpressStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\LegendStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\LineSeries2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\NestedDonutSeries2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\PaneStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\PieSeries2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\PointSeries2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\RangeXStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\RangeYStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\SeriesLabelStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\SeriesLabel_BarSideBySideSeries2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\SeriesLabel_PieSeriesStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\SimpleDiagram2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\TitleStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DevExpress\XYDiagram2DStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ImageStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\GaugeStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ButtonStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ListViewStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\LabelStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\LayoutStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ProgressBarStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\SliderStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\ComboBoxStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\TextBoxStyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Global.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\ControlDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Blue\ToolbarResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Blue\RoutingConfigurationResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Blue\SensorIconResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Blue\ImageResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Asset_LayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Asset_ListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Asset_PropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Asset_ToolBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisX2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisXLabelPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisXRangePropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisXTitlePropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisY2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisYLabelPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisYRangePropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\AxisYTitlePropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\BarSideBySideSeries2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\ChartControlPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_AlarmStatePropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_AnimationPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_AutoModePropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_BarSeriesChartPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_DataBoxPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_DataGridPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_DetailInformationPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_GaugePropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_GifPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_ImagePropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_ImageViewerPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_IPCameraPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_LayoutPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_LineChartPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_LineSeriesChartPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_MovePropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_NestedDonutSeriesPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_PieChartPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_ProgressBarPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_ResourceSensorPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_SensorPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_StreamingPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_TextBoxPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_VerticalBarChartPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\CP_VideoPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\LegendPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\LineSeries2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\NestedDonutSeries2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\PanePropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\PointSeries2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\RoutingConfigurationPropertyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ComponentProperty\SeriesLabelPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\SimpleDiagram2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\TitlePropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ComponentProperty\XYDiagram2DPropertyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\AbnormalAlarmPopupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\Block.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\LoadingAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PMSLayoutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Component\CP_IPCameraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\EditableNavigationItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\CartridgeDialogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MapFrameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IPCam\IPCamView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Popup\CP_RoutingConfigurationPopupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Popup\IPCamPopupWindowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ScenarioView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\AlarmHistoryItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\coever.lib.axis.core\Coever.Lib.Axis.Core.csproj">
+      <Project>{b3baeb31-6216-407f-9609-073f490cb32b}</Project>
+      <Name>Coever.Lib.Axis.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.alarmstate.core\Coever.Lib.CoPlatform.AlarmState.Core.csproj">
+      <Project>{638a1bb8-ec66-4c45-a5d6-427daed8566a}</Project>
+      <Name>Coever.Lib.CoPlatform.AlarmState.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.core\Coever.Lib.CoPlatform.Core.csproj">
+      <Project>{21a397ef-35fd-41ac-8fd4-7644a268bcd1}</Project>
+      <Name>Coever.Lib.CoPlatform.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.ipcam.core\Coever.Lib.CoPlatform.IPCam.Core.csproj">
+      <Project>{da935408-7e7c-4fb7-9319-8d7083907b4c}</Project>
+      <Name>Coever.Lib.CoPlatform.IPCam.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.coplatform.scenario.core\Coever.Lib.CoPlatform.Scenario.Core.csproj">
+      <Project>{41616c14-8ed9-483b-a66a-e84ed79de18a}</Project>
+      <Name>Coever.Lib.CoPlatform.Scenario.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.core\Coever.Lib.Core.csproj">
+      <Project>{7b49cb8d-b3b4-4f08-a4ae-8efb1c77c633}</Project>
+      <Name>Coever.Lib.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.mqtt.core\Coever.Lib.Mqtt.Core.csproj">
+      <Project>{92f442b6-4ddd-47ce-8d63-40e3026bb219}</Project>
+      <Name>Coever.Lib.Mqtt.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.wf.axis\Coever.Lib.WF.Axis.csproj">
+      <Project>{bece3579-75a5-4686-b1c4-980fe7d38678}</Project>
+      <Name>Coever.Lib.WF.Axis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.wpf.axis\Coever.Lib.WPF.Axis.csproj">
+      <Project>{c3ec101c-90fb-4cd7-8457-ecf1e53c6543}</Project>
+      <Name>Coever.Lib.WPF.Axis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coever.lib.wpf.core\Coever.Lib.WPF.Core.csproj">
+      <Project>{686bc368-a67a-4374-b0a4-e1bacf8d6a2a}</Project>
+      <Name>Coever.Lib.WPF.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMS.Module.EnvironmentSetting\DMS.Module.EnvironmentSetting.csproj">
+      <Project>{fe637b7b-41aa-4761-ae52-e999136c2b35}</Project>
+      <Name>DMS.Module.EnvironmentSetting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismWPF.Common\PrismWPF.Common.csproj">
+      <Project>{5f4030c6-0ab1-465b-9322-2f8740ec9832}</Project>
+      <Name>PrismWPF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\prismwpf.control\PrismWPF.Control.csproj">
+      <Project>{00e22dd2-918b-406a-8a60-9d490961b7a5}</Project>
+      <Name>PrismWPF.Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Res.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Res.en-US1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Res.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Res.ko-KR.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.ko-KR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Res.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Asset\AssetStructure.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Asset\Company\Coever\AssetList.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Asset\Theme\Black\Demo_Chart.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Asset\Theme\Black\Base_Component.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Asset\Theme\Blue\Base_Component.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Asset\Theme\Blue\Demo_Chart.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Asset\Theme\White\Base_Component.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Asset\Theme\White\Demo_Chart.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\NoSaveSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>NoSaveSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="AxisCamera.mft, Version=0.1.4.0, Type=win32">
+      <Name>AxisCamera.mft.manifest</Name>
+      <HintPath>..\..\03.External\AxisCamera\AxisCamera.mft.manifest</HintPath>
+    </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator">
+      <Version>2.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="M2Mqtt">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>8.0.19</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
+    <PackageReference Include="Unity">
+      <Version>5.11.3</Version>
+    </PackageReference>
+    <PackageReference Include="Unnoficial.Microsoft.Expression.Drawing">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="WpfAnimatedGif">
+      <Version>2.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Asset\Theme\Black\Component\" />
+    <Folder Include="Asset\Theme\Black\Layout\" />
+    <Folder Include="Asset\Theme\Blue\Component\" />
+    <Folder Include="Asset\Theme\Blue\Layout\" />
+    <Folder Include="Asset\Theme\White\Component\" />
+    <Folder Include="Asset\Theme\White\Layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\GIFs\Sample.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
+</Project>

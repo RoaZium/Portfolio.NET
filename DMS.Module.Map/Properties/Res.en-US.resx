@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ColorAvgSeries" xml:space="preserve">
+    <value>#FF1E90FF</value>
+  </data>
+  <data name="ColorEditModeBackgroundColor" xml:space="preserve">
+    <value>#FFADEEA2</value>
+  </data>
+  <data name="MsgAllMaplayoutClose" xml:space="preserve">
+    <value>All currently open ,map layouts will be closed.
+The screen currently being edited is not saved.
+Do you agree?</value>
+  </data>
+  <data name="MsgCanOnlyDropInFolder" xml:space="preserve">
+    <value>Items can only be moved to folders.</value>
+  </data>
+  <data name="MsgCantLoadImage" xml:space="preserve">
+    <value>Could not load image.</value>
+  </data>
+  <data name="MsgFailedLoadProcessList" xml:space="preserve">
+    <value>Failed to load process list.</value>
+  </data>
+  <data name="MsgFailedLoadSensorList" xml:space="preserve">
+    <value>Failed to load sensor list.</value>
+  </data>
+  <data name="MsgFailedSaveMapLayout" xml:space="preserve">
+    <value>Failed to save map layout</value>
+  </data>
+  <data name="MsgFolderRemoveWarning" xml:space="preserve">
+    <value>This item and its children will be permanently deleted.
+Do you agree?</value>
+  </data>
+  <data name="MsgIncorrectInput" xml:space="preserve">
+    <value>The input value is invalid.</value>
+  </data>
+  <data name="MsgItemRemoveWarning" xml:space="preserve">
+    <value>This item will be permanently deleted.
+Do you agree?</value>
+  </data>
+  <data name="MsgNotResource" xml:space="preserve">
+    <value>The lowest level entry ('resource') in the process configuration does not have a layout.</value>
+  </data>
+  <data name="MsgNotTerminal" xml:space="preserve">
+    <value>The lowest level entry ('Terminal') in the process configuration does not have a layout.</value>
+  </data>
+  <data name="MsgNotTool" xml:space="preserve">
+    <value>The lowest level entry ('Tool') in the process configuration does not have a layout.</value>
+  </data>
+  <data name="MsgProcessDidnSelected" xml:space="preserve">
+    <value>Please select a process.</value>
+  </data>
+  <data name="MsgSensorDidnSelected" xml:space="preserve">
+    <value>Please select a sensor.</value>
+  </data>
+  <data name="StrAbnomalHistory" xml:space="preserve">
+    <value>Abnormal history</value>
+  </data>
+  <data name="StrAbnormalState" xml:space="preserve">
+    <value>Abnormal</value>
+  </data>
+  <data name="StrActionNameCompnent" xml:space="preserve">
+    <value>Move to Component</value>
+  </data>
+  <data name="StrActionNameDelay" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="StrActionNameLayout" xml:space="preserve">
+    <value>Go to Layout</value>
+  </data>
+  <data name="StrAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="StrAlarm" xml:space="preserve">
+    <value>Alarm</value>
+  </data>
+  <data name="StrAlarmIcon" xml:space="preserve">
+    <value>AlarmIcon</value>
+  </data>
+  <data name="StrAlarmScenario" xml:space="preserve">
+    <value>AlarmScenario</value>
+  </data>
+  <data name="StrAlarmType" xml:space="preserve">
+    <value>Alarm Type</value>
+  </data>
+  <data name="StrArrange" xml:space="preserve">
+    <value>Arrange</value>
+  </data>
+  <data name="StrAssignment" xml:space="preserve">
+    <value>Assignment</value>
+  </data>
+  <data name="StrBar" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+  <data name="StrBringForward" xml:space="preserve">
+    <value>Bring Forward</value>
+  </data>
+  <data name="StrBringToFront" xml:space="preserve">
+    <value>Bring to Front</value>
+  </data>
+  <data name="StrCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="StrChart" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="StrComponentItem" xml:space="preserve">
+    <value>Component Item</value>
+  </data>
+  <data name="StrComponentProperties" xml:space="preserve">
+    <value>Component Properties</value>
+  </data>
+  <data name="StrControlLimit" xml:space="preserve">
+    <value>Control Limit</value>
+  </data>
+  <data name="StrDangerState" xml:space="preserve">
+    <value>Danger</value>
+  </data>
+  <data name="StrDatabase" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="StrDateTime" xml:space="preserve">
+    <value>Date Time</value>
+  </data>
+  <data name="StrDay" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="StrDefaultLanguage" xml:space="preserve">
+    <value>System Default</value>
+  </data>
+  <data name="StrDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="StrEmailAddress" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="StrEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="StrExplorer" xml:space="preserve">
+    <value>Explorer</value>
+  </data>
+  <data name="StrFolder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="StrForward" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="StrGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="StrGraphForm" xml:space="preserve">
+    <value>Graph form</value>
+  </data>
+  <data name="StrHeight" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="StrHour" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="StrImage" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="StrInsert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="StrInvalidActon" xml:space="preserve">
+    <value>Invalid action</value>
+  </data>
+  <data name="StrIPCamera" xml:space="preserve">
+    <value>IP Camera</value>
+  </data>
+  <data name="StrJapanese" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="StrKorean" xml:space="preserve">
+    <value>한국어</value>
+  </data>
+  <data name="StrKPIGraph" xml:space="preserve">
+    <value>KPI Graph</value>
+  </data>
+  <data name="StrLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="StrLimit" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="StrLine" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="StrLocale" xml:space="preserve">
+    <value>Locale</value>
+  </data>
+  <data name="StrLocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="StrMapModification" xml:space="preserve">
+    <value>Map Modification</value>
+  </data>
+  <data name="StrMapObservation" xml:space="preserve">
+    <value>Map Observation</value>
+  </data>
+  <data name="StrMapType" xml:space="preserve">
+    <value>Map Type</value>
+  </data>
+  <data name="StrMax" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="StrMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="StrMin" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="StrMinute" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="StrModify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="StrMonitoring" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="StrMonth" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="StrName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="StrNavigate" xml:space="preserve">
+    <value>Navigate</value>
+  </data>
+  <data name="StrNewFolder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="StrNewLayout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="StrNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="StrNormalState" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StrNotiDateTimeFormat" xml:space="preserve">
+    <value>yyyy-MM-dd HH:mm:ss</value>
+  </data>
+  <data name="StrOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="StrOpenFile" xml:space="preserve">
+    <value>Open File</value>
+  </data>
+  <data name="StrPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="StrPosterior" xml:space="preserve">
+    <value>Posterior</value>
+  </data>
+  <data name="StrPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="StrProcess" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="StrProcessCode" xml:space="preserve">
+    <value>Process Code</value>
+  </data>
+  <data name="StrProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="StrProductionInfo" xml:space="preserve">
+    <value>Production Info</value>
+  </data>
+  <data name="StrProductionProcess" xml:space="preserve">
+    <value>Production Process</value>
+  </data>
+  <data name="StrProperties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="StrRealTimeSensorGraph" xml:space="preserve">
+    <value>Realtime sensor graph</value>
+  </data>
+  <data name="StrRefresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="StrRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="StrReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="StrSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="StrScenario" xml:space="preserve">
+    <value>Scenario</value>
+  </data>
+  <data name="StrScenarioPriority" xml:space="preserve">
+    <value>Scenario priority</value>
+  </data>
+  <data name="StrSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="StrSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="StrSendBackward" xml:space="preserve">
+    <value>Send Backward</value>
+  </data>
+  <data name="StrSendToBack" xml:space="preserve">
+    <value>Send to Back</value>
+  </data>
+  <data name="StrSensor" xml:space="preserve">
+    <value>Sensor</value>
+  </data>
+  <data name="StrSensorCode" xml:space="preserve">
+    <value>Sensor Code</value>
+  </data>
+  <data name="StrSensorName" xml:space="preserve">
+    <value>Sensor Name</value>
+  </data>
+  <data name="StrSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="StrState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="StrTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="StrType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="StrUnknownState" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="StrValue" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="StrVideo" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="StrVideo1" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="StrView" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="StrWarning" xml:space="preserve">
+    <value>Warning!!</value>
+  </data>
+  <data name="StrWeek" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="StrWidth" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="StrXPosition" xml:space="preserve">
+    <value>X Position</value>
+  </data>
+  <data name="StrYPosition" xml:space="preserve">
+    <value>Y Position</value>
+  </data>
+  <data name="MsgNotProcessConfig" xml:space="preserve">
+    <value>The lowest level entry (Terminal, resource, Tool) in the process configuration does not have a layout.</value>
+  </data>
+  <data name="StrCheck" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="MsgFailedLoadData" xml:space="preserve">
+    <value>Failed to load data.</value>
+  </data>
+  <data name="MsgSelectFile" xml:space="preserve">
+    <value>Please select file.</value>
+  </data>
+  <data name="StrAutoMonitoringMode" xml:space="preserve">
+    <value>Auto Monitoring Mode</value>
+  </data>
+  <data name="StrManualMonitoringMode" xml:space="preserve">
+    <value>Manual Monitoring Mode</value>
+  </data>
+  <data name="StrActionNameAlarmLayout" xml:space="preserve">
+    <value>Go to alarm occurrence layout</value>
+  </data>
+  <data name="MsgMESReMoveCaution" xml:space="preserve">
+    <value>The MES process configuration can not be removed.</value>
+  </data>
+  <data name="MsgAutoMonitoringCaution" xml:space="preserve">
+    <value>Automatic monitoring mode is in progress. When the map type is converted, the automatic monitoring mode is canceled.</value>
+  </data>
+  <data name="StrAlarmState" xml:space="preserve">
+    <value>Abnormal history</value>
+  </data>
+  <data name="StrMapToolBar" xml:space="preserve">
+    <value>Map ToolBar</value>
+  </data>
+  <data name="StrVirtual" xml:space="preserve">
+    <value>Virtual</value>
+  </data>
+  <data name="StrEquipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="StrResource" xml:space="preserve">
+    <value>Resource</value>
+  </data>
+  <data name="StrTerminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="StrTool" xml:space="preserve">
+    <value>Tool</value>
+  </data>
+  <data name="StrWorkCenter" xml:space="preserve">
+    <value>WorkCenter</value>
+  </data>
+  <data name="StrDoorClose" xml:space="preserve">
+    <value>Door Close</value>
+  </data>
+  <data name="StrDoorOpen" xml:space="preserve">
+    <value>Door Open</value>
+  </data>
+  <data name="StrCategoryCount" xml:space="preserve">
+    <value>Category Count</value>
+  </data>
+  <data name="StrCategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+  <data name="StrAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="StrExistingItem" xml:space="preserve">
+    <value>Existing Item</value>
+  </data>
+  <data name="StrFilter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="StrNewItem" xml:space="preserve">
+    <value>New Item</value>
+  </data>
+  <data name="MsgPleaseSelectItem" xml:space="preserve">
+    <value>Please select item.</value>
+  </data>
+  <data name="MsgPleaseSelectIPCam" xml:space="preserve">
+    <value>Please select IP Camera.</value>
+  </data>
+  <data name="StrActionNameIPCamComponent" xml:space="preserve">
+    <value>Go to camera component</value>
+  </data>
+  <data name="StrAreaNameOfNull" xml:space="preserve">
+    <value>Main area</value>
+  </data>
+  <data name="StrSelectArea" xml:space="preserve">
+    <value>Select area</value>
+  </data>
+  <data name="StrCautionVirtualName" xml:space="preserve">
+    <value>Please enter a virtual item name.</value>
+  </data>
+  <data name="Str0000" xml:space="preserve">
+    <value>(Default)</value>
+  </data>
+  <data name="StrA010" xml:space="preserve">
+    <value>Color difference meter</value>
+  </data>
+  <data name="StrA020" xml:space="preserve">
+    <value>Film thickness meter</value>
+  </data>
+  <data name="StrA030" xml:space="preserve">
+    <value>Viscometer</value>
+  </data>
+  <data name="StrA040" xml:space="preserve">
+    <value>Pressure gauge</value>
+  </data>
+  <data name="StrA050" xml:space="preserve">
+    <value>Flowmeter</value>
+  </data>
+  <data name="StrA060" xml:space="preserve">
+    <value>thermometer</value>
+  </data>
+  <data name="StrA070" xml:space="preserve">
+    <value>Hygrometer</value>
+  </data>
+  <data name="StrA080" xml:space="preserve">
+    <value>Anemometer</value>
+  </data>
+  <data name="StrA090" xml:space="preserve">
+    <value>voltmeter</value>
+  </data>
+  <data name="StrA100" xml:space="preserve">
+    <value>Ammeter</value>
+  </data>
+  <data name="StrA110" xml:space="preserve">
+    <value>Watt meter</value>
+  </data>
+  <data name="StrA120" xml:space="preserve">
+    <value>Conductivity meter</value>
+  </data>
+  <data name="StrA130" xml:space="preserve">
+    <value>Resistance meter</value>
+  </data>
+  <data name="StrA140" xml:space="preserve">
+    <value>Charge meter</value>
+  </data>
+  <data name="StrA150" xml:space="preserve">
+    <value>Frequency meter (Hz)</value>
+  </data>
+  <data name="StrA160" xml:space="preserve">
+    <value>Vibration meter</value>
+  </data>
+  <data name="StrA170" xml:space="preserve">
+    <value>Light meter</value>
+  </data>
+  <data name="StrA180" xml:space="preserve">
+    <value>Tachometer</value>
+  </data>
+  <data name="StrA190" xml:space="preserve">
+    <value>BOD meter</value>
+  </data>
+  <data name="StrA200" xml:space="preserve">
+    <value>DO meter</value>
+  </data>
+  <data name="StrA210" xml:space="preserve">
+    <value>PH meter</value>
+  </data>
+  <data name="StrA220" xml:space="preserve">
+    <value>Turbidimeter</value>
+  </data>
+  <data name="StrA230" xml:space="preserve">
+    <value>VOC meter</value>
+  </data>
+  <data name="StrA240" xml:space="preserve">
+    <value>Particle counter</value>
+  </data>
+  <data name="StrA250" xml:space="preserve">
+    <value>Noise sensor</value>
+  </data>
+  <data name="StrA260" xml:space="preserve">
+    <value>Gas sensor</value>
+  </data>
+  <data name="StrA270" xml:space="preserve">
+    <value>Position sensor</value>
+  </data>
+  <data name="StrA280" xml:space="preserve">
+    <value>Level sensor</value>
+  </data>
+  <data name="StrA290" xml:space="preserve">
+    <value>Proximity sensor</value>
+  </data>
+  <data name="StrA300" xml:space="preserve">
+    <value>Encoder</value>
+  </data>
+  <data name="StrA310" xml:space="preserve">
+    <value>Length gauge</value>
+  </data>
+  <data name="StrA320" xml:space="preserve">
+    <value>Torque wrench</value>
+  </data>
+  <data name="StrA330" xml:space="preserve">
+    <value>Calipers</value>
+  </data>
+  <data name="StrA340" xml:space="preserve">
+    <value>Stopwatch</value>
+  </data>
+  <data name="StrA350" xml:space="preserve">
+    <value>Timer</value>
+  </data>
+  <data name="StrA360" xml:space="preserve">
+    <value>Measuring cylinder</value>
+  </data>
+  <data name="StrA370" xml:space="preserve">
+    <value>Tester (voltage, current, resistance)</value>
+  </data>
+  <data name="StrB010" xml:space="preserve">
+    <value>control panel</value>
+  </data>
+  <data name="StrB020" xml:space="preserve">
+    <value>Control panel setting unit</value>
+  </data>
+  <data name="StrB030" xml:space="preserve">
+    <value>Indicating controller</value>
+  </data>
+  <data name="StrB040" xml:space="preserve">
+    <value>PLC connection device</value>
+  </data>
+  <data name="StrB050" xml:space="preserve">
+    <value>LS (LimitSwich)</value>
+  </data>
+  <data name="StrB060" xml:space="preserve">
+    <value>Ultravision</value>
+  </data>
+  <data name="StrB070" xml:space="preserve">
+    <value>Frame detector</value>
+  </data>
+  <data name="StrB080" xml:space="preserve">
+    <value>Titrator</value>
+  </data>
+  <data name="StrB090" xml:space="preserve">
+    <value>Robot setting value</value>
+  </data>
+  <data name="StrB100" xml:space="preserve">
+    <value>Pump adjustment scale</value>
+  </data>
+  <data name="StrB110" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="StrB120" xml:space="preserve">
+    <value>Tablet</value>
+  </data>
+  <data name="StrB130" xml:space="preserve">
+    <value>RFID</value>
+  </data>
+  <data name="StrB140" xml:space="preserve">
+    <value>Microscope</value>
+  </data>
+  <data name="StrB150" xml:space="preserve">
+    <value>Wheel balancer</value>
+  </data>
+  <data name="StrB160" xml:space="preserve">
+    <value>Biometric authentication (face, fingerprint)</value>
+  </data>
+  <data name="StrB170" xml:space="preserve">
+    <value>Electrostatic shoe resistance value checker</value>
+  </data>
+  <data name="StrC010" xml:space="preserve">
+    <value>Visually</value>
+  </data>
+  <data name="StrC020" xml:space="preserve">
+    <value>Palpation</value>
+  </data>
+  <data name="StrC030" xml:space="preserve">
+    <value>Auscultation</value>
+  </data>
+  <data name="StrC040" xml:space="preserve">
+    <value>Olfaction</value>
+  </data>
+  <data name="StrC050" xml:space="preserve">
+    <value>Form record</value>
+  </data>
+  <data name="StrC060" xml:space="preserve">
+    <value>Maker measurement</value>
+  </data>
+  <data name="StrC070" xml:space="preserve">
+    <value>Solid concentration</value>
+  </data>
+  <data name="StrC080" xml:space="preserve">
+    <value>Coating Weight</value>
+  </data>
+  <data name="StrGraphRange" xml:space="preserve">
+    <value>Graph Range</value>
+  </data>
+  <data name="StrCautionGraphRange" xml:space="preserve">
+    <value>The minimum range is greater than the maximum range. Please try again.</value>
+  </data>
+  <data name="MsgFailedLoadScenarioAction" xml:space="preserve">
+    <value>Failed to load scenario action.</value>
+  </data>
+  <data name="StrCautionRangeMax" xml:space="preserve">
+    <value>Please enter the maximum range.</value>
+  </data>
+  <data name="StrCautionRangeMin" xml:space="preserve">
+    <value>Please enter a minimum range.</value>
+  </data>
+  <data name="MsgCautionTabitem" xml:space="preserve">
+    <value>You can not add more than 8 layout tabs.</value>
+  </data>
+  <data name="StrDoorAxisTitle" xml:space="preserve">
+    <value>Door opening / closing status</value>
+  </data>
+  <data name="StrDoorTitle" xml:space="preserve">
+    <value>Door opening and closing</value>
+  </data>
+  <data name="StrEmailSubject" xml:space="preserve">
+    <value>Abnormal alarm history</value>
+  </data>
+  <data name="StrComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="StrCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="StrEquipmentCode" xml:space="preserve">
+    <value>EquipmentCode</value>
+  </data>
+  <data name="StrEquipmentName" xml:space="preserve">
+    <value>EquipmentName</value>
+  </data>
+  <data name="StrResourceCode" xml:space="preserve">
+    <value>ResourceCode</value>
+  </data>
+  <data name="StrResourceName" xml:space="preserve">
+    <value>ResourceName</value>
+  </data>
+  <data name="StrTerminalCode" xml:space="preserve">
+    <value>TerminalCode</value>
+  </data>
+  <data name="StrTerminalName" xml:space="preserve">
+    <value>TerminalName</value>
+  </data>
+  <data name="StrToolCode" xml:space="preserve">
+    <value>ToolCode</value>
+  </data>
+  <data name="StrToolName" xml:space="preserve">
+    <value>ToolName</value>
+  </data>
+  <data name="StrWorkCenterCode" xml:space="preserve">
+    <value>WorkCenterCode</value>
+  </data>
+  <data name="StrWorkCenterName" xml:space="preserve">
+    <value>WorkCenterName</value>
+  </data>
+  <data name="StrLineGraph" xml:space="preserve">
+    <value>Line Graph</value>
+  </data>
+  <data name="StrVerticalBarGraph" xml:space="preserve">
+    <value>VerticalBar Graph</value>
+  </data>
+  <data name="MsgAlarmNotiSystemNotExist" xml:space="preserve">
+    <value>Alarm notification device program does not exist.</value>
+  </data>
+  <data name="StrCategoryType" xml:space="preserve">
+    <value>Category type</value>
+  </data>
+  <data name="StrNumericalType" xml:space="preserve">
+    <value>Numerical type</value>
+  </data>
+  <data name="StrSensorType" xml:space="preserve">
+    <value>Sensor type</value>
+  </data>
+  <data name="StrCommentComponent" xml:space="preserve">
+    <value>Comment Component</value>
+  </data>
+  <data name="StrImageComponent" xml:space="preserve">
+    <value>Image Component</value>
+  </data>
+  <data name="StrIPCameraComponent" xml:space="preserve">
+    <value>IPCamera Component</value>
+  </data>
+  <data name="StrLineGraphComponent" xml:space="preserve">
+    <value>LineGraph Component</value>
+  </data>
+  <data name="StrVerticalBarGraphComponent" xml:space="preserve">
+    <value>VerticalBarGraph Component</value>
+  </data>
+  <data name="StrVideoComponent" xml:space="preserve">
+    <value>Video Component</value>
+  </data>
+  <data name="StrVirtualComponent" xml:space="preserve">
+    <value>Virtual Component</value>
+  </data>
+  <data name="StrZoneComponent" xml:space="preserve">
+    <value>Zone Component</value>
+  </data>
+  <data name="StrEquipmentComponent" xml:space="preserve">
+    <value>Equipment Component</value>
+  </data>
+  <data name="StrProcessComponent" xml:space="preserve">
+    <value>Process Component</value>
+  </data>
+  <data name="StrResourceComponent" xml:space="preserve">
+    <value>Sensor Component</value>
+  </data>
+  <data name="StrWorkcenterComponent" xml:space="preserve">
+    <value>Workcenter Component</value>
+  </data>
+  <data name="StrCautionNotSelectedSensor" xml:space="preserve">
+    <value>The sensor must be selected.</value>
+  </data>
+  <data name="MsgNotExistUser" xml:space="preserve">
+    <value>You have no users to receive mail.</value>
+  </data>
+  <data name="MsgWarnPTZControl" xml:space="preserve">
+    <value>If you control the position of the PTZ camera, It may be disturb other users who are observing the scene with this camera.</value>
+  </data>
+  <data name="StrUnlockControl" xml:space="preserve">
+    <value>Unlock control</value>
+  </data>
+  <data name="StrStopState" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="StrFontSize" xml:space="preserve">
+    <value>FontSize</value>
+  </data>
+  <data name="StrText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="StrTextBox" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+  <data name="StrDataBox" xml:space="preserve">
+    <value>DataBox</value>
+  </data>
+  <data name="StrDataBoxComponent" xml:space="preserve">
+    <value>DataBox Component</value>
+  </data>
+  <data name="StrTextBoxComponent" xml:space="preserve">
+    <value>TextBox Component</value>
+  </data>
+  <data name="StrBackgroundColor" xml:space="preserve">
+    <value>Background color</value>
+  </data>
+  <data name="StrBorderBrush" xml:space="preserve">
+    <value>Border color</value>
+  </data>
+  <data name="StrBorderThickness" xml:space="preserve">
+    <value>BorderThickness</value>
+  </data>
+  <data name="StrFontWeight" xml:space="preserve">
+    <value>FontWeight</value>
+  </data>
+  <data name="StrForegroundColor" xml:space="preserve">
+    <value>Foreground Color</value>
+  </data>
+  <data name="StrHorizontalContentAlignment" xml:space="preserve">
+    <value>HorizontalContentAlignment</value>
+  </data>
+  <data name="StrUnit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="StrVerticalContentAlignment" xml:space="preserve">
+    <value>VerticalContentAlignment</value>
+  </data>
+  <data name="StrConfigurationItem" xml:space="preserve">
+    <value>구성항목</value>
+  </data>
+  <data name="StrManagement" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="StrMap" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="StrToolComponent" xml:space="preserve">
+    <value>Tool Component</value>
+  </data>
+  <data name="StrGauge" xml:space="preserve">
+    <value>Gauge</value>
+  </data>
+  <data name="StrIndicator" xml:space="preserve">
+    <value>Indicator</value>
+  </data>
+  <data name="StrParetoChart" xml:space="preserve">
+    <value>ParetoChart</value>
+  </data>
+  <data name="StrPieChart" xml:space="preserve">
+    <value>Pie Chart</value>
+  </data>
+  <data name="StrScatterChart" xml:space="preserve">
+    <value>Scatter Chart</value>
+  </data>
+  <data name="StrXbarChart" xml:space="preserve">
+    <value>Xbar Chart</value>
+  </data>
+  <data name="StrGaugeComponent" xml:space="preserve">
+    <value>Gauge Component</value>
+  </data>
+  <data name="StrIndicatorComponent" xml:space="preserve">
+    <value>Indicator Component</value>
+  </data>
+  <data name="StrParetoChartComponent" xml:space="preserve">
+    <value>Pareto Chart Component</value>
+  </data>
+  <data name="StrPieChartComponent" xml:space="preserve">
+    <value>Pie Chart Component</value>
+  </data>
+  <data name="StrScatterChartComponent" xml:space="preserve">
+    <value>Scatter Chart Component</value>
+  </data>
+  <data name="StrXbarChartComponent" xml:space="preserve">
+    <value>Xbar Chart Component</value>
+  </data>
+  <data name="StrItem" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="StrClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="StrBarSeriesComponent" xml:space="preserve">
+    <value>Bar Series Component</value>
+  </data>
+  <data name="StrLineSeriesComponent" xml:space="preserve">
+    <value>Line Series Component</value>
+  </data>
+  <data name="StrContent" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="StrDataGridComponent" xml:space="preserve">
+    <value>DataGrid Component</value>
+  </data>
+  <data name="StrKind" xml:space="preserve">
+    <value>Kind</value>
+  </data>
+  <data name="StrTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="StrRadialProgressBarComponent" xml:space="preserve">
+    <value>RadialProgressBar Component</value>
+  </data>
+  <data name="StrTerminalComponent" xml:space="preserve">
+    <value>Terminal Component</value>
+  </data>
+  <data name="StrNestedDonutSeriesComponent" xml:space="preserve">
+    <value>NestedDonutSeries Component</value>
+  </data>
+  <data name="StrHoleRadiusPercent" xml:space="preserve">
+    <value>HoleRadiusPercent</value>
+  </data>
+  <data name="StrInnerIndent" xml:space="preserve">
+    <value>InnerIndent</value>
+  </data>
+  <data name="StrAbnormalhistory" xml:space="preserve">
+    <value>Abnormal history</value>
+  </data>
+  <data name="StrAction" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="StrActionMan" xml:space="preserve">
+    <value>Action Man</value>
+  </data>
+  <data name="StrLabelVisibility" xml:space="preserve">
+    <value>Label Visibility</value>
+  </data>
+  <data name="MsgSystemUseCheck" xml:space="preserve">
+    <value>The layout is being modified by another user.</value>
+  </data>
+  <data name="StrLabelPosition" xml:space="preserve">
+    <value>Label Position</value>
+  </data>
+  <data name="StrAxisXTitle" xml:space="preserve">
+    <value>AxisXTitle</value>
+  </data>
+  <data name="StrAxisYTitle" xml:space="preserve">
+    <value>AxisYTitle</value>
+  </data>
+  <data name="StrSize" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="StrDataGrid" xml:space="preserve">
+    <value>Data Grid</value>
+  </data>
+  <data name="MsgNotRemoveRoutingConfig" xml:space="preserve">
+    <value>Process configurations cannot be deleted.</value>
+  </data>
+  <data name="StrLimitHigh" xml:space="preserve">
+    <value>LimitHigh</value>
+  </data>
+  <data name="StrLimitLow" xml:space="preserve">
+    <value>LimitLow</value>
+  </data>
+  <data name="StrMLimitHigh" xml:space="preserve">
+    <value>MLimitHigh</value>
+  </data>
+  <data name="StrMLimitLow" xml:space="preserve">
+    <value>MLimitLow</value>
+  </data>
+  <data name="StrNoImage" xml:space="preserve">
+    <value>No Image</value>
+  </data>
+  <data name="StrAnimationMode" xml:space="preserve">
+    <value>AnimationMode</value>
+  </data>
+  <data name="StrAxisYLabel" xml:space="preserve">
+    <value>AxisY Label</value>
+  </data>
+  <data name="StrAxisYRange" xml:space="preserve">
+    <value>AxisY Range</value>
+  </data>
+  <data name="StrBarBrush" xml:space="preserve">
+    <value>Bar Brush</value>
+  </data>
+  <data name="StrBarWidth" xml:space="preserve">
+    <value>Bar Width</value>
+  </data>
+  <data name="StrBrush" xml:space="preserve">
+    <value>Brush</value>
+  </data>
+  <data name="StrDirection" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="StrFontStaggered" xml:space="preserve">
+    <value>Font Staggered</value>
+  </data>
+  <data name="StrGridLinesBrush" xml:space="preserve">
+    <value>GridLinesBrush</value>
+  </data>
+  <data name="StrInterlaced" xml:space="preserve">
+    <value>Interlaced</value>
+  </data>
+  <data name="StrInterlacedBrush" xml:space="preserve">
+    <value>Interlaced Brush</value>
+  </data>
+  <data name="StrLayout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="StrLegend" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="StrLineBrush" xml:space="preserve">
+    <value>Line Brush</value>
+  </data>
+  <data name="StrMarkSize" xml:space="preserve">
+    <value>Mark Size</value>
+  </data>
+  <data name="StrMLimitLimit" xml:space="preserve">
+    <value>MLimit/Limit</value>
+  </data>
+  <data name="StrNavigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="StrNestedDonuts" xml:space="preserve">
+    <value>NestedDonuts</value>
+  </data>
+  <data name="StrOpacity" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="StrPane" xml:space="preserve">
+    <value>Pane</value>
+  </data>
+  <data name="StrPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="StrRadialProgressBar" xml:space="preserve">
+    <value>RadialProgressBar</value>
+  </data>
+  <data name="StrRangeMaxValue" xml:space="preserve">
+    <value>Range MaxValue</value>
+  </data>
+  <data name="StrRangeMinValue" xml:space="preserve">
+    <value>Range MinValue</value>
+  </data>
+  <data name="StrRotation" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="StrSeriesLabel" xml:space="preserve">
+    <value>SeriesLabel</value>
+  </data>
+  <data name="StrShape" xml:space="preserve">
+    <value>Shape</value>
+  </data>
+  <data name="StrSideMargins" xml:space="preserve">
+    <value>Side Margins</value>
+  </data>
+  <data name="StrStartEnd" xml:space="preserve">
+    <value>Start/End</value>
+  </data>
+  <data name="StrStraightLine" xml:space="preserve">
+    <value>Straight Line</value>
+  </data>
+  <data name="StrTickmarks" xml:space="preserve">
+    <value>Tickmarks</value>
+  </data>
+  <data name="StrTickmarksMinor" xml:space="preserve">
+    <value>TickmarksMinor</value>
+  </data>
+  <data name="StrToolTipEnabled" xml:space="preserve">
+    <value>ToolTip Enabled</value>
+  </data>
+  <data name="StrVertical" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="StrVisible" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="StrXAxisLabel" xml:space="preserve">
+    <value>XAxisLabel</value>
+  </data>
+  <data name="StrXAxisModel" xml:space="preserve">
+    <value>XAxis Model</value>
+  </data>
+  <data name="StrXAxisRange" xml:space="preserve">
+    <value>XAxisRange</value>
+  </data>
+  <data name="StrXAxisTitle" xml:space="preserve">
+    <value>XAxisTitle</value>
+  </data>
+  <data name="StrXYDiagram" xml:space="preserve">
+    <value>XYDiagram</value>
+  </data>
+  <data name="StrYAxisModel" xml:space="preserve">
+    <value>YAxis Model</value>
+  </data>
+  <data name="MsgNotExistLayout" xml:space="preserve">
+    <value>Layout does not exist</value>
+  </data>
+  <data name="StrRoutingConfiguration" xml:space="preserve">
+    <value>Routing Config</value>
+  </data>
+  <data name="StrRange" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="StrCornerRadius" xml:space="preserve">
+    <value>CornerRadius</value>
+  </data>
+  <data name="StrProgressBar" xml:space="preserve">
+    <value>ProgressBar</value>
+  </data>
+  <data name="StrAlarmDisplay" xml:space="preserve">
+    <value>AlarmDisplay</value>
+  </data>
+  <data name="StrBackgroundAlarm" xml:space="preserve">
+    <value>BackgroundAlarm</value>
+  </data>
+  <data name="StrBorderAlarm" xml:space="preserve">
+    <value>BorderAlarm</value>
+  </data>
+  <data name="StrFontAlarm" xml:space="preserve">
+    <value>FontAlarm</value>
+  </data>
+  <data name="StrShapeColor" xml:space="preserve">
+    <value>ShapeColor</value>
+  </data>
+  <data name="StrSampleData" xml:space="preserve">
+    <value>SampleData</value>
+  </data>
+  <data name="StrDust" xml:space="preserve">
+    <value>Dust</value>
+  </data>
+  <data name="StrHumidity" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="StrTemperature" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="StrEquipment01" xml:space="preserve">
+    <value>Mold equipment</value>
+  </data>
+  <data name="StrEquipment02" xml:space="preserve">
+    <value>Injection equipment</value>
+  </data>
+  <data name="StrEquipment03" xml:space="preserve">
+    <value>Processing equipment</value>
+  </data>
+  <data name="StrEquipment04" xml:space="preserve">
+    <value>Polishing equipment</value>
+  </data>
+  <data name="StrEquipment05" xml:space="preserve">
+    <value>Painting equipment</value>
+  </data>
+  <data name="StrProcess01" xml:space="preserve">
+    <value>Plant 1</value>
+  </data>
+  <data name="StrProcess02" xml:space="preserve">
+    <value>Plant 2</value>
+  </data>
+  <data name="StrResourceSensor01" xml:space="preserve">
+    <value>Temperature Senser</value>
+  </data>
+  <data name="StrResourceSensor02" xml:space="preserve">
+    <value>Dust sensor</value>
+  </data>
+  <data name="StrResourceSensor03" xml:space="preserve">
+    <value>Humidity sensor</value>
+  </data>
+  <data name="StrResourceSensor04" xml:space="preserve">
+    <value>VOC sensor</value>
+  </data>
+  <data name="StrResourceSensor05" xml:space="preserve">
+    <value>Pressure sensor</value>
+  </data>
+  <data name="StrWorkCenter01" xml:space="preserve">
+    <value>1-1 WorkCenter</value>
+  </data>
+  <data name="StrWorkCenter02" xml:space="preserve">
+    <value>1-2 WorkCenter</value>
+  </data>
+  <data name="StrWorkCenter03" xml:space="preserve">
+    <value>2-1 WorkCenter</value>
+  </data>
+  <data name="StrWorkCenter04" xml:space="preserve">
+    <value>2-2 WorkCenter</value>
+  </data>
+  <data name="StrWorkCenter05" xml:space="preserve">
+    <value>2-3 WorkCenter</value>
+  </data>
+  <data name="StrLayoutComponent" xml:space="preserve">
+    <value>Layout Component</value>
+  </data>
+  <data name="StrTextWrapping" xml:space="preserve">
+    <value>Text Wrapping</value>
+  </data>
+  <data name="StrPie" xml:space="preserve">
+    <value>Pie</value>
+  </data>
+  <data name="StrTextPattern" xml:space="preserve">
+    <value>Text Pattern</value>
+  </data>
+  <data name="StrAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="StrPlay" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="StrStreaming" xml:space="preserve">
+    <value>Streaming</value>
+  </data>
+  <data name="StrAutoPlay" xml:space="preserve">
+    <value>Auto Play</value>
+  </data>
+  <data name="StrStreamingComponent" xml:space="preserve">
+    <value>Streaming Component</value>
+  </data>
+  <data name="StrAsset" xml:space="preserve">
+    <value>Asset</value>
+  </data>
+  <data name="StrScreen" xml:space="preserve">
+    <value>Screen</value>
+  </data>
+  <data name="StrNewScreen" xml:space="preserve">
+    <value>New Screen</value>
+  </data>
+</root>

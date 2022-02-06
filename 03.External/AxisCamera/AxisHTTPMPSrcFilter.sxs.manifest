@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisHTTPMPSrcFilter.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisHTTPMPSrcFilter.ax">
+
+    <comClass
+        description="Axis HTTP Multipart Source Filter"
+        clsid="{1A643A97-F45E-40BD-82BB-3DA946A249EB}"
+        threadingModel="Both" />
+
+</file>
+
+</assembly>

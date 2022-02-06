@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisFileWriter.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisFileWriter.dll">
+
+    <comClass
+        description="AxisFileWriter Class"
+        clsid="{FFBCF410-CF16-4391-AB6C-B5613061EDA8}"
+        threadingModel="Apartment"
+        progid="AxisFileWriter.AxisFileWriter"
+        tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+    <comClass
+        description="AxisFileAuthenticator Class"
+        clsid="{1189CEA2-0DD9-4754-8ECC-6094549AB4E9}"
+        threadingModel="Apartment"
+        progid="AxisFileWriter.AxisFileAuthenticator"
+        tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+    <comClass
+        description="AxisFileAttributeStoreFactory Class"
+        clsid="{04DF2822-A122-4AFE-B36F-08326FCCE372}"
+        threadingModel="Apartment"
+        progid="AxisFileWriter.AxisFileAttributeStoreFactory"
+        tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+    <typelib tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}"
+        version="1.0"
+        helpdir="" />
+
+</file>
+
+<comInterfaceExternalProxyStub
+    name="IAxisFileWriter"
+    iid="{501BD93B-4BA4-4AE8-9B6E-08B8CD004E3D}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+<comInterfaceExternalProxyStub
+    name="IAxisFileAuthenticator"
+    iid="{5A8AB7C4-CFD2-43DE-98CE-487B7E3C0F8F}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+<comInterfaceExternalProxyStub
+    name="_IAxisFileAuthenticatorEvents"
+    iid="{7470718F-6492-4A56-8A21-40797E42DCA3}"
+    proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+<comInterfaceExternalProxyStub
+    name="IAxisFileAttributeStoreFactory"
+    iid="{AEAA5614-4340-470D-916A-6EEDC1426C67}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+<comInterfaceExternalProxyStub
+    name="IAxisAttributeStore"
+    iid="{1F8EDE17-8782-45F3-9F29-EA2C7349B5DF}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{FB3F93E0-C288-4FCC-B90B-6C0D80AB648B}" />
+
+</assembly>

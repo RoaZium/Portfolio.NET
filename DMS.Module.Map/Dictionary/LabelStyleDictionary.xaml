@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="xDetailInfoLabelTemplate" TargetType="{x:Type Label}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.TitleM.Background}" />
+        <Setter Property="Content" Value="{Binding DmComponentM.PropertyM.TitleM.Content}"/>
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.TitleM.FontSize}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.TitleM.FontStyle}" />
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.TitleM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.TitleM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.TitleM.Height}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.TitleM.HorizontalContentAlignment}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.TitleM.Margin}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.TitleM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.TitleM.Padding}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.TitleM.VerticalContentAlignment}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.TitleM.Visibility}" />
+    </Style>
+
+</ResourceDictionary>

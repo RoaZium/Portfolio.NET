@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sSimpleDiagram2D" TargetType="{x:Type dxc:SimpleDiagram2D}">
+        <Setter Property="SeriesDataMember" Value="SeriesDataMember" />
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.BorderThickness}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.HorizontalContentAlignment}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Padding}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.VerticalContentAlignment}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Visibility}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.SimpleDiagram2DM.Width}" />
+    </Style>
+   
+</ResourceDictionary>

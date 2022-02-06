@@ -1,0 +1,38 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sAxisXLabelBase" TargetType="{x:Type dxc:AxisLabel}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.BorderThickness}" />
+        <Setter Property="dxc:Axis2D.ResolveOverlappingOptions">
+            <Setter.Value>
+                <dxc:AxisLabelResolveOverlappingOptions 
+                    AllowRotate="{Binding DmComponentM.PropertyM.AxisXLabelM.AllowRotate}" 
+                    AllowStagger="{Binding DmComponentM.PropertyM.AxisXLabelM.AllowStagger}" >
+                </dxc:AxisLabelResolveOverlappingOptions>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.HorizontalContentAlignment}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Padding}" />
+        <Setter Property="Staggered" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Staggered}" />
+        <Setter Property="TextPattern" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.TextPattern}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.AxisXLabelM.Visible}" />
+    </Style>
+   
+</ResourceDictionary>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="FFmpeg.mft"
+    version="1.0.0.0" />
+
+<file name="avcodec-57.dll"/>
+<file name="avformat-57.dll"/>
+<file name="avutil-55.dll"/>
+<file name="swresample-2.dll"/>
+<file name="swscale-4.dll"/>
+
+</assembly>

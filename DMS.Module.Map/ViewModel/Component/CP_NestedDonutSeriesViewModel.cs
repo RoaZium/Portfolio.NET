@@ -1,0 +1,57 @@
+﻿using DMS.Module.Map.Demo;
+using DMS.Module.Map.Infrastructure;
+using DMS.Module.Map.Model;
+using Newtonsoft.Json;
+using PrismWPF.Common;
+using PrismWPF.Common.Infrastructure;
+using System;
+using System.Collections.Generic;
+using uPLibrary.Networking.M2Mqtt.Messages;
+
+namespace DMS.Module.Map.ViewModel.Component
+{
+    public class CP_NestedDonutSeriesViewModel : CP_CommonBaseViewModel
+    {
+        public override void Load()
+        {
+            base.Load();
+
+            SetMqttChannel();
+        }
+
+        public override void Unload()
+        {
+            base.Unload();
+        }
+
+        protected override void OnComponentData()
+        {
+            if (DmComponentM.PropertyM.CategoryCode == "0")
+            {
+                Demo_ChartData chartSampleData = new Demo_ChartData();
+                DmComponentM.ChartSeriesList = chartSampleData.SetNestedDonutChartData();
+            }
+        }
+
+        protected override void OnSubscribeAsyncMqtt(MqttMsgPublishEventArgs e)
+        {
+            try
+            {
+                base.OnSubscribeAsyncMqtt(e);
+
+                var data = JsonConvert.DeserializeObject<List<DmChartDataModel>>(TopicMessage);
+
+                if (data == null)
+                {
+                    return;
+                }
+
+                DmComponentM.ChartSeriesList = data.ToObservableCollection();
+            }
+            catch (Exception ex)
+            {
+                LogManager.Instance.WriteLine(LOG.LOG, LOG_LEVEL.ErrorLevel, "NestedDonutSeries MQTT:" + ex.ToString());
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BorderStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ButtonStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ComboBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ComponentPropertyDictionary.xaml"/>
+        <ResourceDictionary Source="DataBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="DataGridStyleDictionary.xaml"/>
+        <ResourceDictionary Source="GaugeStyleDictionary.xaml"/>
+        <ResourceDictionary Source="GridStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ImageStyleDictionary.xaml"/>
+        <ResourceDictionary Source="LabelStyleDictionary.xaml"/>
+        <ResourceDictionary Source="LayoutStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ListViewStyleDictionary.xaml"/>
+        <ResourceDictionary Source="PopupStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ProgressBarStyleDictionary.xaml"/>
+        <ResourceDictionary Source="RectangleStyleDictionary.xaml"/>
+        <ResourceDictionary Source="SliderStyleDictionary.xaml"/>
+        <ResourceDictionary Source="StackPanelStyleDictionary.xaml"/>
+        <ResourceDictionary Source="TextBlockStyleDictionary.xaml"/>
+        <ResourceDictionary Source="TextBoxStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ToggleButtonStyleDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

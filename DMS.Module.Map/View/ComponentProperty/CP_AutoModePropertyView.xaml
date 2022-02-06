@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_AutoModePropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:baseStatic="clr-namespace:DMS.Module.Map.Infrastructure"
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             Loaded="UserControl_Loaded"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.AutoModeM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="AutoMode" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+                    <!--시나리오-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="시나리오" />
+
+                    <!--배경색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="배경색" />
+
+                    <!--불투명-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="불투명" />
+
+                    <!--테두리 두께-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 두께" />
+
+                    <!--테두리 색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 색" />
+
+                    <!--줌-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="줌" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--시나리오-->
+                    <ComboBox x:Name="ComboBox_Scenario" 
+                              Style="{StaticResource xBasicComboBox}"
+                              ItemsSource="{Binding Source={x:Static baseStatic:BaseSingletonManager.Instance}, Path=ScenarioList}"
+                              SelectedItem="{Binding Source={x:Static baseStatic:BaseSingletonManager.Instance}, Path=SelectedScenario, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              SelectionChanged="ComboBox_Scenario_SelectionChanged"
+                              DropDownOpened="ComboBox_Scenario_DropDownOpened"
+                              DisplayMemberPath="ScenarioName" />
+
+                    <!--배경색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Text="{Binding ComponentMst.PropertyM.AutoModeM.Background}"
+                              Foreground="{Binding ComponentMst.PropertyM.AutoModeM.Background}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.AutoModeM.Background}" />
+
+                    <!--불투명-->
+                    <ComboBox Style="{StaticResource xComboBox_OpacityArray}"
+                              SelectedItem="{Binding ComponentMst.PropertyM.AutoModeM.Opacity}" />
+
+                    <!--테두리 두께-->
+                    <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.PropertyM.AutoModeM.BorderThickness}"
+                                TextType="Number" />
+
+                    <!--테두리 색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                              Foreground="{Binding ComponentMst.PropertyM.AutoModeM.BorderBrush}"
+                              SelectedValue="{Binding ComponentMst.PropertyM.AutoModeM.BorderBrush}"
+                              Text="{Binding ComponentMst.PropertyM.AutoModeM.BorderBrush}" />
+
+                    <!--Zoom-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Slider Grid.Column="0"
+                                x:Name="xZoom"
+                                Style="{StaticResource xSlider_Zoom}"
+                                Value="{Binding ComponentMst.PropertyM.AutoModeM.Zoom}"/>
+                        <TextBlock Grid.Column="1"
+                                   Style="{StaticResource FontSize14TextBlock}"
+                                   Text="{Binding ElementName=xZoom, Path=Value, StringFormat=P0}" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

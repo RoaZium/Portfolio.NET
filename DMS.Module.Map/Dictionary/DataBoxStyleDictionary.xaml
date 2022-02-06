@@ -1,0 +1,53 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="xDataBoxBorderTemplate01" TargetType="{x:Type Border}" BasedOn="{StaticResource sBaseBorder}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.DataBoxM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.DataBoxM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.DataBoxM.BorderThickness}" />
+        <Setter Property="CornerRadius" Value="{Binding DmComponentM.PropertyM.DataBoxM.CornerRadius}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.DataBoxM.Opacity}" />
+        <Setter Property="Visibility" Value="{Binding DmComponentM.PropertyM.DataBoxM.Visibility}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.DataBoxM.BorderAlarmVisibility }" Value="True">
+                <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.DataBoxM.BackgroundAlarmVisibility }" Value="True">
+                <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+            </DataTrigger>
+            
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.DataBoxM.NormalAlarmVisibility}" Value="True"/>
+                    <Condition Binding="{Binding DmComponentM.PropertyM.AlarmState}" Value="0"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.DataBoxM.Background}" />
+            </MultiDataTrigger>
+            
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="xDataBoxTextBlockTemplate01" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.DataBoxM.FontSize}" />
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.DataBoxM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.DataBoxM.Foreground}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.DataBoxM.HorizontalAlignment}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.DataBoxM.Opacity}" />
+        <Setter Property="Text">
+            <Setter.Value>
+                <MultiBinding StringFormat="{}{0}{1}">
+                    <Binding Path="DmComponentM.PropertyM.TextContent"/>
+                    <Binding Path="DmComponentM.PropertyM.DataBoxM.Unit"/>
+                </MultiBinding>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.DataBoxM.VerticalAlignment}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding DmComponentM.PropertyM.DataBoxM.ForegroundAlarmVisibility}" Value="True">
+                <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.AlarmState, Converter={StaticResource xAlarmStateColorConverter}}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

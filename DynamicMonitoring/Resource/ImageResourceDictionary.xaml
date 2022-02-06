@@ -1,0 +1,263 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!-- **************************************** Image Style **************************************** -->
+    <!--메뉴모듈-Black-->
+    <DrawingImage x:Key="bla_ic_menufoldDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF999999" Geometry="F0 M24,24z M0,0z M20,17L20,19 4,19 4,17 20,17z M20,12L20,14 4,14 4,12 20,12z M20,7L20,9 4,9 4,7 20,7z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!--모니터링모듈-Black-->
+    <DrawingImage x:Key="bla_ic_monitoringDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M13.016,17L13.015,19 17,19 17,20 7,20 7,19 11.007,19 11.007,17 13.016,17z" />
+                    <GeometryDrawing Geometry="F0 M24,24z M0,0z M19,16.5L5,16.5A0.498,0.498,0,0,1,4.5,16L4.5,6C4.5,5.862,4.556,5.737,4.646,5.646L19,5.5A0.498,0.498,0,0,1,19.5,6L19.5,16A0.498,0.498,0,0,1,19,16.5z">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFCDCDCD" Thickness="1" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M6,7L18,7 18,15 6,15z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--관리자모듈-Black-->
+    <DrawingImage x:Key="bla_ic_adminDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Geometry="F0 M24,24z M0,0z M19,18.5L5,18.5A0.498,0.498,0,0,1,4.5,18L4.5,7C4.5,6.862,4.556,6.737,4.646,6.646L19,6.5A0.498,0.498,0,0,1,19.5,7L19.5,18A0.498,0.498,0,0,1,19,18.5z">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFCDCDCD" Thickness="1" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M13,8L13,17 6,17 6,8 13,8z M18,15L18,16 14,16 14,15 18,15z M18,13L18,14 14,14 14,13 18,13z M18,11L18,12 14,12 14,11 18,11z M18,9L18,10 14,10 14,9 18,9z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--설정모듈-Black-->
+    <DrawingImage x:Key="bla_ic_setDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M17.348,12.686C17.378,12.462 17.398,12.238 17.398,12 17.398,11.762 17.378,11.538 17.348,11.314L18.867,10.159A0.347,0.347,0,0,0,18.953,9.711L17.514,7.289C17.428,7.135,17.234,7.079,17.075,7.135L15.283,7.835A5.295,5.295,0,0,0,14.067,7.149L13.793,5.294A0.348,0.348,0,0,0,13.441,5L10.562,5A0.348,0.348,0,0,0,10.21,5.294L9.936,7.149A5.568,5.568,0,0,0,8.72,7.835L6.928,7.135A0.356,0.356,0,0,0,6.489,7.289L5.05,9.711A0.339,0.339,0,0,0,5.137,10.159L6.656,11.314C6.626,11.538 6.606,11.769 6.606,12 6.606,12.231 6.626,12.462 6.656,12.686L5.137,13.841A0.347,0.347,0,0,0,5.051,14.289L6.491,16.711C6.577,16.865,6.771,16.921,6.929,16.865L8.721,16.165C9.095,16.445,9.498,16.676,9.937,16.851L10.211,18.706A0.348,0.348,0,0,0,10.563,19L13.442,19C13.622,19,13.772,18.874,13.794,18.706L14.068,16.851A5.568,5.568,0,0,0,15.284,16.165L17.076,16.865C17.242,16.928,17.429,16.865,17.515,16.711L18.955,14.289A0.347,0.347,0,0,0,18.868,13.841L17.349,12.686z M12,14C10.897,14 10,13.103 10,12 10,10.897 10.897,10 12,10 13.103,10 14,10.897 14,12 14,13.103 13.103,14 12,14z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!--최소화모듈-Black-->
+    <DrawingImage x:Key="bla_ic_miniDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M7,12L17,12 17,13 7,13z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--최대화모듈-Black-->
+    <DrawingImage x:Key="bla_ic_maxDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Geometry="F0 M24,24z M0,0z M17,17.5L7,17.5A0.498,0.498,0,0,1,6.5,17L6.5,7C6.5,6.862,6.556,6.737,6.646,6.646L17,6.5A0.498,0.498,0,0,1,17.5,7L17.5,17A0.498,0.498,0,0,1,17,17.5z">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFCDCDCD" Thickness="1" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M7,6L17,6A1,1,0,0,1,18,7L18,10 6,10 6,7A1,1,0,0,1,7,6z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!--닫기모듈-Black-->
+    <DrawingImage x:Key="bla_ic_closeDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FFCDCDCD" Geometry="F0 M24,24z M0,0z M17,8.007L15.993,7 12,10.993 8.007,7 7,8.007 10.993,12 7,15.993 8.007,17 12,13.007 15.993,17 17,15.993 13.007,12z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!-- 모니터링 모듈 -->
+    <DrawingImage x:Key="xblue_ic_sel_monitoringDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Geometry="F0 M24,24z M0,0z M2,2.75A0.25,0.25,0,0,0,1.75,3L1.75,17C1.75,17.138,1.862,17.25,2,17.25L22,17.25A0.25,0.25,0,0,0,22.25,17L22.25,3A0.25,0.25,0,0,0,22,2.75L2,2.75z">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FF0764B9" Thickness="1.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF0764B9" Geometry="F0 M24,24z M0,0z M10,18L14,18 14,21 18,21 18,23 6,23 6,21 10,21 10,18z M4,5L20,5 20,15 4,15z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!-- 관리 모듈 -->
+    <DrawingImage x:Key="xblue_ic_sel_adminDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Geometry="F0 M24,24z M0,0z M2,4.75A0.25,0.25,0,0,0,1.75,5L1.75,20C1.75,20.138,1.862,20.25,2,20.25L22,20.25A0.25,0.25,0,0,0,22.25,20L22.25,5A0.25,0.25,0,0,0,22,4.75L2,4.75z">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FF0764B9" Thickness="1.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF0764B9" Geometry="F0 M24,24z M0,0z M19,16L19,17 14,17 14,16 19,16z M19,14L19,15 14,15 14,14 19,14z M19,12L19,13 14,13 14,12 19,12z M19,10L19,11 14,11 14,10 19,10z M19,8L19,9 14,9 14,8 19,8z M4,7L12,7 12,18 4,18z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- 메뉴 -->
+    <DrawingImage x:Key="xblue_ic_menufoldDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF254264" Geometry="F0 M24,24z M0,0z M20,16L20,18 4,18 4,16 20,16z M20,11L20,13 4,13 4,11 20,11z M20,6L20,8 4,8 4,6 20,6z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!-- 설정 -->
+    <DrawingImage x:Key="xblue_ic_setDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF254264" Geometry="F0 M24,24z M0,0z M17.348,12.686C17.378,12.462 17.398,12.238 17.398,12 17.398,11.762 17.378,11.538 17.348,11.314L18.867,10.159A0.347,0.347,0,0,0,18.953,9.711L17.514,7.289C17.428,7.135,17.234,7.079,17.075,7.135L15.283,7.835A5.295,5.295,0,0,0,14.067,7.149L13.793,5.294A0.348,0.348,0,0,0,13.441,5L10.562,5A0.348,0.348,0,0,0,10.21,5.294L9.936,7.149A5.568,5.568,0,0,0,8.72,7.835L6.928,7.135A0.356,0.356,0,0,0,6.489,7.289L5.05,9.711A0.339,0.339,0,0,0,5.137,10.159L6.656,11.314C6.626,11.538 6.606,11.769 6.606,12 6.606,12.231 6.626,12.462 6.656,12.686L5.137,13.841A0.347,0.347,0,0,0,5.051,14.289L6.491,16.711C6.577,16.865,6.771,16.921,6.929,16.865L8.721,16.165C9.095,16.445,9.498,16.676,9.937,16.851L10.211,18.706A0.348,0.348,0,0,0,10.563,19L13.442,19C13.622,19,13.772,18.874,13.794,18.706L14.068,16.851A5.568,5.568,0,0,0,15.284,16.165L17.076,16.865C17.242,16.928,17.429,16.865,17.515,16.711L18.955,14.289A0.347,0.347,0,0,0,18.868,13.841L17.349,12.686z M12,14C10.897,14 10,13.103 10,12 10,10.897 10.897,10 12,10 13.103,10 14,10.897 14,12 14,13.103 13.103,14 12,14z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- 최소화 -->
+    <DrawingImage x:Key="xblue_ic_miniDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF254264" Geometry="F0 M24,24z M0,0z M7,12L17,12 17,13 7,13z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- 최대화 -->
+    <DrawingImage x:Key="xblue_ic_maxDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Geometry="F0 M24,24z M0,0z M7,6.5A0.5,0.5,0,0,0,6.5,7L6.5,17A0.5,0.5,0,0,0,7,17.5L17,17.5A0.5,0.5,0,0,0,17.5,17L17.5,7A0.5,0.5,0,0,0,17,6.5L7,6.5z">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FF254264" Thickness="1" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF254264" Geometry="F0 M24,24z M0,0z M7,6L17,6A1,1,0,0,1,18,7L18,10 6,10 6,7A1,1,0,0,1,7,6z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- 닫기 -->
+    <DrawingImage x:Key="xblue_ic_closeDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF254264" Geometry="F0 M24,24z M0,0z M17,8.007L15.993,7 12,10.993 8.007,7 7,8.007 10.993,12 7,15.993 8.007,17 12,13.007 15.993,17 17,15.993 13.007,12z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--확대증가-->
+    <DrawingImage x:Key="bla_ic_addDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF999999" Geometry="F0 M24,24z M0,0z M13,6L13,11 18,11 18,13 12.999,13 13,18 11,18 10.999,13 6,13 6,11 11,11 11,6 13,6z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--확대축소-->
+    <DrawingImage x:Key="bla_ic_removeDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF999999" Geometry="F0 M24,24z M0,0z M6,11L18,11 18,13 6,13z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <!--뒤로 되돌리기-->
+    <DrawingImage x:Key="btn_numbering_prevDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V40 H40 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing>
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="19" RadiusY="19" Rect="1,1,38,38" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,13.818,10.818">
+                        <GeometryDrawing Geometry="F0 M40,40z M0,0z M9.818,18.273L0.727,9.182 9.818,0.091">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Round" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!--앞으로 되돌리기-->
+    <DrawingImage x:Key="btn_numbering_nextDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V40 H40 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing>
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                        </GeometryDrawing.Pen>
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="19" RadiusY="19" Rect="1,1,38,38" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="-1,0,0,1,26,10.818">
+                        <GeometryDrawing Geometry="F0 M40,40z M0,0z M9.636,18.273L0.545,9.182 9.636,0.091">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FFD0D9E4" Thickness="2" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Round" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+</ResourceDictionary>

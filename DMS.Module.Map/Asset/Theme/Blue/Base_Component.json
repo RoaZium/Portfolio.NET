@@ -1,0 +1,1210 @@
+﻿[
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM601001",
+    "RoutingName": "Process",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": {
+      "ShapeSize": 40
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM601002",
+    "RoutingName": "WorkCenter",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": {
+      "ShapeSize": 40
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM601003",
+    "RoutingName": "Equipment",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": {
+      "ShapeSize": 40
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM601004",
+    "RoutingName": "Terminal",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": {
+      "ShapeSize": 40
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM601005",
+    "RoutingName": "Resource",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": {
+      "ShapeSize": 40
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM601006",
+    "RoutingName": "Tool",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": {
+      "ShapeSize": 40
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM701000",
+    "RoutingName": "Virtual",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": {
+      "ShapeSize": 40
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM701001",
+    "RoutingName": "Image",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 200,
+    "Width": 300,
+    "DspSort": 0,
+    "PropertyM": null
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM701002",
+    "RoutingName": "Video",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": null
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM701003",
+    "RoutingName": "IPCamera",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 150,
+    "Width": 150,
+    "DspSort": 0,
+    "PropertyM": null
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM701005",
+    "RoutingName": "TextBox",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 50,
+    "Width": 200,
+    "DspSort": 0,
+    "PropertyM": {
+      "TextContent": "Text",
+      "TextBoxM": {
+        "Background": "Black",
+        "BorderBrush": "",
+        "BorderThickness": 0,
+        "CornerRadius": "5",
+        "FontSize": "20",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "HorizontalAlignment": "Center",
+        "Opacity": "1.0",
+        "Text": "TEXT BOX",
+        "VerticalAlignment": "Center",
+        "TextWrapping": "NoWrap",
+        "Visible": "False"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM801001",
+    "RoutingName": "LineChart",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "ComponentType": "LineChart",
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "Zoom": 1.0,
+      "AxisX2DM": {
+        "AutoGrid": "False",
+        "Background": "",
+        "Brush": "Gray",
+        "FlowDirection": "LeftToRight",
+        "GridLinesBrush": "",
+        "GridLinesMinorBrush": "",
+        "GridLinesMinorVisible": false,
+        "GridLinesVisible": false,
+        "IsExpanded": false,
+        "Interlaced": true,
+        "MinorCount": "0",
+        "TickmarksCrossAxis": false,
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False",
+        "Visible": "True"
+      },
+      "AxisXLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": false
+      },
+      "AxisXRangeM": {},
+      "AxisXTitleM": {},
+      "AxisY2DM": {
+        "Brush": "Gray",
+        "GridLinesBrush": "#FF707070",
+        "GridLinesVisible": true,
+        "HorizontalAlignment": "Center",
+        "IsExpanded": false,
+        "Margin": "",
+        "Padding": "",
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False"
+      },
+      "AxisYLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": false,
+        "Padding": "0,0,3,0"
+      },
+      "ChartControlM": {
+        "Background": "#FF252526",
+        "IsExpanded": false,
+        "Padding": ""
+      },
+      "LegendM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "HorizontalPosition": "Right",
+        "IsExpanded": true,
+        "MarkerMode": "CheckBox",
+        "Orientation": "Vertical",
+        "VerticalPosition": "Top",
+        "Visible": "True",
+        "Visibility": "Hidden"
+      },
+      "LineSeries2DM": {
+        "Brush": "Gold",
+        "IsExpanded": false
+      },
+      "PaneM": {
+        "IsExpanded": false,
+        "Padding": "10"
+      },
+      "TitleM": {
+        "Background": "#FF334258",
+        "Content": "타이틀",
+        "FontSize": "20",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "Height": "35",
+        "HorizontalAlignment": "Stretch",
+        "IsExpanded": false,
+        "Padding": "10,5,0,0",
+        "VerticalAlignment": "Center"
+      },
+      "XYDiagram2DM": {}
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM801002",
+    "RoutingName": "VerticalBarChart",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "ComponentType": "VerticalBarChart",
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "Zoom": 1.0,
+      "AxisX2DM": {
+        "AutoGrid": "False",
+        "Background": "",
+        "Brush": "Gray",
+        "FlowDirection": "LeftToRight",
+        "GridLinesBrush": "",
+        "GridLinesMinorBrush": "",
+        "GridLinesMinorVisible": false,
+        "GridLinesVisible": false,
+        "IsExpanded": false,
+        "Interlaced": true,
+        "MinorCount": "0",
+        "TickmarksCrossAxis": false,
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False",
+        "Visible": "True"
+      },
+      "AxisY2DM": {
+        "Brush": "Gray",
+        "GridLinesBrush": "#FF707070",
+        "GridLinesVisible": true,
+        "HorizontalAlignment": "Center",
+        "IsExpanded": false,
+        "Margin": "",
+        "Padding": "",
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False"
+      },
+      "AxisXLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": false
+      },
+      "AxisYLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": false,
+        "Padding": "0,0,3,0"
+      },
+      "AxisXRangeM": {},
+      "AxisYRangeM": {},
+      "AxisXTitleM": {},
+      "AxisYTitleM": {},
+      "BarSideBySideSeries2DM": {
+        "Brush": "Gold",
+        "IsExpanded": false
+      },
+      "ChartControlM": {
+        "Background": "#FF252526",
+        "IsExpanded": false,
+        "Padding": ""
+      },
+      "LegendM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "HorizontalPosition": "Right",
+        "IsExpanded": true,
+        "MarkerMode": "CheckBox",
+        "Orientation": "Vertical",
+        "VerticalPosition": "Top",
+        "Visible": "True",
+        "Visibility": "Hidden"
+      },
+      "PaneM": {
+        "IsExpanded": false,
+        "Padding": "10"
+      },
+      "TitleM": {
+        "Background": "#FF334258",
+        "Content": "타이틀",
+        "FontSize": "20",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "Height": "35",
+        "HorizontalAlignment": "Stretch",
+        "IsExpanded": false,
+        "Padding": "10,5,0,0",
+        "VerticalAlignment": "Center"
+      },
+      "XYDiagram2DM": {}
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "BarSeries",
+    "RoutingName": "BarSeries",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "AxisX2DM": {
+        "Brush": "Gray",
+        "FlowDirection": "LeftToRight",
+        "IsExpanded": false,
+        "Interlaced": true,
+        "Margin": "",
+        "MinorCount": "1",
+        "Padding": "",
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False",
+        "Visible": "True"
+      },
+      "AxisY2DM": {
+        "Brush": "Gray",
+        "GridLinesBrush": "#FF707070",
+        "GridLinesVisible": true,
+        "IsExpanded": false,
+        "Margin": "",
+        "MinorCount": "1",
+        "Padding": "",
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False"
+      },
+      "AxisXLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": false,
+        "Margin": "",
+        "Padding": "0,0,0,5"
+      },
+      "AxisYLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": true,
+        "Margin": "",
+        "Padding": "5,0,3,0"
+      },
+      "AxisXRangeM": {},
+      "AxisYRangeM": {},
+      "AxisXTitleM": {},
+      "AxisYTitleM": {},
+      "BarSideBySideSeries2DM": {
+        "Brush": "Gold",
+        "IsExpanded": false
+      },
+      "ChartControlM": {
+        "Background": "#FF252526",
+        "IsExpanded": false
+      },
+      "LegendM": {
+        "IsExpanded": false,
+        "Visibility": "Collapsed"
+      },
+      "TitleM": {
+        "Background": "#FF334258",
+        "Content": "타이틀",
+        "FontSize": "20",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "Height": "35",
+        "IsExpanded": false,
+        "Padding": "10,5,0,0"
+      },
+      "TotalValueM": {},
+      "XYDiagram2DM": {
+        "IsExpanded": false,
+        "Margin": "0,5,5,0"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM801003",
+    "RoutingName": "DataBox",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 50,
+    "Width": 200,
+    "DspSort": 0,
+    "PropertyM": {
+      "TextContent": "35",
+      "DataBoxM": {
+        "Background": "White",
+        "BackgroundAlarmVisibility": false,
+        "BorderAlarmVisibility": false,
+        "BorderBrush": "Black",
+        "BorderThickness": 2,
+        "CornerRadius": "5",
+        "FontSize": "20",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "Black",
+        "ForegroundAlarmVisibility": false,
+        "HorizontalAlignment": "Center",
+        "Opacity": "1.0",
+        "VerticalAlignment": "Center"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "LineSeries",
+    "RoutingName": "LineSeries",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "AxisX2DM": {
+        "Brush": "Gray",
+        "FlowDirection": "LeftToRight",
+        "IsExpanded": false,
+        "Interlaced": true,
+        "Margin": "",
+        "MinorCount": "1",
+        "Padding": "",
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False",
+        "Visible": "True"
+      },
+      "AxisY2DM": {
+        "Brush": "Gray",
+        "GridLinesBrush": "#FF707070",
+        "GridLinesVisible": true,
+        "IsExpanded": false,
+        "Margin": "",
+        "MinorCount": "1",
+        "Padding": "",
+        "TickmarksMinorVisible": "False",
+        "TickmarksVisible": "False"
+      },
+      "AxisXLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": false,
+        "Margin": "",
+        "Padding": "0,0,0,5"
+      },
+      "AxisYLabelM": {
+        "FontSize": "11",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": true,
+        "Margin": "",
+        "Padding": "5,0,3,0"
+      },
+      "AxisXRangeM": {},
+      "AxisYRangeM": {},
+      "AxisXTitleM": {},
+      "AxisYTitleM": {},
+      "ChartControlM": {
+        "Background": "#FF252526",
+        "IsExpanded": false
+      },
+      "LegendM": {
+        "IsExpanded": false,
+        "Visibility": "Collapsed"
+      },
+      "TitleM": {
+        "Background": "#FF334258",
+        "Content": "타이틀",
+        "FontSize": "20",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "Height": "35",
+        "IsExpanded": false,
+        "Padding": "10,5,0,0"
+      },
+      "TotalValueM": {},
+      "XYDiagram2DM": {
+        "IsExpanded": false,
+        "Margin": "0,5,5,0"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "NestedDonutSeries",
+    "RoutingName": "NestedDonutSeries",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "ItemCode": "0",
+      "ItemName": "Sample Data"
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "ParetoChart",
+    "RoutingName": "ParetoChart",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data"
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "PieChart",
+    "RoutingName": "PieChart",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "ItemCode": "0",
+      "ItemName": "Sample Data"
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "ProgressBar",
+    "RoutingName": "ProgressBar",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 40,
+    "Width": 400,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "Zoom": 1.0,
+      "ProgressBarM": {
+        "Background": "#FFD9DCE8",
+        "Brush": "#FF20AAFF",
+        "CornerRadius": "6",
+        "FontSize": "30",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "HorizontalAlignment": "Center",
+        "IsExpanded": true,
+        "Maximum": "100",
+        "Minimum": "0",
+        "VerticalAlignment": "Center"
+      },
+      "TextContent": "85"
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "ScatterChart",
+    "RoutingName": "ScatterChart",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "ItemCode": "0",
+      "ItemName": "Sample Data"
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DM701005",
+    "RoutingName": "DM701005",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 100,
+    "Width": 200,
+    "DspSort": 0,
+    "PropertyM": {
+      "TextContent": "Sample Data"
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "XbarChart",
+    "RoutingName": "XbarChart",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+      "CategoryCode": "0",
+      "CategoryName": "Sample Data",
+      "ItemCode": "0",
+      "ItemName": "Sample Data"
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "Gauge",
+    "RoutingName": "Gauge",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 122,
+    "Width": 217,
+    "DspSort": 0,
+    "PropertyM": {
+      "ArcM": {
+        "Angle": "270",
+        "ArcThickness": "20",
+        "ArcThicknessUnit": "Pixel",
+        "DataType": "Percent",
+        "EndAngle": "180",
+        "Fill": "#FFFE7201",
+        "FlowDirection": "LeftToRight",
+        "Height": "200",
+        "IsExpanded": true,
+        "Margin": "0,10,0,0",
+        "StartAngle": "0",
+        "Stroke": "#FF373737",
+        "StrokeLineJoin": "Miter",
+        "StrokeThickness": "1",
+        "TotalValue": "100",
+        "Width": "200"
+      },
+      "ArcPanelM": {
+        "Background": "#FF14161C",
+        "CornerRadius": "3",
+        "IsExpanded": true
+      },
+      "StartLabelM": {
+        "Content": "0",
+        "Foreground": "White",
+        "FontSize": "9",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "HorizontalContentAlignment": "Left",
+        "IsExpanded": false,
+        "Padding": "15,0,0,0",
+        "VerticalContentAlignment": "Bottom",
+        "Visibility": "Visible"
+      },
+      "EndLabelM": {
+        "Content": "100",
+        "Foreground": "White",
+        "FontSize": "9",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "HorizontalContentAlignment": "Right",
+        "IsExpanded": false,
+        "Padding": "0,0,11,0",
+        "VerticalContentAlignment": "Bottom",
+        "Visibility": "Visible"
+      },
+      "TotalValueM": {
+        "Foreground": "White",
+        "FontSize": "35",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "HorizontalContentAlignment": "Center",
+        "IsExpanded": true,
+        "Padding": "10,60,0,0",
+        "Value": "50",
+        "VerticalContentAlignment": "Center",
+        "Visibility": "Visible"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "Indicator",
+    "RoutingName": "Indicator",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 400,
+    "Width": 200,
+    "DspSort": 0,
+    "PropertyM": null
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DataGrid",
+    "RoutingName": "DataGrid",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 1200,
+    "DspSort": 0,
+    "PropertyM": {
+      "Zoom": 1.0,
+      "DataGridCellM": {
+        "Background": "#FFFFFFFF",
+        "BorderBrush": "#FFE0E0E0",
+        "BorderThickness": 1,
+        "FontSize": "14",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "#FF000000",
+        "HorizontalAlignment": "Center",
+        "IsExpanded": true,
+        "VerticalAlignment": "Center"
+      },
+      "DataGridColumnHeaderM": {
+        "Background": "#FF252526",
+        "BorderBrush": "Gray",
+        "BorderThickness": 1,
+        "FontSize": "18",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "Height": "50",
+        "HorizontalContentAlignment": "Center",
+        "IsExpanded": true,
+        "VerticalContentAlignment": "Center"
+      },
+      "DataGridM": {
+        "Background": "#FF252526",
+        "IsExpanded": true
+      },
+      "DataGridRowM": {
+        "Height": "30",
+        "IsExpanded": true
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "RadialProgressBar",
+    "RoutingName": "RadialProgressBar",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 500,
+    "DspSort": 0,
+    "PropertyM": {
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "Layout",
+    "RoutingName": "Layout",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 400,
+    "Width": 600,
+    "DspSort": 0,
+    "PropertyM": {
+      "LayoutM": {
+        "Background": "Transparent",
+        "BorderBrush": "Yellow",
+        "BorderThickness": 5,
+        "IsExpanded": true,
+        "Visible": "True",
+        "Zoom": "1"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "Move",
+    "RoutingName": "Move",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 30,
+    "Width": 120,
+    "DspSort": 0,
+    "PropertyM": {
+      "MoveM": {
+        "Background": "#FFFE7201",
+        "BorderBrush": "White",
+        "BorderThickness": 0,
+        "CornerRadius": "5",
+        "FontSize": "16",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "IsExpanded": true,
+        "Margin": "0,-4,0,0",
+        "Opacity": "1.0",
+        "TextWrapping": "WrapWithOverflow",
+        "Visibility": "Visible",
+        "Content": "Move",
+        "HorizontalContentAlignment": "Center",
+        "VerticalContentAlignment": "Center",
+        "Visible": "False"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "Streaming",
+    "RoutingName": "Streaming",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 200,
+    "Width": 200,
+    "DspSort": 0,
+    "PropertyM": {
+      "PlaybackM": {
+        "Play": false,
+        "IsExpanded": true
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "ImageViewer",
+    "RoutingName": "ImageViewer",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 200,
+    "Width": 200,
+    "DspSort": 0,
+    "PropertyM": {
+      "ImageViewerM": {
+        "IsExpanded": true
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "AlarmHistory",
+    "RoutingName": "AlarmHistory",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 600,
+    "Width": 200,
+    "DspSort": 0,
+    "PropertyM": {
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "Gif",
+    "RoutingName": "Gif",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 300,
+    "DspSort": 0,
+    "PropertyM": {
+      "GifM": {
+        "AnimationSpeedRatio": 1.0,
+        "IsExpanded": true
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "AutoMode",
+    "RoutingName": "AutoMode",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 300,
+    "DspSort": 0,
+    "PropertyM": {
+      "AutoModeM": {
+        "IsExpanded": true
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "DetailInfo",
+    "RoutingName": "DetailInfo",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 300,
+    "Width": 300,
+    "DspSort": 0,
+    "PropertyM": {
+      "DetailInfoM": {
+        "Background": "#FF2A2F33",
+        "BorderBrush": "Wheat",
+        "BorderThickness": 2,
+        "FontSize": "20",
+        "FontStyle": "Normal",
+        "FontWeight": "Heavy",
+        "Margin": "5,10,5,0",
+        "IsExpanded": true,
+        "Opacity": "1.0",
+        "Foreground": "White"
+      },
+      "DetailInfoTitleM": {
+        "Background": "Transparent",
+        "FontSize": "14",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "#FFFDF3F4",
+        "Margin": "0",
+        "IsExpanded": true,
+        "Opacity": "1.0",
+        "Padding": "0",
+        "TextAlignment": "Left",
+        "Width": "100"
+      },
+      "DetailInfoValueM": {
+        "Background": "Transparent",
+        "FontSize": "14",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "#FFFDF3F4",
+        "Margin": "0",
+        "IsExpanded": true,
+        "Opacity": "1.0",
+        "Padding": "0",
+        "TextAlignment": "Left",
+        "Width": "100"
+      },
+      "TitleM": {
+        "Background": "Red",
+        "BorderBrush": "Cornsilk",
+        "BorderThickness": 11,
+        "Content": "리소스",
+        "FontSize": "30",
+        "FontStyle": "Normal",
+        "FontWeight": "Bold",
+        "Foreground": "White",
+        "Height": "40",
+        "HorizontalAlignment": "Center",
+        "HorizontalContentAlignment": "Center",
+        "IsExpanded": true,
+        "Margin": "0",
+        "Opacity": "1.0",
+        "Padding": "0",
+        "VerticalAlignment": "Center",
+        "VerticalContentAlignment": "Center",
+        "Visibility": "Visible",
+        "Width": "0"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 2,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "AlarmState",
+    "RoutingName": "AlarmState",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 50,
+    "Width": 50,
+    "DspSort": 0,
+    "PropertyM": {
+      "AlarmStateM": {
+        "BackgroundAlarmVisibility": false,
+        "BorderAlarmVisibility": false,
+        "Fill": "White",
+        "Opacity": "0.7",
+        "RadiusX": "20",
+        "RadiusY": "20",
+        "Stroke": "Green",
+        "StrokeThickness": "18",
+        "Visibility": "Visible"
+      }
+    }
+  },
+  {
+    "UserId": 0,
+    "MapType": 1,
+    "RoutingCode": null,
+    "PRoutingCode": null,
+    "RoutingType": "Animation",
+    "RoutingName": "Animation",
+    "CoordinateX": 0,
+    "CoordinateY": 0,
+    "Zindex": 0,
+    "Height": 100,
+    "Width": 100,
+    "DspSort": 0,
+    "PropertyM": {
+      "AnimationM": {
+        "Background": "Transparent",
+        "BackgroundAlarmVisibility": false,
+        "BorderBrush": "Transparent",
+        "BorderThickness": 0,
+        "BorderAlarmVisibility": false,
+        "Brush": "Orange",
+        "BrushAlarmVisibility": true,
+        "CornerRadius": "0",
+        "IsExpanded": true,
+        "Opacity": "1.0"
+      }
+    }
+  }
+]

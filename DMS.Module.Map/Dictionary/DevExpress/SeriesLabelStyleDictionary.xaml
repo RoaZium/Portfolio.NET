@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sSeriesLabelBase" TargetType="{x:Type dxc:SeriesLabel}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.BorderThickness}" />
+        <Setter Property="ConnectorThickness" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.ConnectorThickness}" />
+        <Setter Property="ConnectorVisible" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.ConnectorVisible}" />
+        <Setter Property="dxc:BarSideBySideSeries2D.LabelPosition" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.LabelPosition}" />
+        <!--<Setter Property="ElementTemplate" Value="{DynamicResource xSeriesLabelTemplate}" />-->
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.HorizontalContentAlignment}" />
+        <Setter Property="Indent" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Indent}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Padding}" />
+        <Setter Property="ResolveOverlappingMode" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.ResolveOverlappingMode}" />
+        <Setter Property="TextPattern" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.TextPattern}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Visible}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Width}" />
+    </Style>
+
+    <!--Custom_SeriesLabel-->
+    <DataTemplate x:Key="xSeriesLabelTemplate">
+        <Border BorderThickness="0" 
+                Opacity="1.0" 
+                BorderBrush="DarkGray">
+            <Border.Background>
+                <SolidColorBrush Color="{Binding Path=Color}"/>
+            </Border.Background>
+            <Label Content="{Binding Path=Text}" 
+                   Padding="2,1" 
+                   Foreground="Red"
+                   FontFamily="SegoeUI"
+                   FontStyle="Normal"
+                   FontSize="{Binding Path=DmComponentM.PropertyM.BarSideBySideSeries2DM.FontSize}"
+                   FontWeight="Bold"
+                   FontStretch="Normal"
+                   Background="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Background}"/>
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>

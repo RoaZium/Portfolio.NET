@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="AxisLabelXStyleDictionary.xaml"/>
+        <ResourceDictionary Source="AxisLabelYStyleDictionary.xaml"/>
+        <ResourceDictionary Source="AxisTitleXStyleDictionary.xaml"/>
+        <ResourceDictionary Source="AxisTitleYStyleDictionary.xaml"/>
+        <ResourceDictionary Source="AxisX2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="AxisY2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="BarSideBySideSeries2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="ChartControlStyleDictionary.xaml"/>
+        <ResourceDictionary Source="LegendStyleDictionary.xaml"/>
+        <ResourceDictionary Source="LineSeries2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="NestedDonutSeries2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="PaneStyleDictionary.xaml"/>
+        <ResourceDictionary Source="PieSeries2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="PointSeries2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="RangeXStyleDictionary.xaml"/>
+        <ResourceDictionary Source="RangeYStyleDictionary.xaml"/>
+        <ResourceDictionary Source="SeriesLabel_BarSideBySideSeries2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="SeriesLabel_PieSeriesStyleDictionary.xaml"/>
+        <ResourceDictionary Source="SeriesLabelStyleDictionary.xaml"/>
+        <ResourceDictionary Source="SimpleDiagram2DStyleDictionary.xaml"/>
+        <ResourceDictionary Source="TitleStyleDictionary.xaml"/>
+        <ResourceDictionary Source="XYDiagram2DStyleDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+   
+</ResourceDictionary>

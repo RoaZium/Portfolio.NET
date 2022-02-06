@@ -1,0 +1,173 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.AxisY2DPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+            <!--보기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="보기" />
+            
+            <!--그리드 선 보기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="큰 선 보기" />
+
+            <!--그리드 선 색-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="큰 선 색" />
+
+            <!--작은 선 보기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="작은 선 보기" />
+
+            <!--작은 선 색-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="작은 선 색" />
+
+            <!--교차 눈금 표시-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="교차 눈금 표시" />
+
+            <!--두께-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="두께" />
+
+            <!--색상-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="색상" />
+            
+            <!--큰 눈금 보기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="큰 눈금 보기" />
+            
+            <!--큰 눈금 길이-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="큰 눈금 길이" />
+
+            <!--큰 눈금 두께-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="큰 눈금 두께" />
+
+            <!--작은 눈금 보기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="작은 눈금 보기" />
+            
+            <!--작은 눈금 두께-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="작은 눈금 두께" />
+
+            <!--작은 눈금 수-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="작은 눈금 수" />
+
+            <!--짜맞추기 사용-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="짜맞추기 사용" />
+
+            <!--짜맞추기 색-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="짜맞추기 색" />
+
+            <!--축 정렬-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}" 
+                       Text="축 정렬"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+            <!--보기-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                          IsChecked="{Binding ComponentMst.PropertyM.AxisY2DM.Visible}" />
+            
+            <!--그리드 선 보기-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                          IsChecked="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesVisible}"/>
+
+            <!--그리드 선 색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                          Text="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesBrush}"
+                          Foreground="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesBrush}"
+                          SelectedValue="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesBrush}" />
+
+            <!--작은 선 보기-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                          IsChecked="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesMinorVisible}" />
+
+            <!--작은 선 색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                          Text="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesMinorBrush}"
+                          Foreground="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesMinorBrush}"
+                          SelectedValue="{Binding ComponentMst.PropertyM.AxisY2DM.GridLinesMinorBrush}" />
+
+            <!--교차 눈금 표시-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                          IsChecked="{Binding ComponentMst.PropertyM.AxisY2DM.TickmarksCrossAxis}" />
+
+            <!--두께-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.AxisY2DM.Thickness}" />
+
+            <!--색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                          Text="{Binding ComponentMst.PropertyM.AxisY2DM.Brush}"
+                          Foreground="{Binding ComponentMst.PropertyM.AxisY2DM.Brush}"
+                          SelectedValue="{Binding ComponentMst.PropertyM.AxisY2DM.Brush}" />
+            
+            <!--큰 눈금 보기-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                          IsChecked="{Binding ComponentMst.PropertyM.AxisY2DM.TickmarksVisible}" />
+            
+            <!--큰 눈금 길이-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                         Text="{Binding ComponentMst.PropertyM.AxisY2DM.TickmarksLength}" />
+
+            <!--큰 눈금 두께-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                         Text="{Binding ComponentMst.PropertyM.AxisY2DM.TickmarksThickness}" />
+
+            <!--작은 눈금 보기-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                      IsChecked="{Binding ComponentMst.PropertyM.AxisY2DM.TickmarksMinorVisible}" />
+            
+            <!--작은 눈금 두께-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                         Text="{Binding ComponentMst.PropertyM.AxisY2DM.TickmarksMinorThickness}" />
+
+            <!--작은 눈금 수-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                    Text="{Binding ComponentMst.PropertyM.AxisY2DM.MinorCount, StringFormat=N2}"
+                                    TextType="Decimal" />
+
+            <!--짜맞추기 사용-->
+            <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                          IsChecked="{Binding ComponentMst.PropertyM.AxisY2DM.Interlaced}" />
+
+            <!--짜맞추기 색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                          Text="{Binding ComponentMst.PropertyM.AxisY2DM.InterlacedBrush}"
+                          Foreground="{Binding ComponentMst.PropertyM.AxisY2DM.InterlacedBrush}"
+                          SelectedValue="{Binding ComponentMst.PropertyM.AxisY2DM.InterlacedBrush}" />
+
+            <!--축 정렬-->
+            <ComboBox Style="{StaticResource xComboBox_AlignmentArray}"
+                          SelectedItem="{Binding ComponentMst.PropertyM.AxisY2DM.Alignment}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--컴포넌트 속성_타이틀-->
+    <Style x:Key="xTextBlock_ComponentPropertyTitle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrush_Font}"/>
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Padding" Value="0,4,0,0" />
+    </Style>
+
+    <!--임시-->
+    <Style x:Key="myHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+        <Setter Property="Visibility" Value="Collapsed" />
+    </Style>
+    
+    <Style x:Key="xTextBlock_DetailInfoTitle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.Background, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="FontSize" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.FontSize, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="FontStyle" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.FontStyle, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="FontWeight" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.FontWeight, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Foreground" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.Foreground, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Margin" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.Margin, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Opacity" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.Opacity, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Padding" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.Padding, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Text" Value="{Binding Title}" />
+        <Setter Property="TextAlignment" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoTitleM.TextAlignment, RelativeSource={RelativeSource AncestorType=ListView}}" />
+    </Style>
+
+    <Style x:Key="xTextBlock_DetailInfoValue" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.Background, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="FontSize" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.FontSize, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="FontStyle" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.FontStyle, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="FontWeight" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.FontWeight, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Foreground" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.Foreground, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Margin" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.Margin, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Opacity" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.Opacity, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Padding" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.Padding, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        <Setter Property="Text" Value="{Binding Value}" />
+        <Setter Property="TextAlignment" Value="{Binding Path=DataContext.DmComponentM.PropertyM.DetailInfoValueM.TextAlignment, RelativeSource={RelativeSource AncestorType=ListView}}" />
+    </Style>
+</ResourceDictionary>

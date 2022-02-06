@@ -1,0 +1,192 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ArrayDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--컴포넌트 타이틀-->
+    <Style x:Key="xTextBlock_ComponentTitle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+        <Setter Property="Background" Value="{DynamicResource SolidColorBrush_Transparent}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}"/>
+        <Setter Property="Height" Value="25" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="100" />
+    </Style>
+
+    
+    
+    <!--컴포넌트 속성_타이틀-->
+    <Style x:Key="xLabel_ComponentPropertyTitle" TargetType="{x:Type Label}" BasedOn="{StaticResource xLabelBase}">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrush_Font}"/>
+        <Setter Property="Height" Value="25" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+
+    <!--컴포넌트 속성_TextBox-->
+    <Style x:Key="L_TextBox_ComponentProperty" TargetType="{x:Type TextBox}" BasedOn="{StaticResource sBaseTextBox}">
+        <Setter Property="AcceptsReturn" Value="True" />
+        <Setter Property="AcceptsTab" Value="True" />
+        <Setter Property="Height" Value="25" />
+    </Style>
+    
+    <!--컴포넌트 속성_CheckBox-->
+    <Style x:Key="L_CheckBox_ComponentProperty" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource xCheckBoxBase}">
+        <Setter Property="Foreground" Value="{DynamicResource SolidColorBrush_Font}"/>
+        <Setter Property="Height" Value="25" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+
+    <!--컴포넌트 속성_ComboBox-->
+    <Style x:Key="L_ComboBox_ComponentProperty" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource ComponentPropertyComboBox}">
+        <Setter Property="Height" Value="25" />
+    </Style>
+
+    <!--컴포넌트 속성_ComboBox_색상-->
+    <Style x:Key="L_ComboBox_Color" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource ColorComboBox}">
+        <Setter Property="DisplayMemberPath" Value="Name" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sColorArray}}" />
+        <Setter Property="SelectedValuePath" Value="Name" />
+    </Style>
+
+
+    <!--기본 콤보박스 속성-->
+    <Style x:Key="xComboBox_PropertyBase" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource ComponentPropertyComboBox}">
+        <Setter Property="Height" Value="25" />
+    </Style>
+
+    
+    
+
+    <!--축 정렬 콤보박스-->
+    <Style x:Key="xComboBox_AlignmentArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sAlignmentArray}}" />
+    </Style>
+
+    <!--애니메이션 모드-->
+    <Style x:Key="xComboBox_AnimationModeArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sAnimationModeArray}}" />
+    </Style>
+
+    <!--호 타입 모드-->
+    <Style x:Key="xComboBox_ArcThicknessUnitArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sArcThicknessUnitArray}}" />
+    </Style>
+
+    <!--내부 들여쓰기 콤보박스-->
+    <Style x:Key="xComboBox_DataTypeArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sDataTypeArray}}" />
+    </Style>
+
+    <!--글꼴 스타일 콤보박스-->
+    <Style x:Key="xComboBox_FontStyleArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sFontStyleArray}}" />
+    </Style>
+
+    <!--글꼴 두께 콤보박스-->
+    <Style x:Key="xComboBox_FontWeightArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sFontWeightOptionsArray}}" />
+    </Style>
+
+    <!--방향 콤보박스-->
+    <Style x:Key="xComboBox_FlowDirectionArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sFlowDirectionArray}}" />
+    </Style>
+
+    <!--내부 들여쓰기 콤보박스-->
+    <Style x:Key="xComboBox_InnerIndentArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sInnerIndentArray}}" />
+    </Style>
+
+    <!--라벨 위치 콤보박스-->
+    <Style x:Key="xComboBox_SeriesLabelPositionArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sSeriesLabelPositionArray}}" />
+    </Style>
+
+    <!--스웝 방향 콤보박스-->
+    <Style x:Key="xComboBox_SweepDirectionArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sSweepDirectionArray}}" />
+    </Style>
+
+    <!--불투명 콤보박스-->
+    <Style x:Key="xComboBox_OpacityArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sOpacityArray}}" />
+    </Style>
+
+    <!--수직위치 콤보박스-->
+    <Style x:Key="xComboBox_VerticalPositionArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sVerticalPositionArray}}" />
+    </Style>
+
+    <!--수평위치 콤보박스-->
+    <Style x:Key="xComboBox_HorizontalPositionArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sHorizontalPositionArray}}" />
+    </Style>
+    
+    <!--수직정렬 콤보박스-->
+    <Style x:Key="xComboBox_VerticalAlignmentArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sVerticalAlignmentArray}}" />
+    </Style>
+
+    <!--수평정렬 콤보박스-->
+    <Style x:Key="xComboBox_HorizontalAlignmentArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sHorizontalAlignmentArray}}" />
+    </Style>
+
+    <!--Marker Mode 콤보박스-->
+    <Style x:Key="xComboBox_MarkerModeArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sMarkerModeArray}}" />
+    </Style>
+
+    <!--Marker Mode 콤보박스-->
+    <Style x:Key="xComboBox_PieSeriesMarkerModeArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sPieSeriesMarkerModeArray}}" />
+    </Style>
+
+    <!--측정단위 콤보박스-->
+    <Style x:Key="xComboBox_MeasureUnitArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sUnitofTimeArray}}" />
+    </Style>
+
+    <!--Orientation-->
+    <Style x:Key="xComboBox_OrientationArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sOrientationArray}}" />
+    </Style>
+
+    <!--가로 스크롤 보기 콤보박스-->
+    <Style x:Key="xComboBox_ScrollBarVisibilityArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sScrollBarVisibilityArray}}" />
+    </Style>
+
+    <!--StrokeLineJoin 콤보박스-->
+    <Style x:Key="xComboBox_StrokeLineJoinArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sStrokeLineJoinArray}}" />
+    </Style>
+
+    <!--Orientation-->
+    <Style x:Key="xComboBox_VisibilityArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sVisibilityArray}}" />
+    </Style>
+
+    <!--줄 바꿈 콤보박스-->
+    <Style x:Key="xComboBox_TextWrappingArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sTextArray}}" />
+    </Style>
+
+    <!--텍스트 축 정렬-->
+    <Style x:Key="xComboBox_TextAlignmentArray" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PropertyBase}">
+        <Setter Property="ItemsSource" Value="{Binding Source={StaticResource sTextAlignmentArray}}" />
+    </Style>
+
+    <!--버튼-->
+    <Style x:Key="xButton_Component" TargetType="{x:Type Button}" BasedOn="{StaticResource RoundTextButton}">
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Width" Value="Auto" />
+    </Style>
+
+</ResourceDictionary>

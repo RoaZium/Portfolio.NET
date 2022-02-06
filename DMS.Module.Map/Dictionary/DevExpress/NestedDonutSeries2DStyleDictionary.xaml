@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sNestedDonutSeries2DBase" TargetType="{x:Type dxc:NestedDonutSeries2D}">
+        <Setter Property="ArgumentDataMember" Value="ArgumentDataMember" />
+        <Setter Property="ColorDataMember" Value="ColorDataMember" />
+        <Setter Property="ValueDataMember" Value="ValueDataMember" />
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.BorderThickness}" />
+        <Setter Property="CheckableInLegend" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.CheckableInLegend}" />
+        <Setter Property="CheckedInLegend" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.CheckedInLegend}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Height}" />
+        <Setter Property="HoleRadiusPercent" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.HoleRadiusPercent}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.HorizontalContentAlignment}" />
+        <Setter Property="InnerIndent" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.InnerIndent}" />
+        <Setter Property="LabelsResolveOverlappingMinIndent" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.LabelsResolveOverlappingMinIndent}" />
+        <Setter Property="LegendTextPattern" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.LegendTextPattern}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Padding}" />
+        <Setter Property="Rotation" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Rotation}" />
+        <Setter Property="ShowInLegend" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.ShowInLegend}" />
+        <Setter Property="SweepDirection" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.SweepDirection}" />
+        <Setter Property="ToolTipEnabled" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.ToolTipEnabled}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Visible}"/>
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.NestedDonutSeries2DM.Width}" />
+    </Style>
+   
+</ResourceDictionary>

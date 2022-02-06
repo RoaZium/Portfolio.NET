@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisMediaViewer.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisMediaViewer.dll">
+
+    <comClass
+        description="AxisMediaViewer coclass"
+        clsid="{AAD0CA6B-829A-40AA-B2FF-22B397D10ED9}"
+        threadingModel="Both" 
+        progid="AxisMediaViewerLib.AxisMediaViewer"
+        tlbid="{F6A698FA-9E65-4757-B01C-F17674D37707}"  />
+
+    <typelib tlbid="{F6A698FA-9E65-4757-B01C-F17674D37707}"
+        version="3.40"
+        helpdir="" />
+
+</file>
+
+<comInterfaceExternalProxyStub
+    name="IAxisMediaViewer"
+    iid="{C4947C07-5190-4658-9DB3-86BCBBB36D64}"
+    proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{F6A698FA-9E65-4757-B01C-F17674D37707}" />
+
+<comInterfaceExternalProxyStub
+    name="IAxisMediaViewerEvents"
+    iid="{C98A99F6-6311-469F-861A-164916AA45BF}"
+    proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid="{F6A698FA-9E65-4757-B01C-F17674D37707}" />
+
+</assembly>

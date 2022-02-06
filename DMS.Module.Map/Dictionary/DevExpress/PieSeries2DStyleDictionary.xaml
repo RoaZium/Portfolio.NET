@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sPieSeries2DBase" TargetType="{x:Type dxc:PieSeries2D}">
+        <Setter Property="ArgumentDataMember" Value="ArgumentDataMember" />
+        <Setter Property="ColorDataMember" Value="ColorDataMember" />
+        <Setter Property="ValueDataMember" Value="ValueDataMember" />
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.BorderThickness}" />
+        <Setter Property="CheckableInLegend" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.CheckableInLegend}" />
+        <Setter Property="CheckedInLegend" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.CheckedInLegend}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Height}" />
+        <Setter Property="HoleRadiusPercent" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.HoleRadiusPercent}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.HorizontalContentAlignment}" />
+        <Setter Property="LabelsResolveOverlappingMinIndent" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.LabelsResolveOverlappingMinIndent}" />
+        <Setter Property="LegendTextPattern" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.LegendTextPattern}"/>
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Padding}" />
+        <Setter Property="PointAnimation">
+            <Setter.Value>
+                <dxc:Pie2DFlyInAnimation Duration="0:0:1.5" 
+                                         PointOrder="Random">
+                </dxc:Pie2DFlyInAnimation>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Rotation" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Rotation}" />
+        <Setter Property="ShowInLegend" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.ShowInLegend}" />
+        <Setter Property="SweepDirection" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.SweepDirection}" />
+        <Setter Property="TotalLabel">
+            <Setter.Value>
+                <dxc:PieTotalLabel FontSize="{Binding DmComponentM.PropertyM.PieTotalLabelM.FontSize}"
+                                   FontWeight="{Binding DmComponentM.PropertyM.PieTotalLabelM.FontWeight}"
+                                   Foreground="{Binding DmComponentM.PropertyM.PieTotalLabelM.Foreground}"
+                                   MaxWidth="{Binding DmComponentM.PropertyM.PieTotalLabelM.MaxWidth}"
+                                   TextPattern="{Binding DmComponentM.PropertyM.PieTotalLabelM.TextPattern}"
+                                   Visibility="Visible">
+                </dxc:PieTotalLabel>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Visible}"/>
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.PieSeries2DM.Width}" />
+    </Style>
+   
+</ResourceDictionary>

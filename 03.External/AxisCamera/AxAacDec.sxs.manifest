@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxAacDec.sxs"
+    version="1.0.0.0" />
+
+<file name="AxAacDec.dll">
+
+    <comClass
+        description="CAxAacDecEmb Class"
+        clsid="{ba7a56eb-d1b9-443b-96e9-086532a378f1}"
+        threadingModel="Both"
+        progid="DMO.AxAacDecEmb" />
+
+</file>
+
+</assembly>

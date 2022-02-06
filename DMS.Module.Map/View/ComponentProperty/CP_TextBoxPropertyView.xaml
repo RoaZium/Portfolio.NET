@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_TextBoxPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.TextBoxM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="TextBox" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+                    <!--글꼴 두께-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 두께" />
+
+                    <!--글꼴 색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 색" />
+
+                    <!--글꼴 스타일-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 스타일" />
+
+                    <!--글꼴 크기-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="글꼴 크기" />
+
+                    <!--내용-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="내용" />
+
+                    <!--배경색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="배경색" />
+
+                    <!--보기-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="보기" />
+
+                    <!--불투명-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="불투명" />
+
+                    <!--수직 정렬-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="수직 정렬" />
+
+                    <!--수평 정렬-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="수평 정렬" />
+
+                    <!--코너 반경-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="코너 반경" />
+
+                    <!--테두리 두께-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 두께" />
+
+                    <!--테두리 색-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="테두리 색" />
+
+                    <!--텍스트 줄 바꿈-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="텍스트 줄 바꿈" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--글꼴 두께-->
+                    <ComboBox Style="{StaticResource xComboBox_FontWeightArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.TextBoxM.FontWeight}" />
+
+                    <!--글꼴 색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Text="{Binding ComponentMst.PropertyM.TextBoxM.Foreground}"
+                      Foreground="{Binding ComponentMst.PropertyM.TextBoxM.Foreground}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.TextBoxM.Foreground}" />
+
+                    <!--글꼴 스타일-->
+                    <ComboBox Style="{StaticResource xComboBox_FontStyleArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.TextBoxM.FontStyle}" />
+
+                    <!--글꼴 크기-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.TextBoxM.FontSize}" />
+
+                    <!--내용-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.TextBoxM.Text}" />
+
+                    <!--배경색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Text="{Binding ComponentMst.PropertyM.TextBoxM.Background}"
+                      Foreground="{Binding ComponentMst.PropertyM.TextBoxM.Background}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.TextBoxM.Background}" />
+
+                    <!--보기-->
+                    <CheckBox Style="{StaticResource L_CheckBox_ComponentProperty}"
+                      IsChecked="{Binding ComponentMst.PropertyM.TextBoxM.Visible}" />
+
+                    <!--불투명-->
+                    <ComboBox Style="{StaticResource xComboBox_OpacityArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.TextBoxM.Opacity}" />
+
+                    <!--수직 정렬-->
+                    <ComboBox Style="{StaticResource xComboBox_VerticalAlignmentArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.TextBoxM.VerticalAlignment}" />
+
+                    <!--수평 정렬-->
+                    <ComboBox Style="{StaticResource xComboBox_HorizontalAlignmentArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.TextBoxM.HorizontalAlignment}" />
+
+                    <!--코너 반경-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.TextBoxM.CornerRadius}" />
+
+                    <!--테두리 두께-->
+                    <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.PropertyM.TextBoxM.BorderThickness}"
+                                TextType="Number" />
+
+                    <!--테두리 색-->
+                    <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Foreground="{Binding ComponentMst.PropertyM.TextBoxM.BorderBrush}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.TextBoxM.BorderBrush}"
+                      Text="{Binding ComponentMst.PropertyM.TextBoxM.BorderBrush}" />
+
+                    <!--텍스트 줄 바꿈-->
+                    <ComboBox Style="{StaticResource xComboBox_TextWrappingArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.TextBoxM.TextWrapping}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

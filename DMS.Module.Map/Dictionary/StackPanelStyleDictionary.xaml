@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Border: Slider-->
+    <Style x:Key="xStackPanel_SliderPanel" TargetType="{x:Type StackPanel}">
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="MaxHeight" Value="900" />
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="Panel.ZIndex" Value="2" />
+    </Style>
+    
+</ResourceDictionary>

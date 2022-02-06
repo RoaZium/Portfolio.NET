@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_ResourceSensorPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+            <!--관리치 하한-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="관리치 하한" />
+
+            <!--관리치 상한-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="관리치 상한" />
+
+            <!--한계치 하한-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="한계치 하한" />
+
+            <!--한계치 상한-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="한계치 상한" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+            <!--관리치 하한-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.ResourceM.MLimitLow}"
+                                TextType="SignedDecimal" />
+
+            <!--관리치 상한-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.ResourceM.MLimitHigh}"
+                                TextType="SignedDecimal">
+            </Controls:CvTextBox>
+
+            <!--한계치 하한-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.ResourceM.LimitLow}"
+                                TextType="SignedDecimal" />
+
+            <!--한계치 상한-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.ResourceM.LimitHigh}"
+                                TextType="SignedDecimal" />
+
+        </StackPanel>
+    </Grid>
+</UserControl>

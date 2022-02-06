@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.AxisXRangePropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+            <!--측면 여백-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="측면 여백" />
+
+            <!--측면 여백 자동-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                       Text="측면 여백 자동" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+            <!--측면 여백-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.AxisXRangeM.SideMarginsValue}" />
+
+            <!--측면 여백 자동-->
+            <CheckBox Style="{StaticResource sBaseCheckBox}"
+                      IsChecked="{Binding ComponentMst.PropertyM.AxisXRangeM.AutoSideMargins}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

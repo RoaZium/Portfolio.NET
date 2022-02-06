@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisOverlayFilter.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisOverlayFilter.ax">
+
+    <comClass
+        description="AXIS Overlay Filter Instance"
+        clsid="{F83004AD-524B-4887-B049-2D3407161D24}"
+        threadingModel="Both" />
+
+</file>
+
+</assembly>

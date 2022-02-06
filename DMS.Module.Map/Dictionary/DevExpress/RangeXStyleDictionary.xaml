@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sAxisXRangeBase" TargetType="{x:Type dxc:Range}">
+        <Setter Property="AutoSideMargins" Value="{Binding DmComponentM.PropertyM.AxisXRangeM.AutoSideMargins}" />
+        <Setter Property="MaxValue" Value="{Binding DmComponentM.PropertyM.AxisXRangeM.MaxValue}" />
+        <Setter Property="MinValue" Value="{Binding DmComponentM.PropertyM.AxisXRangeM.MinValue}" />
+        <Setter Property="SideMarginsValue" Value="{Binding DmComponentM.PropertyM.AxisXRangeM.SideMarginsValue}" />
+    </Style>
+
+</ResourceDictionary>

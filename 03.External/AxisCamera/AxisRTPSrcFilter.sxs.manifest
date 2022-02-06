@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxisRTPSrcFilter.sxs"
+    version="1.0.0.0" />
+
+<file name="AxisRTPSrcFilter.ax">
+
+    <comClass
+        description="AxisRTPSrcFilter"
+        clsid="{4F1D0C59-5ECC-4028-87F3-482191D2230F}"
+        threadingModel="Both" />
+
+    <comClass
+        description="Properties"
+        clsid="{EDF6EF69-13A0-4132-B406-76AE94ECAC0F}"
+        threadingModel="Both" />
+
+</file>
+
+</assembly>

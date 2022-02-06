@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <Style x:Key="sPie_SeriesLabelBase" TargetType="{x:Type dxc:SeriesLabel}">
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Background}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.BorderThickness}" />
+        <Setter Property="ConnectorThickness" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.ConnectorThickness}" />
+        <Setter Property="ConnectorVisible" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.ConnectorVisible}" />
+        <Setter Property="dxc:PieSeries.LabelPosition" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.LabelPosition}" />
+        <Setter Property="ElementTemplate" Value="{DynamicResource seriesLabel}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.HorizontalContentAlignment}" />
+        <Setter Property="Indent" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Indent}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Padding}" />
+        <Setter Property="ResolveOverlappingMode" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.ResolveOverlappingMode}" />
+        <Setter Property="TextPattern" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.TextPattern}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Visible}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.SeriesLabelM.Width}" />
+    </Style>
+
+    <DataTemplate x:Key="seriesLabel">
+        <Border BorderThickness="0" 
+                    Opacity="1.0" 
+                    BorderBrush="DarkGray">
+            <Border.Background>
+                <SolidColorBrush Color="{Binding Path=Color}"/>
+            </Border.Background>
+            <Label Content="{Binding Path=Text}" 
+                       Padding="2,1" 
+                       Foreground="White"
+                       FontFamily="SegoeUI"
+                       FontStyle="Normal"
+                       FontSize="{Binding DmComponentM.PropertyM.SeriesLabelM.FontSize}"
+                       FontWeight="Bold"
+                       FontStretch="Normal"
+                       Background="Black"/>
+        </Border>
+    </DataTemplate>
+    
+</ResourceDictionary>

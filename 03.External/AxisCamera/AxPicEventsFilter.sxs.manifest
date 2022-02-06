@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxPicEventsFilter.sxs"
+    version="1.0.0.0" />
+
+<file name="AxPicEventsFilter.ax">
+
+    <comClass
+        description="AXIS Picture Events"
+        clsid="{833CAF80-A132-4FEF-8188-2A6004E3F239}"
+        threadingModel="Both" />
+
+</file>
+
+</assembly>

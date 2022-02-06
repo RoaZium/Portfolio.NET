@@ -1,0 +1,263 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.LegendPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+            <!--글꼴 두께-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="글꼴 두께" />
+
+            <!--글꼴 색-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="글꼴 색" />
+
+            <!--글꼴 스타일-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="글꼴 스타일" />
+
+            <!--글꼴 크기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="글꼴 크기" />
+
+            <!--너비-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="너비" />
+
+            <!--높이-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="높이" />
+
+            <!--마커 유형-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="마커 유형" />
+
+            <!--방향-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="방향" />
+
+            <!--배경색-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="배경색" />
+
+            <!--범례 방향-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="범례 방향" />
+
+            <!--범례 내용 보기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="범례 내용 보기" />
+
+            <!--범례 내용 보기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="범례 보기" />
+
+            <!--불투명-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="불투명" />
+
+            <!--수직 위치-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="수직 위치" />
+
+            <!--수평 위치-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="수평 위치" />
+            
+            <!--수직 정렬-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="수직 정렬" />
+
+            <!--수평 정렬-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="수평 정렬" />
+
+            <!--여백-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="여백" />
+
+            <!--여백 메우기-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="여백 메우기" />
+
+            <!--최대 높이-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="최대 높이" />
+
+            <!--최대 너비-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="최대 너비" />
+
+            <!--최소 높이-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="최소 높이" />
+
+            <!--최소 너비-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="최소 너비" />
+
+            <!--테두리 두께-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="테두리 두께" />
+
+            <!--테두리 색-->
+            <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                   Text="테두리 색" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+            <!--글꼴 두께-->
+            <ComboBox Style="{StaticResource xComboBox_FontWeightArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.FontWeight}" />
+
+            <!--글꼴 색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Text="{Binding ComponentMst.PropertyM.LegendM.Foreground}"
+                      Foreground="{Binding ComponentMst.PropertyM.LegendM.Foreground}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.LegendM.Foreground}" />
+
+            <!--글꼴 스타일-->
+            <ComboBox Style="{StaticResource xComboBox_FontStyleArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.FontStyle}" />
+
+            <!--글꼴 크기-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.LegendM.FontSize}" />
+
+            <!--너비-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                    Text="{Binding ComponentMst.PropertyM.LegendM.Width, StringFormat=N2}"
+                                    TextType="Decimal" />
+
+            <!--높이-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                    Text="{Binding ComponentMst.PropertyM.LegendM.Height, StringFormat=N2}"
+                                    TextType="Decimal" />
+
+            <!--마커 유형-->
+            <ComboBox SelectedItem="{Binding ComponentMst.PropertyM.LegendM.MarkerMode}" >
+                <ComboBox.Style>
+                    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_PieSeriesMarkerModeArray}">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="PieChart">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.Style>
+            </ComboBox>
+            <ComboBox SelectedItem="{Binding ComponentMst.PropertyM.LegendM.MarkerMode}" >
+                <ComboBox.Style>
+                    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource xComboBox_MarkerModeArray}">
+                        <Setter Property="Visibility" Value="Visible" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="PieChart">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.Style>
+            </ComboBox>
+            
+            <!--방향-->
+            <ComboBox Style="{StaticResource xComboBox_AlignmentArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.FlowDirection}" />
+
+            <!--배경색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Text="{Binding ComponentMst.PropertyM.LegendM.Background}"
+                      Foreground="{Binding ComponentMst.PropertyM.LegendM.Background}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.LegendM.Background}" />
+
+            <!--범례 방향-->
+            <ComboBox Style="{StaticResource xComboBox_OrientationArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.Orientation}" />
+
+            <!--범례 내용 보기-->
+            <CheckBox Style="{StaticResource sBaseCheckBox}"
+                      IsChecked="{Binding ComponentMst.PropertyM.LegendM.Visible}" />
+
+            <!--범례 보기-->
+            <ComboBox Style="{StaticResource xComboBox_VisibilityArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.Visibility}" />
+
+            <!--불투명-->
+            <ComboBox Style="{StaticResource xComboBox_OpacityArray}"
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.Opacity}" />
+
+            <!--수직 위치-->
+            <ComboBox Style="{StaticResource xComboBox_VerticalPositionArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.VerticalPosition}" />
+
+            <!--수평 위치-->
+            <ComboBox Style="{StaticResource xComboBox_HorizontalPositionArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.HorizontalPosition}" />
+            
+            <!--수직 정렬-->
+            <ComboBox Style="{StaticResource xComboBox_VerticalAlignmentArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.VerticalAlignment}" />
+
+            <!--수평 정렬-->
+            <ComboBox Style="{StaticResource xComboBox_HorizontalAlignmentArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.LegendM.HorizontalAlignment}" />
+
+            <!--여백-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.LegendM.Margin}" />
+
+            <!--여백 메우기-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.LegendM.Padding}" />
+
+            <!--최대 높이-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                Text="{Binding ComponentMst.PropertyM.LegendM.MaxHeight, StringFormat=N2}"
+                                TextType="Decimal" />
+
+            <!--최대 너비-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                Text="{Binding ComponentMst.PropertyM.LegendM.MaxWidth, StringFormat=N2}"
+                                TextType="Decimal" />
+
+            <!--최소 높이-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                Text="{Binding ComponentMst.PropertyM.LegendM.MinHeight, StringFormat=N2}"
+                                TextType="Decimal" />
+
+            <!--최소 너비-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                Text="{Binding ComponentMst.PropertyM.LegendM.MinWidth, StringFormat=N2}"
+                                TextType="Decimal" />
+
+            <!--테두리 두께-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                Text="{Binding ComponentMst.PropertyM.LegendM.BorderThickness}"
+                                TextType="Number" />
+
+            <!--테두리 색-->
+            <ComboBox Style="{StaticResource L_ComboBox_Color}" 
+                      Foreground="{Binding ComponentMst.PropertyM.LegendM.BorderBrush}"
+                      SelectedValue="{Binding ComponentMst.PropertyM.LegendM.BorderBrush}"
+                      Text="{Binding ComponentMst.PropertyM.LegendM.BorderBrush}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

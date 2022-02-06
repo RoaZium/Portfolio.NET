@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="AxMatroskaSplitter.sxs"
+    version="1.0.0.0" />
+
+<file name="AxMatroskaSplitter.ax">
+
+    <comClass
+        description="AXIS Matroska Splitter Filter"
+        clsid="{C696DDDC-D62B-48A0-A449-369700F96903}"
+        threadingModel="Both" />
+
+    <comClass
+        description="Properties"
+        clsid="{633E3971-C2EC-46D7-9B88-3E7CE641245F}"
+        threadingModel="Both" />
+
+</file>
+
+</assembly>

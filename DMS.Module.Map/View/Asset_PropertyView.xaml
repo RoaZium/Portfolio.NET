@@ -1,0 +1,460 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.Asset_PropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:base="clr-namespace:DMS.Module.Map.Infrastructure"
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--타이틀-->
+        <TextBlock Grid.Row="0" 
+                   Style="{StaticResource FontSize14TextBlock}"
+                   Text="{Binding ComponentMst.RoutingName}" />
+
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Orientation="Vertical">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="LostFocus">
+                        <i:InvokeCommandAction Command="{Binding LostFocusCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
+                <Grid>
+                    <Grid.Style>
+                        <Style TargetType="{x:Type Grid}">
+                            <Setter Property="Visibility" Value="Visible" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingName}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Style>
+                    
+                    <!--공통-->
+                    <Expander >
+                        <Expander.Header>
+                            <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                                   Text="공통" >
+                            </TextBlock>
+                        </Expander.Header>
+
+                        <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="110" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+
+                        <!--수평 위치-->
+                        <TextBlock Grid.Column="0" Grid.Row="0"
+                                   Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{x:Static res:Res.StrXPosition}">
+                        </TextBlock>
+                        <Controls:CvTextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource L_TextBox_ComponentProperty}"
+                                            Text="{Binding ComponentMst.CoordinateX, StringFormat=N2}"
+                                            TextType="Decimal">
+                        </Controls:CvTextBox>
+
+                        <!--수직 위치-->
+                        <TextBlock Grid.Column="0" Grid.Row="1" 
+                                   Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{x:Static res:Res.StrYPosition}">
+                        </TextBlock>
+                        <Controls:CvTextBox Grid.Column="1" Grid.Row="1" 
+                                            Style="{StaticResource L_TextBox_ComponentProperty}"
+                                            Text="{Binding ComponentMst.CoordinateY, StringFormat=N2}"
+                                            TextType="Decimal">
+                        </Controls:CvTextBox>
+
+                        <!--너비-->
+                        <TextBlock Grid.Column="0" Grid.Row="2"
+                                   Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{x:Static res:Res.StrWidth}">
+                        </TextBlock>
+                        <Controls:CvTextBox Grid.Column="1" Grid.Row="2" 
+                                            Style="{StaticResource L_TextBox_ComponentProperty}" 
+                                            Text="{Binding ComponentMst.Width, StringFormat=N2}"
+                                            TextType="Decimal" >
+                        </Controls:CvTextBox>
+
+                        <!--높이-->
+                        <TextBlock Grid.Column="0" Grid.Row="3" 
+                                   Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{x:Static res:Res.StrHeight}">
+                        </TextBlock>
+                        <Controls:CvTextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource L_TextBox_ComponentProperty}"
+                                            Text="{Binding ComponentMst.Height, StringFormat=N2}"
+                                            TextType="Decimal">
+                        </Controls:CvTextBox>
+
+                        <!--레이아웃 색상-->
+                        <TextBlock Grid.Column="0" Grid.Row="4" 
+                                   Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{x:Static res:Res.StrBackgroundColor}" >
+                        </TextBlock>
+                        <ComboBox Grid.Column="1" Grid.Row="4" 
+                                  Style="{StaticResource L_ComboBox_Color}" 
+                                  Text="{Binding ComponentMst.PropertyM.LayoutBackground}"
+                                  Foreground="{Binding ComponentMst.PropertyM.LayoutBackground}"
+                                  SelectedValue="{Binding ComponentMst.PropertyM.LayoutBackground}"
+                                  DisplayMemberPath="Name"
+                                  SelectedValuePath="Name" >
+                        </ComboBox>
+                    </Grid>
+
+                </Expander>
+                </Grid>
+
+                <Grid>
+                    <Grid.Style>
+                        <Style TargetType="{x:Type Grid}">
+                            <Setter Property="Visibility" Value="Visible" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601001">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601002">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601003">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601004">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601005">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601006">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM701002">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM701003">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM701005">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Style>
+                    <!--항목-->
+                    <Expander>
+                        <Expander.Header>
+                            <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                                   Text="{x:Static res:Res.StrItem}" />
+                        </Expander.Header>
+
+                        <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="110" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+
+                        <!--타입-->
+                        <TextBlock Grid.Column="0" Grid.Row="0" 
+                                   Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{x:Static res:Res.StrType}">
+                        </TextBlock>
+                        <ComboBox Grid.Column="1" Grid.Row="0" 
+                                  Style="{StaticResource L_ComboBox_ComponentProperty}" 
+                                  DisplayMemberPath="Name"
+                                  ItemsSource="{Binding Source={x:Static base:BaseSingletonManager.Instance}, Path=BaseInfoTypeList}" 
+                                  SelectedItem="{Binding SelectedBaseInfoType, Mode=TwoWay}">
+                        </ComboBox>
+
+                        <!--항목-->
+                        <TextBlock Grid.Column="0" Grid.Row="1" 
+                                   Style="{StaticResource FontSize12TextBlock}"
+                                   Text="{x:Static res:Res.StrItem}">
+                        </TextBlock>
+                        <ComboBox Grid.Column="1" Grid.Row="1"
+                                  Style="{StaticResource L_ComboBox_ComponentProperty}"
+                                  ItemsSource="{Binding BaseInfoList}" 
+                                  SelectedItem="{Binding SelectedBaseInfo}"
+                                  DisplayMemberPath="Name">
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel />
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                        </ComboBox>
+                    </Grid>
+                </Expander>
+                </Grid>
+
+                <ContentControl>
+                    <ContentControl.Style>
+                        <Style TargetType="{x:Type ContentControl}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601001">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--공정 컴포넌트-->
+                                            <local:RoutingConfigurationPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601002">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--작업장 컴포넌트-->
+                                            <local:RoutingConfigurationPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601003">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--설비 컴포넌트-->
+                                            <local:RoutingConfigurationPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601004">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--설비 상세 컴포넌트-->
+                                            <local:RoutingConfigurationPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM601005">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--센서 컴포넌트-->
+                                            <local:RoutingConfigurationPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM701001">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--이미지 컴포넌트-->
+                                            <local:CP_ImagePropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM701002">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--비디오 컴포넌트-->
+                                            <local:CP_VideoPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM701003">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--IPCamera 컴포넌트-->
+                                            <local:CP_IPCameraPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM801001">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--선형 컴포넌트-->
+                                            <local:CP_LineChartPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM801002">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--수직 막대형 컴포넌트-->
+                                            <local:CP_VerticalBarChartPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="Gauge">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--게이지 컴포넌트-->
+                                            <local:CP_GaugePropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM701005">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--텍스트 상자 컴포넌트-->
+                                            <local:CP_TextBoxPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DM801003">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--데이터 상자 컴포넌트-->
+                                            <local:CP_DataBoxPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="ProgressBar">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--진행 표시줄 컴포넌트-->
+                                            <local:CP_ProgressBarPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="Layout">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--레이아웃 컴포넌트-->
+                                            <local:CP_LayoutPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="Move">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--이동 컴포넌트-->
+                                            <local:CP_MovePropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="BarSeries">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--복합 막대형 차트 컴포넌트-->
+                                            <local:CP_BarSeriesChartPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="LineSeries">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--복합 선형 차트 컴포넌트-->
+                                            <local:CP_LineSeriesChartPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="PieChart">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--원형 차트 컴포넌트-->
+                                            <local:CP_PieChartPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="NestedDonutSeries">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--중첩 원형 차트 컴포넌트-->
+                                            <local:CP_NestedDonutSeriesPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="Streaming">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--스트리밍 컴포넌트-->
+                                            <local:CP_StreamingPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DataGrid">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--DataGrid 컴포넌트-->
+                                            <local:CP_DataGridPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="ImageViewer">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--이미지 뷰어 컴포넌트-->
+                                            <local:CP_ImageViewerPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="Gif">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--이미지 뷰어 컴포넌트-->
+                                            <local:CP_GifPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="AutoMode">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--자동 모니터링 모드 컴포넌트-->
+                                            <local:CP_AutoModePropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="DetailInfo">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--상세 정보 컴포넌트-->
+                                            <local:CP_DetailInformationPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="AlarmState">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--알람 상태 컴포넌트-->
+                                            <local:CP_AlarmStatePropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ComponentMst.RoutingType}" Value="Animation">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <!--애니메이션 컴포넌트-->
+                                            <local:CP_AnimationPropertyView />
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ContentControl.Style>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>
+
+    

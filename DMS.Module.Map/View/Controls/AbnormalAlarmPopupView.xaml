@@ -1,0 +1,126 @@
+﻿<Window x:Class="DMS.Module.Map.View.Controls.AbnormalAlarmPopupView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:DMS.Module.Map.View.Controls"
+        xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
+        Loaded="Window_Loaded" Unloaded="Window_Unloaded"
+        Height="300"
+        Style="{StaticResource xCustomPopupWindow}">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="xGrid_AbnormalAlarm" TargetType="{x:Type Grid}" BasedOn="{StaticResource xGridBase}">
+                <Setter Property="Background" Value="#FF2A2F33" />
+            </Style>
+            
+            <Style x:Key="xTextBlock_AbnormalAlarmTitle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource xTextBlockBase}">
+                <Setter Property="FontSize" Value="50" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+
+            <Style x:Key="xTextBlock_AbnormalAlarm" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource FontSize20TextBlock}">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Style="{StaticResource sBaseGrid}" 
+          Background="#FFE6232A">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="326*"/>
+            <ColumnDefinition Width="69*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" 
+                   Style="{StaticResource xImageBase}" 
+                   Source="{StaticResource xDrawingImage_DangerPopup}"/>
+
+            <TextBlock Grid.Column="2"
+                       Style="{StaticResource xTextBlock_AbnormalAlarmTitle}"
+                       Text="error" />
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource xGrid_AbnormalAlarm}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.Row="1"
+                       Style="{StaticResource xTextBlock_AbnormalAlarm}"
+                       Text="{Binding Title}" />
+
+            <TextBlock Grid.Column="1" Grid.Row="3"
+                       Style="{StaticResource xTextBlock_AbnormalAlarm}"
+                       Text="오류가 감지 되었습니다.">
+            </TextBlock>
+        </Grid>
+
+        <!-- 저장/취소 -->
+        <Grid Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource xGrid_AbnormalAlarm}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="8"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1" Grid.Row="1"
+                    Style="{StaticResource RoundTextButton}"
+                    Content="확인"
+                    Command="{Binding OKCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
+
+            </Button>
+
+            <Button Grid.Column="3" Grid.Row="1"
+                    Style="{StaticResource RoundTextButton}"
+                    Content="이동"
+                    Command="{Binding MoveCommand}" 
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
+
+            </Button>
+
+        </Grid>
+    </Grid>
+</Window>

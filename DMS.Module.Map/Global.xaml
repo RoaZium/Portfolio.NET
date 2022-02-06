@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/PrismWPF.Common;component/Dictionary/ConverterResourceDictionary.xaml"/>
+        <ResourceDictionary Source="/PrismWPF.Control;component/Style/PrismWPFStyleDictionary.xaml" />
+
+        <ResourceDictionary Source="/DMS.Module.Map;component/Resource/Blue/ImageResourceDictionary.xaml"/>
+        <ResourceDictionary Source="/DMS.Module.Map;component/Resource/Blue/SensorIconResourceDictionary.xaml"/>
+        <ResourceDictionary Source="/DMS.Module.Map;component/Resource/Blue/RoutingConfigurationResourceDictionary.xaml"/>
+        <ResourceDictionary Source="/DMS.Module.Map;component/Resource/Blue/ToolbarResourceDictionary.xaml"/>
+        <ResourceDictionary Source="/DMS.Module.Map;component/Resource/ControlDictionary.xaml"/>
+
+        <ResourceDictionary Source="/DMS.Module.Map;component/Dictionary/ArrayDictionary.xaml"/>
+        <ResourceDictionary Source="/DMS.Module.Map;component/Dictionary/ComponentPropertyDictionary.xaml"/>
+        <ResourceDictionary Source="/DMS.Module.Map;component/Dictionary/DataTemplateDictionary.xaml"/>
+
+        <ResourceDictionary Source="/DMS.Module.Map;component/Dictionary/DevExpress/DevExpressStyleDictionary.xaml"/>
+        <ResourceDictionary Source="/DMS.Module.Map;component/Dictionary/ControlStyleDictionary.xaml"/>
+
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

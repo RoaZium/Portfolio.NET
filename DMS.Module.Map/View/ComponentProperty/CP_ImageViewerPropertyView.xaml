@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.CP_ImageViewerPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:PropertyView="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             xmlns:local="clr-namespace:DMS.Module.Map.View.ComponentProperty"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <!--DataGridCell-->
+        <Expander IsExpanded="{Binding ComponentMst.PropertyM.DataGridCellM.IsExpanded}">
+            <Expander.Header>
+                <TextBlock Style="{StaticResource FontSize14TextBlock}" 
+                           Text="이미지 뷰어" />
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+                    <!--파일 다이알로그-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}" 
+                               Text="{x:Static res:Res.StrImage}" />
+
+                    <!--가로 스크롤 활성화-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="가로 스크롤 활성화" />
+
+                    <!--세로 스크롤 활성화-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="세로 스크롤 활성화" />
+
+                    <!--ScaleX-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="ScaleX" />
+
+                    <!--ScaleY-->
+                    <TextBlock Style="{StaticResource xTextBlock_ComponentPropertyTitle}"
+                               Text="ScaleY" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+                    <!--파일 다이알로그-->
+                    <Button Style="{StaticResource xButton_Component}" 
+                    Content="{x:Static res:Res.StrOpenFile}" 
+                    Command="{Binding ImageFileCommand}" />
+
+                    <!--가로 스크롤 활성화-->
+                    <ComboBox Style="{StaticResource xComboBox_ScrollBarVisibilityArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.ImageViewerM.HorizontalScrollBarVisibility}" />
+
+                    <!--세로 스크롤 활성화-->
+                    <ComboBox Style="{StaticResource xComboBox_ScrollBarVisibilityArray}" 
+                      SelectedItem="{Binding ComponentMst.PropertyM.ImageViewerM.VerticalScrollBarVisibility}" />
+
+                    <!--ScaleX-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.ImageViewerM.ScaleX}" />
+
+                    <!--ScaleY-->
+                    <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.ImageViewerM.ScaleY}" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="DMS.Module.Map.View.ComponentProperty.AxisYRangePropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:DMS.Module.Map.Properties"
+             xmlns:Controls="clr-namespace:PrismWPF.Control.Text;assembly=PrismWPF.Control"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DMS.Module.Map;component/Global.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Style="{StaticResource xStackPanelVertical}" >
+            <!--최대 범위-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                   Content="최대 범위" />
+
+            <!--최소 높이-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                   Content="최소 높이" />
+
+            <!--측면 여백-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                   Content="측면 여백" />
+
+            <!--측면 여백 자동-->
+            <Label Style="{StaticResource xLabel_ComponentPropertyTitle}"
+                   Content="측면 여백 자동" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Style="{StaticResource xStackPanelVertical}">
+            <!--최대 범위-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.AxisYRangeM.MaxValue}" />
+
+            <!--최소 높이-->
+            <Controls:CvTextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                                Text="{Binding ComponentMst.PropertyM.AxisYRangeM.MinHeight, StringFormat=N2}"
+                                TextType="Decimal" />
+
+            <!--측면 여백-->
+            <TextBox Style="{StaticResource L_TextBox_ComponentProperty}"
+                     Text="{Binding ComponentMst.PropertyM.AxisYRangeM.SideMarginsValue}" />
+
+            <!--측면 여백 자동-->
+            <CheckBox Style="{StaticResource sBaseCheckBox}"
+                      IsChecked="{Binding ComponentMst.PropertyM.AxisYRangeM.AutoSideMargins}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

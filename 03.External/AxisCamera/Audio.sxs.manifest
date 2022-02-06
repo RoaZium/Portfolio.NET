@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+    type="win32"
+    name="Audio.sxs"
+    version="1.0.0.0" />
+
+<file name="Audio.dll">
+
+    <comClass
+        description="AudioHandler Class"
+        clsid="{53D71A20-15BA-4884-A778-07A75F6049F4}"
+        threadingModel="Apartment"
+        progid="Audio.AudioHandler"
+        tlbid="{4C709024-8272-4202-8692-67053B679392}" />
+
+    <comClass
+        description="AudioDecoder Class"
+        clsid="{D1F283E1-DF6F-41e4-AED1-EB1D6B4B0AE1}"
+        threadingModel="Both"
+        progid="Audio.AudioDecoder"
+        tlbid="{4C709024-8272-4202-8692-67053B679392}" />
+
+    <comClass
+        description="AudioProcessor Class"
+        clsid="{B2505399-A5CE-4824-876D-77DF16986CDA}"
+        threadingModel="Both"
+        progid="Audio.AudioProcessor"
+        tlbid="{4C709024-8272-4202-8692-67053B679392}" />
+
+    <comClass
+        description="AxOpusDecoder Class"
+        clsid="{644366B2-97CB-4BF3-8EA0-8F853E67C830}"
+        threadingModel="Both"
+        progid="Audio.AxOpusDecoder"
+        tlbid="{4C709024-8272-4202-8692-67053B679392}" />
+
+    <comClass
+        description="AxOpusEncoder Class"
+        clsid="{C0DA7F14-B69C-4280-A17B-D44536D7C62D}"
+        threadingModel="Both"
+        progid="Audio.AxOpusEncoder"
+        tlbid="{4C709024-8272-4202-8692-67053B679392}" />
+
+    <comClass
+        description="MFOpusDecoder Class"
+        clsid="{B37A5F61-D837-4F1C-BF99-0DD22E17F1C4}"
+        threadingModel="Both"
+        progid="Audio.MFOpusDecoder"
+        tlbid="{4C709024-8272-4202-8692-67053B679392}" />
+
+    <comClass
+        description="AxAudioRenderer Class"
+        clsid="{EDA55726-49B3-449B-B03A-B9779623F3AA}"
+        threadingModel="Both"
+        progid="Audio.AxAudioRenderer"
+        tlbid="{4C709024-8272-4202-8692-67053B679392}" />
+
+</file>
+
+</assembly>

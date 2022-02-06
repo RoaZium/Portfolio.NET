@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" >
+
+    <!--BarSideBySideSeries2D: 복합 막대형 차트-->
+    <Style x:Key="sBarSideBySideSeries2DBase" TargetType="{x:Type dxc:BarSideBySideSeries2D}">
+        <Setter Property="ArgumentDataMember" Value="ArgumentDataMember" />
+        <Setter Property="ColorDataMember" Value="ColorDataMember" />
+        <Setter Property="ValueDataMember" Value="ValueDataMember" />
+        <Setter Property="Background" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Background}" />
+        <Setter Property="BarWidth" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.BarWidth}" />
+        <Setter Property="BorderBrush" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.BorderThickness}" />
+        <Setter Property="Brush" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Brush}" />
+        <Setter Property="CheckableInLegend" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.CheckableInLegend}" />
+        <Setter Property="CheckedInLegend" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.CheckedInLegend}" />
+        <Setter Property="CrosshairEnabled" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.CrosshairEnabled}" />
+        <Setter Property="CrosshairLabelPattern" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.CrosshairLabelPattern}" />
+        <Setter Property="CrosshairLabelVisibility" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.CrosshairLabelVisibility}" />
+        <Setter Property="FlowDirection" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FlowDirection}" />
+        <Setter Property="FontSize" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontSize}" />
+        <Setter Property="FontStretch" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontStretch}" />
+        <Setter Property="FontStyle" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontStyle}"/>
+        <Setter Property="FontWeight" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.FontWeight}" />
+        <Setter Property="Foreground" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Foreground}" />
+        <Setter Property="Height" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Height}" />
+        <Setter Property="HorizontalAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.HorizontalAlignment}" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.HorizontalContentAlignment}" />
+        <Setter Property="LabelsVisibility" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.LabelsVisibility}" />
+        <Setter Property="Margin" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Margin}" />
+        <Setter Property="MaxHeight" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MaxHeight}" />
+        <Setter Property="MaxWidth" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MaxWidth}" />
+        <Setter Property="MinHeight" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MinHeight}" />
+        <Setter Property="MinWidth" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.MinWidth}" />
+        <Setter Property="Opacity" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Opacity}" />
+        <Setter Property="Padding" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Padding}" />
+        <Setter Property="VerticalAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.VerticalAlignment}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.VerticalContentAlignment}" />
+        <Setter Property="Visible" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Visible}" />
+        <Setter Property="Width" Value="{Binding DmComponentM.PropertyM.BarSideBySideSeries2DM.Width}" />
+    </Style>
+   
+</ResourceDictionary>
