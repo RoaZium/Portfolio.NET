@@ -6,7 +6,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:viewModels="clr-namespace:SvgToXaml.ViewModels"
         xmlns:wrapPanel="clr-namespace:SvgToXaml.WrapPanel"
-        mc:Ignorable="d"  
+        mc:Ignorable="d" 
         Title="SvgToXaml   © 2015 Bernd Klaiber" Height="350" Width="525"
         AllowDrop="True"
         Drop="MainWindow_OnDrop"
